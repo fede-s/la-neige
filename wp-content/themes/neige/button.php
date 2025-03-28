@@ -1,0 +1,1 @@
+<a class="linkBtn"  href="<?= $atts['link'] ?>" ><?= $atts['label'] ?></a>
