@@ -1,5 +1,6 @@
 :root {
 	--soft-pink: #fadcdc;
+	--soft-pink-rgb: 250, 220, 220;
 	--olive-green: #96963c;
 	--forest-blue: #284a46;
 }
@@ -8,6 +9,12 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
+	color: var(--forest-blue);
+}
+h3{
+	font-size: 26px;
+	margin-bottom: 12px;
+	font-weight: 400;
 }
 
 // Menu Nav //

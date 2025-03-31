@@ -576,12 +576,20 @@ template {
 
 :root {
   --soft-pink: #fadcdc;
+  --soft-pink-rgb: 250, 220, 220;
   --olive-green: #96963c;
   --forest-blue: #284a46;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
+  color: var(--forest-blue);
+}
+
+h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  font-weight: 400;
 }
 
 #hamburger-menu {
@@ -698,4 +706,91 @@ body {
 
 .menu-item a:hover {
   color: var(--olive-green);
+}
+
+.header-stay {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.header-stay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.header-stay .header-text {
+  position: absolute;
+  bottom: 8%;
+  left: 5%;
+  z-index: 2;
+  max-width: 33%;
+  font-size: 33px;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient img {
+  display: block;
+  width: 100%;
+}
+
+.gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(var(--soft-pink-rgb), 1) 0%, rgba(var(--soft-pink-rgb), 0) 100%);
+  pointer-events: none;
+}
+
+.rooms-container {
+  padding: 0 20%;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1400px;
+  align-items: flex-start;
+  clear: both;
+  justify-content: space-between;
+  position: relative;
+}
+
+.room {
+  padding-bottom: 20px;
+  display: block;
+  width: 49%;
+}
+.room img {
+  height: 434px;
+  width: 100%;
+  object-fit: cover;
+}
+.room p {
+  display: block;
+  margin: 0;
+  font-size: 15px;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+.room .room-link {
+  display: block;
+  margin-top: 20px;
+  color: var(--forest-blue);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+}
+.room .room-link:hover {
+  color: var(--olive-green);
+  text-decoration: none;
 }

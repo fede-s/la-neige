@@ -1,7 +1,10 @@
 <?php 
+include(__DIR__ . '/yama/config/config.php');
+require_once(THEME . '/yama/utils/Utils.php');
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', 'Mar-06');
+	define( '_S_VERSION',  Yama\Utils::getVersion());
 }
 function arphabet_widgets_init() {
 
@@ -51,7 +54,7 @@ add_action('after_setup_theme', 'neige_features');
 add_action('admin_menu', function() {
    global $menu;
 
-   add_menu_page('Home Page', 'Home Page', 'read', 'post.php?post=13&action=edit', '', 'dashicons-admin-home', 4);
+   add_menu_page('Home Page', 'Home Page', 'read', 'post.php?post=7&action=edit', '', 'dashicons-admin-home', 4);
    remove_menu_page('edit-comments.php');
 });
 

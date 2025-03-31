@@ -19,7 +19,7 @@
 
 
 <body>
-<?php require_once(__DIR__ . '/Utils.php'); ?>
+<?php require_once(THEME . '/yama/utils/Utils.php');?>
 
 <!-- <?php
 if (has_nav_menu('menu-1')) {
@@ -76,7 +76,7 @@ $svg_content = get_svg_content(get_template_directory() . '/svg/burger-menu.svg'
         <?php
         foreach ($menu_items as $item) {
             $slug = get_post_field( 'post_name', $item->object_id );
-            echo Utils::imgLazyFromPost($item->object_id, 'large', '100vw', '', $slug);
+            echo YAMA\Utils::imgLazyFromPost($item->object_id, 'large', '100vw', '', $slug);
         } ?>
     </div>
 </div>
