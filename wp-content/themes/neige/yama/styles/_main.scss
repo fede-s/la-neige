@@ -70,20 +70,6 @@ ol {
   padding-left: 25px;
 }
 
-.container {
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-  max-width: 1190px;
-  &.large {
-    max-width: 1220px;
-    padding: 0;
-  }
-  &.sm {
-    max-width: 995px;
-  }
-}
-
 .main-color {
   color: var(--main-color);
 }
@@ -618,9 +604,6 @@ ol {
   position: relative;
   &.wide {
     padding: 0 30px;
-    .owl-item {
-      padding-right: 8px;
-    }
   }
   &:not(.wide) {
     .owl-nav {
@@ -821,8 +804,9 @@ ol {
   }
 
   img {
+    height: 100vh;
     width: 100%;
-    height: 100%;
+    max-width: unset;
     object-fit: contain;
   }
 }

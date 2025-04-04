@@ -40,6 +40,7 @@ $ratio = empty($ratio) ? 'three-two-ratio' : $ratio; ?>
         touchDrag: true,
         mouseDrag: true,
         nav: true,
+        margin: 8,
         responsive: {
             0: {
                 items: <?= $mobileItems ?>,

@@ -31,9 +31,9 @@ add_theme_support( 'post-thumbnails' );
 
 function neige_files() {
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
-	wp_enqueue_script('owl-carousel', get_theme_file_uri('/build/owl.carousel.min.js'), ['jquery'], _S_VERSION, TRUE);
-	wp_enqueue_script('lib', get_theme_file_uri('/build/lib.js'), array('jquery'), _S_VERSION, true);
+    wp_enqueue_script( 'third-party-js', THEME_URI . '/build/third-party.js', ['jquery'], _S_VERSION);
+    wp_enqueue_script( 'lib', THEME_URI . '/build/lib.js', ['jquery', 'third-party-js'], _S_VERSION);
+    wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
     wp_enqueue_style('neige_main_styles', get_theme_file_uri('/assets/css/style.css'), [], _S_VERSION);
 }
 

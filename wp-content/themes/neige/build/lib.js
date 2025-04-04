@@ -36,23 +36,20 @@ document.addEventListener('DOMContentLoaded', function () {
             img.classList.add('show');
         });
     });
-    
-    
-
-    function displayModal(selector) {
-        jQuery(selector).css('display', 'block');
-     }
-     
-     function closeModal() {
-        jQuery('.modal ').css('display', 'none');
-     }
-     
-     function displayModalGallery(selector, index) {
-        jQuery(selector + ' .owl-carousel').trigger('to.owl.carousel', index);
-        setTimeout(() => {
-           displayModal(selector);
-        }, 0);
-        return false
-     }
-
 });
+
+function displayModal(selector) {
+    jQuery(selector).css('display', 'block');
+}
+
+function closeModal() {
+    jQuery('.modal ').css('display', 'none');
+}
+
+function displayModalGallery(selector, index) {
+    jQuery(selector + ' .owl-carousel').trigger('to.owl.carousel', index);
+    setTimeout(() => {
+        displayModal(selector);
+    }, 0);
+    return false
+}
