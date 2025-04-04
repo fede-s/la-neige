@@ -17,17 +17,7 @@ get_header(); ?>
 
 </div>
 
-<div>
-
-   <?php
-   $roomTypes = YAMA\Utils::getPosts('room-type');
-   foreach ($roomTypes as $room) {
-   }
-   ?>
-
-</div>
-
-<div class="rooms-container">
+<div class="rooms-container container">
 
    <?php
    $roomTypes = YAMA\Utils::getPosts('room-type');

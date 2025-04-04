@@ -31,7 +31,7 @@ add_action('init', function () {
     // );
 
     register_taxonomy(
-        'chalet-features',
+        'amenities',
         ['room-type'],
         [
             'supports' => ['title'],

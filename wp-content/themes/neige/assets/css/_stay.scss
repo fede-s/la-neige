@@ -17,7 +17,7 @@
       left: 5%;
       z-index: 2;
       max-width: 33%;
-      font-size: 33px;
+      font-size: clamp(17px, 2.5vw, 33px);
    }
 }
 
@@ -46,12 +46,11 @@
 
 
 .rooms-container {
-   padding: 0 20%;
    padding-top: 50px;
    display: flex;
    flex-wrap: wrap;
    gap: 15px;
-   max-width: 1400px;
+   // max-width: 1400px;
    align-items: flex-start;
    clear: both;
    justify-content: space-between;
@@ -89,5 +88,8 @@
    .room-link:hover {
       color: var(--olive-green);
       text-decoration: none;
+   }
+   @include tablet {
+      width: 100%;
    }
 }
