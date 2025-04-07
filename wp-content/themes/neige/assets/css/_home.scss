@@ -1,0 +1,23 @@
+.video-container {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   left: 50%;
+   top: 50%;
+   width: 190vh;
+   height: 104vh; 
+}
+
+.video-container iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+    .video-container {
+      height: calc(100vw * .57);
+      width: 100vw;
+   }
+}

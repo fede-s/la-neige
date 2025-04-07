@@ -7,54 +7,11 @@
   --admin-bar-height: 32px;
 }
 
-body {
-  font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-  font-weight: 500;
-  line-height: 1.2;
-  clear: both;
-  color: var(--main-color);
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
 
 img {
   vertical-align: middle;
 }
 
-a {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
 
 .post, .page {
   margin: 0;
@@ -64,11 +21,6 @@ script {
   display: none !important;
 }
 
-ul,
-ol {
-  margin-left: 0;
-  padding-left: 25px;
-}
 
 .main-color {
   color: var(--main-color);
@@ -394,7 +346,7 @@ ol {
   font-size: 2rem;
   color: white;
   text-shadow: 2px 2px 8px black;
-  marginL: 0;
+  margin: 0;
 }
 
 .tab-menu {
@@ -1831,6 +1783,11 @@ h2.resp-accordion:first-child {
   .floating-button.msn i {
     color: #0084FF;
   }
+  .caca {
+    position: absolute !important; 
+    top: 0% !important;
+    z-index: 100 !important;
+  }
 
 }
 
@@ -2000,6 +1957,14 @@ h2.resp-accordion:first-child {
     .owl-nav {
       display: none;
     }
+  }
+}
+.close-button {
+  position: absolute;
+  top: 0%;
+  z-index: 100;
+  @include phone {
+    top: 10%;
   }
 }
 

@@ -7,9 +7,9 @@
 
 get_header(); ?>
 
-<div class="header-stay">
+<div class="header">
    <div class="gradient">
-      <?= YAMA\Utils::imgLazy(get_field('header_image'), 'large', '1400px') ?>
+      <?= YAMA\Utils::imgLazy(get_field('header_image'), 'large', '2000px') ?>
    </div>
    <div class="header-text">
       <?= get_field('header_text'); ?>
