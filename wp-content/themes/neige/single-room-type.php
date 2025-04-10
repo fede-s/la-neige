@@ -4,9 +4,7 @@
 /**
  * Template Name: room type
  */
-require_once(THEME . '/yama/widgets/Widgets.php');
-require_once(THEME . '/yama/widgets/lists/Lists.php');
-require_once(THEME . '/yama/widgets/carousel/Carousel.php');
+
 get_header(); ?>
 
 <div class="container">

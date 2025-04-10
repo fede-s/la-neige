@@ -19,8 +19,12 @@
 
 
 <body>
-<?php require_once(THEME . '/yama/utils/Utils.php');?>
-
+<?php
+require_once(THEME . '/yama/utils/Utils.php');
+require_once(THEME . '/yama/widgets/Widgets.php');
+require_once(THEME . '/yama/widgets/lists/Lists.php');
+require_once(THEME . '/yama/widgets/carousel/Carousel.php');
+?>
 <!-- <?php
 if (has_nav_menu('menu-1')) {
     $menu_items = wp_get_nav_menu_items('menu-1');

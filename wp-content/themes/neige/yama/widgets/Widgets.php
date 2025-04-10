@@ -42,5 +42,8 @@ class Widgets {
    static function parallaxHeader($post) {
       include(__DIR__ . '/parallax-header.php');
    }
+   public static function textImageSection($type) {
+      include(__DIR__ . '/text-image-section.php');
+  }
 }
 ?>

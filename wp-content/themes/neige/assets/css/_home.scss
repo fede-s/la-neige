@@ -1,23 +1,276 @@
 .video-container {
-   position: absolute;
-   transform: translate(-50%, -50%);
-   left: 50%;
-   top: 50%;
-   width: 190vh;
-   height: 104vh; 
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 190vh;
+  height: 104vh;
 }
 
 .video-container iframe {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-aspect-ratio: 16/9) {
-    .video-container {
-      height: calc(100vw * .57);
-      width: 100vw;
-   }
+  .video-container {
+    height: calc(100vw * .57);
+    width: 100vw;
+  }
+}
+
+
+
+.section-text-image {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+
+  .side-text {
+    width: 47.5%;
+    box-sizing: border-box;
+
+    h1 {
+      width: 75%;
+      font-size: 56px;
+      font-weight: 600;
+    }
+
+    h5 {
+      width: 60%;
+      font-weight: 500;
+      padding-bottom: 20px;
+    }
+
+    p {
+      width: 75%;
+      padding-left: 10%;
+      line-height: 1.25;
+    }
+
+    .linkBtn {
+      margin: 40px 0;
+      margin-left: 10%;
+
+    }
+
+    svg {
+      position: relative;
+      height: 40px;
+      width: 40px;
+      top: -4%;
+      left: 45%;
+
+      path {
+        fill: var(--olive-green);
+      }
+    }
+
+    @include small-desktop {
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    @include tablet {
+
+      h1,
+      h5,
+      p {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .linkBtn {
+        margin-left: 0;
+      }
+
+    }
+  }
+
+
+  .side-image {
+    width: 47.5%;
+
+    .three-two-ratio {
+      aspect-ratio: 0;
+      height: 100%;
+
+      @include tablet {
+        aspect-ratio: 3 / 2;
+      }
+    }
+
+    .owl-item,
+    .owl-stage,
+    .owl-stage-outer,
+    .owl-carousel,
+    .carousel-gallery {
+      height: 100%;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .main-image {
+    img {
+      position: relative;
+      width: 126.3%;
+      height: 100%;
+      object-fit: cover;
+
+      @include small-desktop {
+        width: 111.6%;
+      }
+
+      @include tablet {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
+
+    .side-text,
+    .side-image {
+      width: 100%;
+    }
+
+  }
+
+  .side-img {
+    display: grid;
+    width: 100%;
+
+    @include tablet {
+      height: auto;
+    }
+
+    .top-image {
+      left: 21%;
+      bottom: 41%;
+      width: 65%;
+      height: 400px;
+      z-index: 1;
+
+      @include small-tablet {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .basic-info {
+    padding-left: 10%;
+    padding-top: 40px;
+
+    @include tablet {
+      padding-left: 0;
+    }
+
+    svg {
+      top: 0;
+      left: 0;
+
+      path {
+        fill: var(--forest-blue);
+      }
+    }
+  }
+}
+
+.float-img {
+  position: relative;
+  height: 126.4vh;
+  margin: 0 -12.5%;
+  display: grid;
+
+  @include small-desktop {
+    margin: 0;
+  }
+
+  @include tablet {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image-left {
+    position: relative;
+    left: 10%;
+    height: 60vh;
+    width: 30%;
+
+    @include tablet {
+      width: 100%;
+      height: 400px;
+      left: 0;
+      padding-top: 5%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .image-right {
+    position: relative;
+    height: 80vh;
+    width: 35%;
+    left: 65%;
+    top: -30%;
+
+    @include small-desktop {
+      width: 40.6%;
+    }
+
+    @include tablet {
+      width: 100%;
+      height: 400px;
+      left: 0;
+      top: 0;
+      padding-top: 5%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.pink {
+  background-color: var(--soft-pink);
+}
+
+.forest-blue {
+  background-color: var(--forest-blue);
+  color: var(--soft-pink);
+
+  .linkBtn {
+    background-color: inherit;
+    border-color: var(--soft-pink);
+    color: var(--soft-pink);
+  }
+
+  .linkBtn:hover {
+    background-color: var(--soft-pink);
+    color: var(--forest-blue);
+  }
+
 }
