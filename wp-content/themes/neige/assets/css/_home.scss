@@ -62,8 +62,8 @@
 
     svg {
       position: relative;
-      height: 40px;
-      width: 40px;
+      height: 25px;
+      width: 25px;
       top: -4%;
       left: 45%;
 
@@ -170,6 +170,10 @@
         height: auto;
       }
     }
+
+    @include small-tablet {
+      padding: 0;
+    }
   }
 
   .basic-info {
@@ -205,6 +209,7 @@
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
   }
 
   .image-left {
@@ -216,8 +221,11 @@
     @include tablet {
       width: 100%;
       height: 400px;
-      left: 0;
       padding-top: 5%;
+    }
+
+    @include small-desktop {
+      left: 0;
     }
 
     img {
@@ -228,17 +236,22 @@
   }
 
   .image-right {
-    position: relative;
-    height: 80vh;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    // position: relative;
+    // height: 80vh;
     width: 35%;
-    left: 65%;
-    top: -30%;
+    // left: 65%;
+    // top: -30%;
 
     @include small-desktop {
       width: 40.6%;
+      right: -5.6%;
     }
 
     @include tablet {
+      position: relative;
       width: 100%;
       height: 400px;
       left: 0;
@@ -272,5 +285,197 @@
     background-color: var(--soft-pink);
     color: var(--forest-blue);
   }
+
+}
+
+.instagram {
+  position: absolute;
+  width: 20%;
+
+  .side-text {
+    width: 100%;
+  }
+
+  @include tablet {
+    position: relative;
+  }
+}
+
+.temporal-dos {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  height: 95vh;
+
+  @include tablet {
+    display: flex;
+  }
+
+  .post {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include tablet {
+      position: relative;
+    }
+  }
+
+  .one {
+    bottom: 0;
+    width: 21%;
+    height: 500px;
+  }
+
+  .two {
+    right: 45%;
+    width: 20%;
+    height: 350px;
+  }
+
+  .three {
+    bottom: 0;
+    right: 35%;
+    width: 20%;
+    height: 350px;
+  }
+
+  .four {
+    right: 0;
+    width: 21%;
+    height: 500px;
+  }
+
+  @include tablet {
+
+    .one,
+    .two,
+    .three,
+    .four {
+      width: 100%;
+      height: 300px;
+      right: auto;
+
+    }
+  }
+}
+
+.discover {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  a {
+    text-decoration: none;
+    color: var(--forest-blue);
+  }
+  @include tablet {
+    padding-top: 50px;
+    flex-direction: column;
+  }
+}
+
+
+.rooms-display {
+  display: flex;
+  height: 500px;
+
+  .owl-stage-outer {
+    height: 100%;
+
+    .owl-stage {
+      .owl-item {
+        width: 100%;
+        height: 500px;
+
+        .item {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+          }
+        }
+
+        .item:hover img {
+          transform: scale(1.08);
+        }
+
+        .item::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 0, 0, 0);
+          opacity: 0;
+          pointer-events: none;
+          transition: background-color 0.3s ease, opacity 0.3s ease;
+          z-index: 2;
+        }
+
+        .item:hover::before {
+          background-color: rgba(var(--forest-blue-rgb), 0.5);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .owl-nav {
+
+    .owl-next:hover,
+    .owl-prev:hover {
+      background: inherit;
+    }
+  }
+
+  .owl-carousel {
+    .owl-dots {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .info {
+    width: 90%;
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    transition: opacity 1s ease;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--soft-pink);
+    z-index: 3;
+    flex-direction: column;
+    align-items: center;
+
+    .basic-info {
+      gap: 20px;
+      padding: 0;
+    }
+  }
+
+  .center {
+    .info {
+      opacity: 1;
+    }
+  }
+
 
 }

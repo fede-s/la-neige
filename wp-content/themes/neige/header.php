@@ -75,6 +75,12 @@ $svg_content = get_svg_content(get_template_directory() . '/svg/burger-menu.svg'
                 <?php
             } ?>
         </ul>
+        <div class="container social-media top-100">
+         <a href="<?= get_field('instagram', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/instagram.svg'); ?></a>
+         <a href="<?= get_field('facebook', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/facebook.svg'); ?></a>
+         <a href="<?= get_field('youtube', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/youtube.svg'); ?></a>
+         <a href="<?= get_field('tiktok', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/tiktok.svg'); ?></a>
+      </div>
     </div>
     <div class="menu-right">
         <?php

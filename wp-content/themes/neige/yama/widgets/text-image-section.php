@@ -15,7 +15,7 @@ $icons = get_field($name);
 
 
 
-<section class="container <?php echo ($type == 2) ? 'pink' : (($type == 3) ? 'forest-blue' : ''); ?>">
+<section class="container <?php echo ($type == 2) ? 'pink bottom-30' : (($type == 3) ? 'forest-blue' : ''); ?>">
     <div class="section-text-image">
         <?php
         if ($type == 2) { ?>
@@ -65,7 +65,7 @@ $icons = get_field($name);
         </div>
         <?php
         if ($type == 1) {
-            echo '<div class="side-image">';
+            echo '<div class="side-image bottom-30">';
             YAMA\Carousel::galleryFromACF($gallery, false);
             echo '</div>';
         }
