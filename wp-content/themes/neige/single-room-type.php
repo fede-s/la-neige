@@ -3,8 +3,6 @@
  * Template Name: room type
  */
 
-use Yama\Utils;
-
 global $post;
 
 $fields = get_fields($post);
@@ -15,31 +13,31 @@ get_header(); ?>
     <div class="room-details">
         <div class="details">
             <h1 class="post-title"><?php the_title(); ?></h1>
-            <h6><?= YAMA\Utils::getSeasonField($fields, 'sub_title') ?></h6>
+            <h6><?= Utils::getSeasonField($fields, 'sub_title') ?></h6>
             <ul class="basic-info">
                 <div>
                     <?= file_get_contents(get_field('square_meters_icon', 'options')); ?>
-                    <li><?= YAMA\Utils::getSeasonField($fields, 'square_meters'); ?></li>
+                    <li><?= Utils::getSeasonField($fields, 'square_meters'); ?></li>
                 </div>
                 <div>
                     <?= file_get_contents(get_field('people_icon', 'options')); ?>
-                    <li><?= YAMA\Utils::getSeasonField($fields, 'people'); ?></li>
+                    <li><?= Utils::getSeasonField($fields, 'people'); ?></li>
                 </div>
                 <div>
                     <?= file_get_contents(get_field('beds_icon', 'options')); ?>
-                    <li><?= YAMA\Utils::getSeasonField($fields, 'beds'); ?></li>
+                    <li><?= Utils::getSeasonField($fields, 'beds'); ?></li>
                 </div>
                 <div>
                     <?= file_get_contents(get_field('bathrooms_icon', 'options')); ?>
-                    <li><?= YAMA\Utils::getSeasonField($fields, 'bathrooms'); ?></li>
+                    <li><?= Utils::getSeasonField($fields, 'bathrooms'); ?></li>
                 </div>
             </ul>
-            <p><?= YAMA\Utils::getSeasonField($fields, 'description'); ?></p>
+            <p><?= Utils::getSeasonField($fields, 'description'); ?></p>
             <div class="top-50">
                 <h4>Room Amenities</h4>
                 <ul class="amenities basic-info">
                     <?php
-                    $amenities = YAMA\Utils::getSeasonField($fields, 'amenities');
+                    $amenities = Utils::getSeasonField($fields, 'amenities');
                     if ($amenities) {
                         foreach ($amenities as $term_id) {
                             $amenity = get_term($term_id);
@@ -56,7 +54,7 @@ get_header(); ?>
             </div>
             <div class="this-suite top-50">
                 <h4>What’s included in this suite?</h4>
-                <?= YAMA\Utils::getSeasonField($fields, 'this_suite'); ?>
+                <?= Utils::getSeasonField($fields, 'this_suite'); ?>
             </div>
 
         </div>
@@ -69,12 +67,12 @@ get_header(); ?>
                     $count++;
                     if ($count == 1) { ?>
                         <div class="base-image">
-                            <?php echo YAMA\Utils::imgLazy($image, 'medium', '800px'); ?>
+                            <?php echo Utils::imgLazy($image, 'medium', '800px'); ?>
                         </div>
                         <?php
                     } else { ?>
                         <div class="top-image">
-                            <?php echo YAMA\Utils::imgLazy($image, 'medium', '800px'); ?>
+                            <?php echo Utils::imgLazy($image, 'medium', '800px'); ?>
                         </div>
                         <?php
                     }

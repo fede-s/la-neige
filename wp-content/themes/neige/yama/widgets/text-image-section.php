@@ -27,12 +27,12 @@ $icons = get_field($name);
                         $count++;
                         if ($count == 1) { ?>
                             <div class="base-image">
-                                <?php echo YAMA\Utils::imgLazy($image, 'medium', '800px'); ?>
+                                <?php echo Utils::imgLazy($image, 'medium', '800px'); ?>
                             </div>
                         <?php
                         } else { ?>
                             <div class="top-image">
-                                <?php echo YAMA\Utils::imgLazy($image, 'medium', '800px'); ?>
+                                <?php echo Utils::imgLazy($image, 'medium', '800px'); ?>
                             </div>
                         <?php
                         }
@@ -71,7 +71,7 @@ $icons = get_field($name);
         }
         if ($type == 3) { ?>
             <div class="side-image main-image">
-                <?= YAMA\Utils::imgLazy($gallery[0], 'large', '1000px') ?>
+                <?= Utils::imgLazy($gallery[0], 'large', '1000px') ?>
             </div>
         <?php } ?>
     </div>
@@ -79,10 +79,10 @@ $icons = get_field($name);
     if ($type == 3) { ?>
         <div class="float-img forest-blue">
             <div class="image-left top-100">
-                <?= YAMA\Utils::imgLazy($gallery[1], 'medium', '800px') ?>
+                <?= Utils::imgLazy($gallery[1], 'medium', '800px') ?>
             </div>
             <div class="image-right">
-                <?= YAMA\Utils::imgLazy($gallery[2], 'medium', '800px') ?>
+                <?= Utils::imgLazy($gallery[2], 'medium', '800px') ?>
             </div>
         </div>
     <?php }  ?>

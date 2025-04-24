@@ -17,13 +17,13 @@ $ratio = empty($ratio) ? 'three-two-ratio' : $ratio; ?>
                     if (strpos($item['video'], '[video') === 0) {
                         echo do_shortcode($item['video']);
                     } else {
-                        YAMA\Utils::videoIframeOnDemand($item['video'], $item['image']);
+                        Utils::videoIframeOnDemand($item['video'], $item['image']);
                     }
                 } else {
-                    echo YAMA\Utils::imgLazy($item['image'], 'medium_large', $sizes);
+                    echo Utils::imgLazy($item['image'], 'medium_large', $sizes);
                 }
                 if (!empty($item['type']) && $item['type'] === 'panoramic') {
-                    echo YAMA\Utils::imgFromAssets('panoramic', 'png', '', 'panoramic-icon');
+                    echo Utils::imgFromAssets('panoramic', 'png', '', 'panoramic-icon');
                 }
                 if (!empty($item['caption'])) { ?>
                     <p class="caption"><?= $item['caption'] ?></p>

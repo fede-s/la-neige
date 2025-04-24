@@ -1,8 +1,4 @@
 <?php
-namespace Yama;
-
-use WP_Query;
-
 class Utils {
 
     public static $version;
@@ -199,6 +195,7 @@ class Utils {
     }
 
     static function getImageSizesForList($items, $mobileCols, $desktopCols) {
+        $sizes = '';
         if ($mobileCols === 1 || count($items) === 1) {
             $sizes .= '(max-width: 479px) 94vw,';
         } else {

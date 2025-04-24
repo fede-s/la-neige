@@ -90,7 +90,7 @@
                 <?php
                 foreach ($menu_items as $item) {
                     $slug = get_post_field('post_name', $item->object_id);
-                    echo YAMA\Utils::imgLazyFromPost($item->object_id, 'large', '100vw', '', $slug);
+                    echo Utils::imgLazyFromPost($item->object_id, 'large', '100vw', '', $slug);
                 } ?>
             </div>
         </div>

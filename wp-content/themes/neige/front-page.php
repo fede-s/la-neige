@@ -9,7 +9,7 @@ use Yama\Widgets;
 
 get_header(); ?>
 
-<?php $videoId = YAMA\Utils::getVimeoVideoId(get_field('video')); ?>
+<?php $videoId = Utils::getVimeoVideoId(get_field('video')); ?>
 <div class="header">
     <div class="gradient">
         <?php if (get_field('video')) {
@@ -22,7 +22,7 @@ get_header(); ?>
                 </iframe>
             </div>
         <?php } else {
-            echo YAMA\Utils::imgLazy(get_field('header_image'), 'large', '2000px');
+            echo Utils::imgLazy(get_field('header_image'), 'large', '2000px');
         } ?>
 
     </div>
@@ -47,22 +47,22 @@ Widgets::textImageSection($type);
     </div>
     <div class="post one">
         <a href="<?= get_field('post_1')['link']['url'] ?>">
-            <?= YAMA\Utils::imgLazy(get_field('post_1')['image'], 'large', '800px') ?>
+            <?= Utils::imgLazy(get_field('post_1')['image'], 'large', '800px') ?>
         </a>
     </div>
     <div class="post two">
         <a href="<?= get_field('post_2')['link']['url'] ?>">
-            <?= YAMA\Utils::imgLazy(get_field('post_2')['image'], 'large', '800px') ?>
+            <?= Utils::imgLazy(get_field('post_2')['image'], 'large', '800px') ?>
         </a>
     </div>
     <div class="post three">
         <a href="<?= get_field('post_3')['link']['url'] ?>">
-            <?= YAMA\Utils::imgLazy(get_field('post_3')['image'], 'large', '800px') ?>
+            <?= Utils::imgLazy(get_field('post_3')['image'], 'large', '800px') ?>
         </a>
     </div>
     <div class="post four">
         <a href="<?= get_field('post_4')['link']['url'] ?>">
-            <?= YAMA\Utils::imgLazy(get_field('post_4')['image'], 'large', '800px') ?>
+            <?= Utils::imgLazy(get_field('post_4')['image'], 'large', '800px') ?>
         </a>
     </div>
 </section>
@@ -80,12 +80,12 @@ Widgets::textImageSection($type);
     <div class="rooms-display bottom-30 top-100">
         <div id="rooms" class="owl-carousel owl-theme">
             <?php
-            $roomTypes = YAMA\Utils::getPosts('room-type');
+            $roomTypes = Utils::getPosts('room-type');
             foreach ($roomTypes as $room) {
             ?>
                 <div class="item">
                     <a href="<?= get_permalink($room->ID); ?>" target="_blank">
-                        <?= YAMA\Utils::imgLazyFromPost($room, 'medium', '400px'); ?>
+                        <?= Utils::imgLazyFromPost($room, 'medium', '400px'); ?>
                         <div class="info">
                             <h3><?= $room->post_title; ?></h3>
                             <ul class="basic-info">

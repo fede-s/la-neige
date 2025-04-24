@@ -4,7 +4,7 @@ require_once(THEME . '/yama/utils/Utils.php');
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION',  Yama\Utils::getVersion());
+	define( '_S_VERSION',  Utils::getVersion());
 }
 function arphabet_widgets_init() {
 
