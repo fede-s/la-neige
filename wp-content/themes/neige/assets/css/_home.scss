@@ -294,6 +294,11 @@
 
   .side-text {
     width: 100%;
+    svg {
+      top: -13%;
+      height: 100px;
+      width: 100px;
+    }
   }
 
   @include tablet {
@@ -301,7 +306,7 @@
   }
 }
 
-.temporal-dos {
+.insta {
   margin-top: 50px;
   width: 100%;
   display: grid;
@@ -311,6 +316,14 @@
 
   @include tablet {
     display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    height: auto;
+    gap: 10px;
+    padding-bottom: 50px;
+    .section-text-image {
+      padding-top: 50px;
+    }
   }
 
   .post {

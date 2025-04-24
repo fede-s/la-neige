@@ -35,7 +35,8 @@ get_header(); ?>
                 <h4>Room Amenities</h4>
                 <ul class="amenities basic-info">
                     <?php
-                    $amenities = YAMA\Utils::getTerms('amenities');
+                    $amenities = get_the_terms( get_the_ID(), 'amenities' );
+                    if($amenities) { 
                     foreach ($amenities as $amenity) {
                         $term_id = $amenity->term_id;
                         $icon_url = get_term_meta($term_id, 'icon', true);
@@ -46,6 +47,7 @@ get_header(); ?>
                             <li><?= $amenity->name; ?></li>
                         </div>
                     <?php }
+                    }
                     ?>
                 </ul>
             </div>
@@ -58,6 +60,7 @@ get_header(); ?>
         <div class="side-img">
             <?php
             $sideGallery = get_field('side_images');
+            if($sideGallery) {
             $count = 0;
             foreach ($sideGallery as $image) {
                 $count++;
@@ -73,7 +76,7 @@ get_header(); ?>
                     <?php
                 }
                 ?>
-            <?php } ?>
+            <?php } } ?>
         </div>
     </div>
     <?php

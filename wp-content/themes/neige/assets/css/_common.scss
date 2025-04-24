@@ -73,19 +73,20 @@ h6 {
 
 #hamburger-menu {
 	position: fixed;
+	height: 30px;
+	width: 30px;
 	top: 2%;
-	right: 4%;
-	;
+	left: 4%;
 	z-index: 1000;
 	cursor: pointer;
 
 	svg {
-		width: 50px;
-		height: auto;
+		width: 100%;
+		height: 100%;
 		display: block;
 
 		path {
-			fill: var(--soft-pink);
+			fill: var(--forest-blue);
 		}
 	}
 }
@@ -140,11 +141,15 @@ h6 {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	@include tablet {
+		width: 100%;
+	}
 }
 
 .menu-right {
+	position: relative;
 	width: 50%;
-	background-color: #000;
+	background-color: var(--forest-blue);
 	background-size: cover;
 	background-position: center;
 
@@ -156,6 +161,38 @@ h6 {
 
 		&.show {
 			display: block;
+		}
+	}
+	@include tablet {
+		display: none;
+	}
+}
+.menu-right::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(var(--forest-blue-rgb), 0.5);
+	pointer-events: none;
+	z-index: 2;
+ }
+ .logo-header {
+	position: absolute;
+	width: 25%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+
+
+	svg {
+		width: 100%;
+		height: 100%;
+
+		path {
+			fill: var(--soft-pink);
 		}
 	}
 }

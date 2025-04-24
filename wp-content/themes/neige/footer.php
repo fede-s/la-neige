@@ -17,12 +17,20 @@
       <div class="container">
          <h5>GET IN TOUCH</h5>
          <div class="tel">
-            <h5>T</h5>
-            <p><?= get_field('telephone', 'options'); ?></p>
+            <?php
+            $tel = get_field('telephone', 'options');
+            if (!empty($tel)) { ?>
+               <h5>T</h5>
+               <p><a href="tel:<?= $tel ?>"><?= $tel; ?></a></p>
+            <?php } ?>
          </div>
          <div class="email">
-            <h5>E</h5>
-            <p><?= get_field('email', 'options'); ?></p>
+            <?php
+            $mail = get_field('email', 'options');
+            if (!empty($mail)) { ?>
+               <h5>E</h5>
+               <p><a href="mailto:<?= $mail; ?>"><?= $mail; ?></a></p>
+            <?php } ?>
          </div>
          <a href="<?= get_field('url', 'options'); ?>"><?= get_field('url', 'options'); ?></a>
          <h5 class="top-50">KK LA NEIGE</h5>
@@ -40,10 +48,10 @@
          </p>
       </div>
       <div class="signature-footer">
-      <?= file_get_contents(get_field('footer_signature', 'options')); ?>
+         <?= file_get_contents(get_field('footer_signature', 'options')); ?>
       </div>
       <div class="logo-footer">
-      <?= file_get_contents(get_field('logo', 'options')); ?>
+         <?= file_get_contents(get_field('logo', 'options')); ?>
       </div>
    </section>
 </footer>

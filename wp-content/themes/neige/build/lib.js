@@ -54,12 +54,22 @@ function displayModalGallery(selector, index) {
     return false
 }
 
-jQuery(document).ready(function(){
+jQuery(document).ready(function () {
     jQuery('#rooms').owlCarousel({
-      center: true,
-      items: 2,
-      loop: true, 
-      margin: 10,
-      nav: true,
+        center: true,
+        items: 2,
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+            },
+            1000: {
+                items: 2,
+                nav: true,
+            }
+        }
     });
-  });
+});

@@ -36,7 +36,7 @@ Widgets::textImageSection($type);
 $type = 3;
 Widgets::textImageSection($type);
 ?>
-<section class="temporal-dos">
+<section class="insta">
     <div class="container section-text-image instagram">
         <div class="side-text">
             <h5><?= get_field('instagram_pre_title'); ?></h5>

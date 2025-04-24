@@ -8337,18 +8337,20 @@ h6 {
 
 #hamburger-menu {
   position: fixed;
+  height: 30px;
+  width: 30px;
   top: 2%;
-  right: 4%;
+  left: 4%;
   z-index: 1000;
   cursor: pointer;
 }
 #hamburger-menu svg {
-  width: 50px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 #hamburger-menu svg path {
-  fill: var(--soft-pink);
+  fill: var(--forest-blue);
 }
 
 #hamburger-menu svg:hover path {
@@ -8402,10 +8404,16 @@ h6 {
   align-items: center;
   text-align: center;
 }
+@media (max-width: 1024px) {
+  .menu-left {
+    width: 100%;
+  }
+}
 
 .menu-right {
+  position: relative;
   width: 50%;
-  background-color: #000;
+  background-color: var(--forest-blue);
   background-size: cover;
   background-position: center;
 }
@@ -8417,6 +8425,39 @@ h6 {
 }
 .menu-right img.show {
   display: block;
+}
+@media (max-width: 1024px) {
+  .menu-right {
+    display: none;
+  }
+}
+
+.menu-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--forest-blue-rgb), 0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.logo-header {
+  position: absolute;
+  width: 25%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.logo-header svg {
+  width: 100%;
+  height: 100%;
+}
+.logo-header svg path {
+  fill: var(--soft-pink);
 }
 
 .close-menu {
@@ -9151,13 +9192,18 @@ h6 {
 .instagram .side-text {
   width: 100%;
 }
+.instagram .side-text svg {
+  top: -13%;
+  height: 100px;
+  width: 100px;
+}
 @media (max-width: 1024px) {
   .instagram {
     position: relative;
   }
 }
 
-.temporal-dos {
+.insta {
   margin-top: 50px;
   width: 100%;
   display: grid;
@@ -9166,51 +9212,59 @@ h6 {
   height: 95vh;
 }
 @media (max-width: 1024px) {
-  .temporal-dos {
+  .insta {
     display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    height: auto;
+    gap: 10px;
+    padding-bottom: 50px;
+  }
+  .insta .section-text-image {
+    padding-top: 50px;
   }
 }
-.temporal-dos .post {
+.insta .post {
   position: absolute;
   width: 100%;
   height: 400px;
 }
-.temporal-dos .post img {
+.insta .post img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 @media (max-width: 1024px) {
-  .temporal-dos .post {
+  .insta .post {
     position: relative;
   }
 }
-.temporal-dos .one {
+.insta .one {
   bottom: 0;
   width: 21%;
   height: 500px;
 }
-.temporal-dos .two {
+.insta .two {
   right: 45%;
   width: 20%;
   height: 350px;
 }
-.temporal-dos .three {
+.insta .three {
   bottom: 0;
   right: 35%;
   width: 20%;
   height: 350px;
 }
-.temporal-dos .four {
+.insta .four {
   right: 0;
   width: 21%;
   height: 500px;
 }
 @media (max-width: 1024px) {
-  .temporal-dos .one,
-  .temporal-dos .two,
-  .temporal-dos .three,
-  .temporal-dos .four {
+  .insta .one,
+  .insta .two,
+  .insta .three,
+  .insta .four {
     width: 100%;
     height: 300px;
     right: auto;
