@@ -1,5 +1,4 @@
 <?php
-namespace Yama;
 
 class Forms {
 

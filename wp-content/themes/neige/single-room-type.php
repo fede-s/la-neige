@@ -84,7 +84,7 @@ get_header(); ?>
     <?php
     $gallery = Utils::getSeasonField($fields, 'room_gallery');
     ?>
-    <?php YAMA\Carousel::galleryFromACF($gallery); ?>
+    <?php Carousel::galleryFromACF($gallery); ?>
 </div>
 
 

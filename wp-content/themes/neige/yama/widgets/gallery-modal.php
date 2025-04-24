@@ -7,7 +7,7 @@ require_once(THEME . '/yama/widgets/carousel/Carousel.php');  ?>
         <div class="modal-content">
             <button class="close-button" onclick="closeModal('#<?= $modalID ?>')"><i class="far fa-times-circle"></i></button>
             <div class="modal-body">
-                <?php YAMA\Carousel::galleryFromACF($gallery, false, '', true, 'contain') ?>
+                <?php Carousel::galleryFromACF($gallery, false, '', true, 'contain') ?>
             </div>
         </div>
     </div>

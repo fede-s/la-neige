@@ -1,5 +1,4 @@
 <?php
-namespace Yama;
 
 require_once(YAMA . '/widgets/Widgets.php');
 require_once(YAMA . '/forms/Forms.php');

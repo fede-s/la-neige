@@ -1,6 +1,4 @@
 <?php
-namespace Yama;
-
 require_once(YAMA . '/forms/Forms.php');
 require_once(YAMA . '/utils/Utils.php');
 

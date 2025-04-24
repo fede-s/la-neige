@@ -1,5 +1,4 @@
 <?php
-namespace Yama;
 
 require_once(YAMA . '/utils/Utils.php');
 

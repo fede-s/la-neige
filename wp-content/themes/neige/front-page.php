@@ -5,8 +5,6 @@
  * Template Name: Home Page
  */
 
-use Yama\Widgets;
-
 get_header(); ?>
 
 <?php $videoId = Utils::getVimeoVideoId(get_field('video')); ?>
