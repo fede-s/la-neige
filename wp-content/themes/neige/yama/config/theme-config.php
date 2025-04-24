@@ -1,5 +1,7 @@
 <?php
 
+require_once(THEME . '/yama/utils/Utils.php');
+
 add_action('init', function () {
     register_post_type('room-type', [
         'supports' => ['title', 'thumbnail'],
@@ -9,26 +11,12 @@ add_action('init', function () {
         'menu_position' => 5,
         'hierarchical' => false,
         'rewrite' => [
-            'slug' => '/stays/room-type',
+            'slug' => '/season/room-types',
             'with_front' => false
         ],
         'labels' => create_post_type_labels('Room Type', 'Room Types'),
         'menu_icon' => 'fas fa-home'
     ]);
-
-    // register_taxonomy(
-    //     'chalet-types',
-    //     'chalet',
-    //     [
-    //         'supports' => ['title', 'thumbnail'],
-    //         'hierarchical' => true,
-    //         'rewrite' => [
-    //             'slug' => 'winter/stays',
-    //             'with_front' => false
-    //         ],
-    //         'labels' => create_post_type_labels('Property Type')
-    //     ]
-    // );
 
     register_taxonomy(
         'amenities',
@@ -40,16 +28,6 @@ add_action('init', function () {
         ]
     );
 
-    // register_taxonomy(
-    //     'amenities',
-    //     ['chalet'],
-    //     [
-    //         'supports' => ['title', 'thumbnail'],
-    //         'hierarchical' => false,
-    //         'labels' => create_post_type_labels('Amenity', 'Amenities')
-    //     ]
-    // );
-
     // register_post_type('form', [
     //     'supports' => ['title'],
     //     'public' => false,
@@ -58,21 +36,6 @@ add_action('init', function () {
     //     'menu_position' => 5,
     //     'labels' => create_post_type_labels('Form'),
     //     'menu_icon' => 'fas fa-paste'
-    // ]);
-
-    // register_post_type('restaurant', [
-    //     'supports' => ['title', 'thumbnail'],
-    //     'public' => true,
-    //     'show_ui' => true,
-    //     'show_in_menu' => true,
-    //     'menu_position' => 5,
-    //     'hierarchical' => false,
-    //     'rewrite' => [
-    //         'slug' => 'winter/restaurants',
-    //         'with_front' => false
-    //     ],
-    //     'labels' => create_post_type_labels('Restaurant'),
-    //     'menu_icon' => 'fas fa-utensils'
     // ]);
 
     // register_taxonomy(
@@ -120,20 +83,20 @@ add_action('init', function () {
     //     ]
     // );
 
-    // register_post_type('experience', [
-    //     'supports' => ['title', 'thumbnail'],
-    //     'public' => true,
-    //     'show_ui' => true,
-    //     'show_in_menu' => true,
-    //     'menu_position' => 5,
-    //     'hierarchical' => false,
-    //     'rewrite' => [
-    //         'slug' => 'winter/experiences',
-    //         'with_front' => false
-    //     ],
-    //     'labels' => create_post_type_labels('Experience'),
-    //     'menu_icon' => 'fas fa-hiking'
-    // ]);
+     register_post_type('activity', [
+         'supports' => ['title', 'thumbnail'],
+         'public' => true,
+         'show_ui' => true,
+         'show_in_menu' => true,
+         'menu_position' => 5,
+         'hierarchical' => false,
+         'rewrite' => [
+             'slug' => 'season/activities',
+             'with_front' => false
+         ],
+         'labels' => create_post_type_labels('Activity', 'Activities'),
+         'menu_icon' => 'fas fa-hiking'
+     ]);
 
     // register_taxonomy(
     //     'experience-features',
@@ -210,37 +173,62 @@ add_action('init', function () {
     //     'menu_icon' => 'fas fa-calendar'
     // ]);
 
-    // register_taxonomy(
-    //     'season',
-    //     ['post', 'restaurant', 'offer', 'chalet', 'experience', 'concierge-service', 'featured-stay', 'event'],
-    //     [
-    //         'supports' => ['title', 'thumbnail'],
-    //         'hierarchical' => true,
-    //         'rewrite' => [
-    //             'slug' => 'season',
-    //             'with_front' => false
-    //         ],
-    //         'labels' => create_post_type_labels('Season')
-    //     ]
-    // );
+     register_taxonomy(
+         'season',
+         ['room-type', 'activity'],
+         [
+             'supports' => ['title', 'thumbnail'],
+             'hierarchical' => true,
+             'rewrite' => [
+                 'slug' => 'season',
+                 'with_front' => false
+             ],
+             'labels' => create_post_type_labels('Season')
+         ]
+     );
 });
 
-// add_action('generate_rewrite_rules', function () {
-//     global $wp_rewrite;
+ add_action('generate_rewrite_rules', function () {
+     global $wp_rewrite;
 
-//     $new_rules = [
-//         '([^/]+)/stays/([^/]+)/([^/]+)/?$' => 'index.php?chalet=' . $wp_rewrite->preg_index(3),
-//         '[^/]+/stays/[^/]+/[^/]+/([^/]+)/?$' => 'index.php?chalet-unit=' . $wp_rewrite->preg_index(1),
+     $new_rules = [
+         'summer/room-types/([^/]+)/?$' => 'index.php?room-type=' . $wp_rewrite->preg_index(1) . '&season=summer',
+         'winter/room-types/([^/]+)/?$' => 'index.php?room-type=' . $wp_rewrite->preg_index(1) . '&season=winter',
+         'summer/activities/([^/]+)/?$' => 'index.php?activity=' . $wp_rewrite->preg_index(1) . '&season=summer',
+         'winter/activities/([^/]+)/?$' => 'index.php?activity=' . $wp_rewrite->preg_index(1) . '&season=winter',
+////         '[^/]+/stays/[^/]+/[^/]+/([^/]+)/?$' => 'index.php?chalet-unit=' . $wp_rewrite->preg_index(1),
 //         '([^/]+)/stays/([^/]+)/?$' => 'index.php?chalet-types=' . $wp_rewrite->preg_index(2),
 //         '([^/]+)/restaurants/([^/]+)/?$' => 'index.php?restaurant=' . $wp_rewrite->preg_index(2) . '&season=' . $wp_rewrite->preg_index(1),
 //         '([^/]+)/offers/([^/]+)/?$' => 'index.php?offer=' . $wp_rewrite->preg_index(2) . '&season=' . $wp_rewrite->preg_index(1),
-//         '([^/]+)/experiences/([^/]+)/?$' => 'index.php?experience=' . $wp_rewrite->preg_index(2) . '&season=' . $wp_rewrite->preg_index(1),
+//         'season/experiences/([^/]+)/?$' => 'index.php?activity=' . $wp_rewrite->preg_index(2) . '&season=' . $wp_rewrite->preg_index(1),
 //         '([^/]+)/concierge-services/([^/]+)/?$' => 'index.php?concierge-service=' . $wp_rewrite->preg_index(2) . '&season=' . $wp_rewrite->preg_index(1),
 //         '([^/]+)/featured-stays/([^/]+)/?$' => 'index.php?featured-stay=' . $wp_rewrite->preg_index(2) . '&season=' . $wp_rewrite->preg_index(1),
-//         '([^/]+)/events/([^/]+)/?$' => 'index.php?event=' . $wp_rewrite->preg_index(2) . '&season=' . $wp_rewrite->preg_index(1)
-//     ];
-//     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
-// });
+////         '([^/]+)/events/([^/]+)/?$' => 'index.php?event=' . $wp_rewrite->preg_index(2) . '&season=' . $wp_rewrite->preg_index(1)
+     ];
+     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+ });
+
+add_filter('post_type_link', function ($link, $post) {
+    if ($post->post_type === 'room-type') {
+        $season = get_the_terms($post->ID, 'season');
+        if ($season && !is_wp_error($season)) {
+            $season_slug = $season[0]->slug;
+            $link = str_replace('season/room-types', $season_slug . '/room-types', $link);
+        }
+    }
+    return $link;
+}, 10, 2);
+
+//add_filter('wp_unique_post_slug', function ($slug, $post_ID, $post_status, $post_type, $post_parent) {
+//    if ($post_type === 'room-type') {
+//        $season = get_the_terms($post_ID, 'season');
+//        $seasonSlug = $season[0]->slug;
+//        if ($season && !is_wp_error($season) && !str_contains($slug, $seasonSlug)) {
+//            return $seasonSlug . '-' . $slug; // Append the season slug to make it unique.
+//        }
+//    }
+//    return $slug;
+//}, 10, 5);
 
 
 // add_filter('post_type_link', function ($link, $post) {

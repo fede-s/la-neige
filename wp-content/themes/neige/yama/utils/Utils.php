@@ -367,9 +367,9 @@ class Utils {
         return $string;
     }
 
-    public static function getSeasonField($fields, $winterKey, $summerKey) {
+    public static function getSeasonField($fields, $key) {
         $season = Utils::getCurrentSeason();
-        return $season === 'summer' & !empty($fields[$summerKey]) ? $fields[$summerKey] : $fields[$winterKey];
+        return $season === 'summer' & !empty($fields['summer'][$key]) ? $fields['summer'][$key] : $fields[$key];
     }
 }
 
