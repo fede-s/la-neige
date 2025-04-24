@@ -66,7 +66,7 @@ $icons = get_field($name);
         <?php
         if ($type == 1) {
             echo '<div class="side-image bottom-30">';
-            YAMA\Carousel::galleryFromACF($gallery, false);
+            Carousel::galleryFromACF($gallery, false);
             echo '</div>';
         }
         if ($type == 3) { ?>

@@ -18,7 +18,7 @@
 </head>
 
 
-<body>
+<body class="<?= Utils::getCurrentSeason() ?>">
     <?php
     require_once(THEME . '/yama/utils/Utils.php');
     require_once(THEME . '/yama/widgets/Widgets.php');
