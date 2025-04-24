@@ -47,7 +47,8 @@ class Utils {
     }
 
     static public function imgLazyFromPost($post, $size, $sizes = '', $alt = '', $class = '', $useSrcset = true) {
-        return Utils::imgLazy(get_post_thumbnail_id($post), $size, $sizes, $alt, $class, $useSrcset);
+        $imageID = Utils::getPostFeaturedImageID($post);
+        return Utils::imgLazy($imageID, $size, $sizes, $alt, $class, $useSrcset);
     }
 
     static public function imgLazy($image, $size, $sizes = '', $alt = '', $class = '', $useSrcset = true) {
@@ -253,13 +254,17 @@ class Utils {
         return Utils::getPostTerm($post, 'chalet-types');
     }
 
+    public static function getSeasonFromURL(): string {
+        preg_match('/^\/(summer|winter)/', $_SERVER['REQUEST_URI'], $matches);
+        return $matches[1] ?? '';
+    }
+
     public static function getCurrentSeason() {
-        $isSummer = strpos($_SERVER['REQUEST_URI'], 'summer');
-        $isWinter = strpos($_SERVER['REQUEST_URI'], 'winter');
-        if ($isSummer === 1 || $isSummer === 4 || strpos($_SERVER['REQUEST_URI'], 'season=summer')) {
-            return 'summer';
+        $season = Utils::getSeasonFromURL();
+        if (!$season) {
+            $season = $_SESSION['season'];
         }
-        return 'winter';
+        return $season ?? 'winter';
     }
 
     public static function getSeasonTerm($season = null) {
@@ -279,21 +284,9 @@ class Utils {
         return count($posts) > 0 ? $posts[0] : null;
     }
 
-    public static function getPostsForSeason($postType, $season = null, $count = -1) {
-        $seasonTerm = self::getSeasonTerm($season);
-        return get_posts([
-            'numberposts' => $count,
-            'post_type' => $postType,
-            'tax_query' => [
-                'relation' => 'OR',
-                [
-                    'taxonomy' => 'season',
-                    'terms' => $seasonTerm ? $seasonTerm->term_id : -1,
-                    'include_children' => false
-                ]
-            ],
-            'suppress_filters' => false,
-        ]);
+    public static function getCurrentSeasonPosts($postType, $count = -1) {
+        $seasonTerm = Utils::getSeasonTerm();
+        return Utils::getPosts($postType, [$seasonTerm], $count);
     }
 
     public static function getOppositeSeason() {
@@ -313,16 +306,16 @@ class Utils {
         }
     }
 
-    public static function getPostLink($post, $season = '') {
+    public static function getPostLink($post, $season = ''): string {
         $link = get_permalink($post);
         $season = $season ? $season : Utils::getCurrentSeason();
-        return str_replace(['winter', 'summer'], $season, $link);
+        return str_replace(['/winter/', '/summer/'], '/' .$season . '/', $link);
     }
 
-    public static function getTermLink($term, $season = '') {
+    public static function getTermLink($term, $season = ''): string {
         $link = get_term_link($term);
         $season = $season ? $season : Utils::getCurrentSeason();
-        return str_replace(['winter', 'summer'], $season, $link);
+        return str_replace(['/winter/', '/summer/'], '/' .$season . '/', $link);
     }
 
     public static function getTermsList($post, $taxonomy) {
@@ -364,9 +357,26 @@ class Utils {
         return $string;
     }
 
-    public static function getSeasonField($fields, $key) {
+    public static function getSeasonField($objectOrFields, $key) {
         $season = Utils::getCurrentSeason();
-        return $season === 'summer' & !empty($fields['summer'][$key]) ? $fields['summer'][$key] : $fields[$key];
+        if (is_array($objectOrFields)) {
+            return $season === 'summer' & !empty($objectOrFields['summer'][$key]) ? $objectOrFields['summer'][$key] : $objectOrFields[$key];
+        } else {
+            $seasonField = null;
+            if ($season === 'summer') {
+                $seasonField = get_field('summer_' . $key, $objectOrFields);
+            }
+            return !empty($seasonField) ? $season : get_field($key, $objectOrFields);
+        }
+    }
+
+    public static function getPostFeaturedImageID($post) {
+        $season = Utils::getCurrentSeason();
+        $imageID = null;
+        if ($season === 'summer') {
+            $imageID = get_field('summer_featured_image', $post);
+        }
+        return !empty($imageID) ? $imageID : get_post_thumbnail_id($post);
     }
 }
 

@@ -6,6 +6,14 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION',  Utils::getVersion());
 }
+
+session_start();
+$seasonFromURL = Utils::getSeasonFromURL();
+
+if ($seasonFromURL) {
+    $_SESSION['season'] = $seasonFromURL;
+}
+
 function arphabet_widgets_init() {
 
 	register_sidebar( array(
