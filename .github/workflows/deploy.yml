@@ -23,5 +23,6 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no bitnami@${{ secrets.LIGHTSAIL_IP }} << 'EOF'
           cd /opt/bitnami/wordpress
-          git pull origin master
+          git fetch origin
+          git reset --hard origin/master
           EOF
