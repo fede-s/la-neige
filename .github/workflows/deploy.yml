@@ -21,7 +21,7 @@ jobs:
 
       - name: 📂 Pull Latest Code on AWS Lightsail
         run: |
-          ssh -o StrictHostKeyChecking=no bitnami@13.55.186.190 << 'EOF'
+          ssh -o StrictHostKeyChecking=no bitnami@${{ secrets.LIGHTSAIL_IP }} << 'EOF'
           cd /opt/bitnami/wordpress
           git pull origin master
           EOF
