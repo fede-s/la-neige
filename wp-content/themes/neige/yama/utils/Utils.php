@@ -264,7 +264,7 @@ class Utils {
         if (!$season && !empty($_SESSION['season'])) {
             $season = $_SESSION['season'];
         }
-        return $season ?: 'winter';
+        return $season ?: get_field('current_season', 'option');
     }
 
     public static function getSeasonTerm($season = null) {
@@ -366,7 +366,7 @@ class Utils {
             if ($season === 'summer') {
                 $seasonField = get_field('summer_' . $key, $objectOrFields);
             }
-            return !empty($seasonField) ? $season : get_field($key, $objectOrFields);
+            return !empty($seasonField) ? $seasonField : get_field($key, $objectOrFields);
         }
     }
 

@@ -2,7 +2,11 @@
 
 require_once(THEME . '/yama/utils/Utils.php');
 
+$postsWithSeason = ['room-type', 'activity'];
+
 add_action('init', function () {
+    global $postsWithSeason;
+
     register_post_type('room-type', [
         'supports' => ['title', 'thumbnail'],
         'public' => true,
@@ -175,7 +179,7 @@ add_action('init', function () {
 
      register_taxonomy(
          'season',
-         ['room-type', 'activity'],
+         $postsWithSeason,
          [
              'supports' => ['title', 'thumbnail'],
              'hierarchical' => true,
@@ -209,11 +213,13 @@ add_action('init', function () {
  });
 
 add_filter('post_type_link', function ($link, $post) {
-    if ($post->post_type === 'room-type') {
+    global $postsWithSeason;
+
+    if (in_array($post->post_type, $postsWithSeason)) {
         $season = get_the_terms($post->ID, 'season');
         if ($season && !is_wp_error($season)) {
             $season_slug = $season[0]->slug;
-            $link = str_replace('season/room-types', $season_slug . '/room-types', $link);
+            $link = str_replace('/season/', '/' . $season_slug . '/', $link);
         }
     }
     return $link;
