@@ -256,15 +256,15 @@ class Utils {
 
     public static function getSeasonFromURL(): string {
         preg_match('/^\/(summer|winter)/', $_SERVER['REQUEST_URI'], $matches);
-        return $matches[1] ?? '';
+        return !empty($matches[1]) ? $matches[1] : '';
     }
 
     public static function getCurrentSeason() {
         $season = Utils::getSeasonFromURL();
-        if (!$season) {
+        if (!$season && !empty($_SESSION['season'])) {
             $season = $_SESSION['season'];
         }
-        return $season ?? 'winter';
+        return $season ?: 'winter';
     }
 
     public static function getSeasonTerm($season = null) {
