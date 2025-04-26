@@ -36,9 +36,10 @@ Widgets::textImageSection($type);
     <div class="container section-text-image instagram">
         <div class="side-text">
             <h5><?= get_field('instagram_pre_title'); ?></h5>
-            <h1><?= get_field('instagram_title'); ?></h1>
-            <?= file_get_contents(get_field('instagram_signature')); ?>
-
+            <div class="signature">
+                <h1><?= get_field('instagram_title'); echo file_get_contents(get_field('instagram_signature')); ?></h1>
+            </div>
+            
         </div>
     </div>
     <div class="post one">
@@ -62,7 +63,7 @@ Widgets::textImageSection($type);
         </a>
     </div>
 </section>
-<section class="container top-100 pink">
+<section class="container top-100 bottom-100 pink">
     <div class="discover">
         <h5>
             Discover Our Accommodations

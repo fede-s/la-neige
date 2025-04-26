@@ -14,7 +14,7 @@
       </div>
    </section>
    <section class="info">
-      <div class="container">
+      <div class="container contact">
          <h5>GET IN TOUCH</h5>
          <div class="tel">
             <?php

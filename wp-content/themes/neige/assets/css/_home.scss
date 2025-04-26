@@ -37,6 +37,7 @@
     box-sizing: border-box;
 
     h1 {
+      position: relative;
       width: 75%;
       font-size: 56px;
       font-weight: 600;
@@ -59,18 +60,21 @@
       margin-left: 10%;
 
     }
-
-    svg {
-      position: relative;
-      height: 25px;
-      width: 25px;
-      top: -4%;
-      left: 45%;
-
-      path {
-        fill: var(--olive-green);
+    .signature {
+      padding-bottom: 50px;
+      svg {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        right: 0;
+        bottom: -20%;
+        path {
+          fill: var(--olive-green);
+        }
       }
+      
     }
+
 
     @include small-desktop {
       h1 {
@@ -294,15 +298,11 @@
 
   .side-text {
     width: 100%;
-    svg {
-      top: -13%;
-      height: 100px;
-      width: 100px;
-    }
   }
 
   @include tablet {
     position: relative;
+    width: 100%;
   }
 }
 
@@ -316,11 +316,11 @@
 
   @include tablet {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 0;
     height: auto;
-    gap: 10px;
     padding-bottom: 50px;
+
     .section-text-image {
       padding-top: 50px;
     }
@@ -344,51 +344,64 @@
 
   .one {
     bottom: 0;
-    width: 21%;
-    height: 500px;
+    width: 400px;
+    height: 55%;
   }
 
   .two {
     right: 45%;
-    width: 20%;
-    height: 350px;
+    width: 380px;
+    height: 39%;
+
+    @include medium-desktop {
+      right: 38%;
+    }
   }
 
   .three {
     bottom: 0;
     right: 35%;
-    width: 20%;
-    height: 350px;
+    width: 380px;
+    height: 39%;
+
+    @include medium-desktop {
+      right: 25%;
+    }
   }
 
   .four {
     right: 0;
-    width: 21%;
-    height: 500px;
+    width: 400px;
+    height: 55%;
   }
 
-  @include tablet {
+  .one,
+  .two,
+  .three,
+  .four {
+    @include small-desktop {
+      width: 300px;
+    }
 
-    .one,
-    .two,
-    .three,
-    .four {
-      width: 100%;
+    @include tablet {
+      width: 50%; 
       height: 300px;
       right: auto;
-
     }
   }
+
 }
 
 .discover {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
   a {
     text-decoration: none;
     color: var(--forest-blue);
   }
+
   @include tablet {
     padding-top: 50px;
     flex-direction: column;

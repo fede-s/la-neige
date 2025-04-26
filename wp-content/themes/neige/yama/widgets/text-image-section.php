@@ -15,7 +15,8 @@ $icons = get_field($name);
 
 
 
-<section class="container <?php echo ($type == 2) ? 'pink bottom-30' : (($type == 3) ? 'forest-blue' : ''); ?>">
+<section class="container <?php echo ($type == 1) ? 'bottom-100' : '';
+                            echo ($type == 2) ? 'pink bottom-100' : (($type == 3) ? 'forest-blue' : ''); ?>">
     <div class="section-text-image">
         <?php
         if ($type == 2) { ?>
@@ -43,8 +44,10 @@ $icons = get_field($name);
         <?php } ?>
         <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : ''; ?>">
             <h5><?= $preTitle; ?></h5>
-            <h1><?= $title; ?></h1>
-            <?= file_get_contents($signature); ?>
+            <div class="signature">
+            <h1><?= $title; ?> <?= file_get_contents($signature); ?></h1>
+                
+            </div>
             <p><?= $text; ?></p>
             <?php if ($type == 1 || $type == 3) { ?>
                 <a href="<?= $button['link']; ?>" class="linkBtn"><?= $button['label']; ?></a>

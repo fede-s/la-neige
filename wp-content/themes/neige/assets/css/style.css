@@ -8325,14 +8325,13 @@ h6 {
 .top-100 {
   padding-top: 100px;
 }
-@media (max-width: 1024px) {
-  .top-100 {
-    padding-top: 0px;
-  }
-}
 
 .bottom-30 {
   padding-bottom: 30px;
+}
+
+.bottom-100 {
+  padding-bottom: 100px;
 }
 
 #hamburger-menu {
@@ -8567,8 +8566,9 @@ h6 {
   position: relative;
   padding-top: 120px;
   background-color: var(--soft-pink);
-  height: 50vh;
-  z-index: 3;
+}
+.footer .info .contact {
+  order: 3;
 }
 .footer .info p {
   margin: 0;
@@ -8592,14 +8592,16 @@ h6 {
 }
 @media (max-width: 1024px) {
   .footer .info {
-    height: 75vh;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .social-media {
   display: flex;
   gap: 15px;
-  z-index: 3;
+  order: 4;
 }
 .social-media a {
   height: 25px;
@@ -8619,7 +8621,7 @@ h6 {
 }
 
 .copyright {
-  z-index: 3;
+  order: 5;
 }
 .copyright p {
   font-size: 12px;
@@ -8631,7 +8633,7 @@ h6 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  order: 2;
 }
 .signature-footer svg {
   width: 100%;
@@ -8643,6 +8645,7 @@ h6 {
 @media (max-width: 1024px) {
   .signature-footer {
     width: 50%;
+    position: relative;
   }
 }
 
@@ -8652,7 +8655,7 @@ h6 {
   left: 50%;
   transform: translateX(-50%);
   top: 20%;
-  z-index: 2;
+  order: 1;
 }
 .logo-footer svg {
   width: 100%;
@@ -8664,6 +8667,7 @@ h6 {
 @media (max-width: 1024px) {
   .logo-footer {
     width: 50%;
+    position: relative;
   }
 }
 
@@ -8959,6 +8963,7 @@ h6 {
   box-sizing: border-box;
 }
 .section-text-image .side-text h1 {
+  position: relative;
   width: 75%;
   font-size: 56px;
   font-weight: 600;
@@ -8977,14 +8982,17 @@ h6 {
   margin: 40px 0;
   margin-left: 10%;
 }
-.section-text-image .side-text svg {
-  position: relative;
-  height: 25px;
-  width: 25px;
-  top: -4%;
-  left: 45%;
+.section-text-image .side-text .signature {
+  padding-bottom: 50px;
 }
-.section-text-image .side-text svg path {
+.section-text-image .side-text .signature svg {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: 0;
+  bottom: -20%;
+}
+.section-text-image .side-text .signature svg path {
   fill: var(--olive-green);
 }
 @media (max-width: 1200px) {
@@ -9192,14 +9200,10 @@ h6 {
 .instagram .side-text {
   width: 100%;
 }
-.instagram .side-text svg {
-  top: -13%;
-  height: 100px;
-  width: 100px;
-}
 @media (max-width: 1024px) {
   .instagram {
     position: relative;
+    width: 100%;
   }
 }
 
@@ -9214,10 +9218,9 @@ h6 {
 @media (max-width: 1024px) {
   .insta {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 0;
     height: auto;
-    gap: 10px;
     padding-bottom: 50px;
   }
   .insta .section-text-image {
@@ -9241,31 +9244,49 @@ h6 {
 }
 .insta .one {
   bottom: 0;
-  width: 21%;
-  height: 500px;
+  width: 400px;
+  height: 55%;
 }
 .insta .two {
   right: 45%;
-  width: 20%;
-  height: 350px;
+  width: 380px;
+  height: 39%;
+}
+@media (max-width: 1500px) {
+  .insta .two {
+    right: 38%;
+  }
 }
 .insta .three {
   bottom: 0;
   right: 35%;
-  width: 20%;
-  height: 350px;
+  width: 380px;
+  height: 39%;
+}
+@media (max-width: 1500px) {
+  .insta .three {
+    right: 25%;
+  }
 }
 .insta .four {
   right: 0;
-  width: 21%;
-  height: 500px;
+  width: 400px;
+  height: 55%;
+}
+@media (max-width: 1200px) {
+  .insta .one,
+  .insta .two,
+  .insta .three,
+  .insta .four {
+    width: 300px;
+  }
 }
 @media (max-width: 1024px) {
   .insta .one,
   .insta .two,
   .insta .three,
   .insta .four {
-    width: 100%;
+    width: 50%;
     height: 300px;
     right: auto;
   }
@@ -9358,5 +9379,3 @@ h6 {
 .rooms-display .center .info {
   opacity: 1;
 }
-
-/*# sourceMappingURL=style.css.map */
