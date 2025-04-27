@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Home Page
  */
@@ -8,6 +9,9 @@ get_header(); ?>
 <?php $videoId = Utils::getVimeoVideoId(get_field('video')); ?>
 <div class="header">
     <div class="gradient">
+        <div class="logo-header">
+            <?= file_get_contents(get_field('logo', 'options')); ?>
+        </div>
         <?php if (get_field('video')) {
         ?>
             <div class="video-container">
@@ -37,9 +41,10 @@ Widgets::textImageSection($type);
         <div class="side-text">
             <h5><?= get_field('instagram_pre_title'); ?></h5>
             <div class="signature">
-                <h1><?= get_field('instagram_title'); echo file_get_contents(get_field('instagram_signature')); ?></h1>
+                <h1><?= get_field('instagram_title');
+                    echo file_get_contents(get_field('instagram_signature')); ?></h1>
             </div>
-            
+
         </div>
     </div>
     <div class="post one">

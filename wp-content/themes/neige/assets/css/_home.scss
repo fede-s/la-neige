@@ -1,3 +1,9 @@
+.gradient .logo-header {
+	width: 20%;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+}
 .video-container {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -66,7 +72,7 @@
         position: absolute;
         height: 100px;
         width: 100px;
-        right: 0;
+        right: 10%;
         bottom: -20%;
         path {
           fill: var(--olive-green);
@@ -298,6 +304,11 @@
 
   .side-text {
     width: 100%;
+    .signature {
+      svg {
+        bottom: -30%;
+      }
+    }
   }
 
   @include tablet {

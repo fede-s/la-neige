@@ -8928,6 +8928,13 @@ h6 {
   }
 }
 
+.gradient .logo-header {
+  width: 20%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
 .video-container {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -8989,7 +8996,7 @@ h6 {
   position: absolute;
   height: 100px;
   width: 100px;
-  right: 0;
+  right: 10%;
   bottom: -20%;
 }
 .section-text-image .side-text .signature svg path {
@@ -9200,6 +9207,9 @@ h6 {
 .instagram .side-text {
   width: 100%;
 }
+.instagram .side-text .signature svg {
+  bottom: -30%;
+}
 @media (max-width: 1024px) {
   .instagram {
     position: relative;
@@ -9378,4 +9388,69 @@ h6 {
 }
 .rooms-display .center .info {
   opacity: 1;
+}
+
+.restaurant .section-text-image {
+  width: auto;
+}
+.restaurant .side-text h1 {
+  padding-bottom: 0;
+}
+.restaurant .side-text .signature svg {
+  position: relative;
+  right: auto;
+  bottom: auto;
+}
+.restaurant .side-image {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.restaurant .side-image p {
+  width: 80%;
+  display: flex;
+  padding: 60px 0;
+}
+.restaurant .side-image .buttons {
+  display: flex;
+  gap: 20px;
+  padding: 70px 10%;
+  align-self: flex-start;
+}
+.restaurant .side-image .side-img {
+  display: flex;
+  height: 300px;
+  width: 100%;
+}
+.restaurant .side-image .side-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.shadow-image {
+  position: relative;
+  display: flex;
+  height: 800px;
+}
+.shadow-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.shadow-image .front {
+  position: relative;
+  z-index: 2;
+}
+.shadow-image .shadow {
+  position: absolute;
+  height: 800px;
+  width: 100%;
+  left: -5%;
+  bottom: -5%;
+  z-index: 1;
+}
+.shadow-image .shadow:hover {
+  z-index: 2;
 }
