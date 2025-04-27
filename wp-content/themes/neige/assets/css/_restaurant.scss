@@ -1,9 +1,11 @@
 .restaurant {
+   padding-bottom: 100px;
    .section-text-image {
       width: auto;
    }
 
    .side-text {
+      text-transform: uppercase;
       h1 {
          padding-bottom: 0;
       }
@@ -35,11 +37,14 @@
          gap: 20px;
          padding: 70px 10%;
          align-self: flex-start;
+         @include tablet {
+            padding: 20px 10%;
+         }
       }
 
       .side-img {
          display: flex;
-         height: 300px;
+         height: 400px;
          width: 100%;
 
          img {
@@ -49,6 +54,9 @@
          }
 
       }
+      @include tablet {
+         padding-top: 100px;
+      }
    }
 
 }
@@ -56,7 +64,8 @@
 .shadow-image {
    position: relative;
    display: flex;
-   height: 800px;
+   height: 650px;
+   width: 80%;
 
    img {
       height: 100%;
@@ -71,14 +80,34 @@
 
    .shadow {
       position: absolute;
-      height: 800px;
+      height: 650px;
       width: 100%;
-      left: -5%;
+      left: -7%;
       bottom: -5%;
       z-index: 1;
+      @include tablet {
+         height: 450px;
+      }
    }
    .shadow:hover {
       z-index: 2;
    }
+   @include tablet {
+      margin: 0 10%;
+      height: 450px;
+   }
 
+}
+
+
+.chef {
+   .shadow {
+      left: auto;
+      right: -7%;
+   }
+   @include tablet {
+      .side-image {
+         padding-top: 0;
+      }
+   }
 }

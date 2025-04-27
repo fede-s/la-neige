@@ -20,7 +20,7 @@ get_header(); ?>
    </div>
 </div>
 
-<section class="restaurant">
+<section class="restaurant forest-blue">
    <div class="container section-text-image">
       <div class="side-text">
          <h5><?= get_field('restaurant_pre_title'); ?></h5>
@@ -30,10 +30,10 @@ get_header(); ?>
          </div>
          <div class="shadow-image">
             <div class="front">
-               <?= Utils::imgLazy(get_field('restaurant_gallery')[0], 'medium', '800px') ;?>
+               <?= Utils::imgLazy(get_field('restaurant_gallery')[0], 'medium', '800px'); ?>
             </div>
             <div class="shadow">
-               <?= Utils::imgLazy(get_field('restaurant_gallery')[1], 'medium', '800px') ;?>
+               <?= Utils::imgLazy(get_field('restaurant_gallery')[1], 'medium', '800px'); ?>
             </div>
          </div>
       </div>
@@ -42,10 +42,36 @@ get_header(); ?>
          <div class="side-img">
             <?php echo Utils::imgLazy(get_field('restaurant_image'), 'medium', '800px'); ?>
          </div>
-         <p><?= get_field('restaurant_text') ;?></p>
+         <p><?= get_field('restaurant_text'); ?></p>
          <div class="buttons">
-         <a href="<?= get_field('button_left')['link']; ?>" class="linkBtn"><?= get_field('button_left')['label']; ?></a>
-         <a href="<?= get_field('button_right')['link']; ?>" class="linkBtn"><?= get_field('button_right')['label']; ?></a>
+            <a href="<?= get_field('button_left')['link']; ?>" class="linkBtn"><?= get_field('button_left')['label']; ?></a>
+            <a href="<?= get_field('button_right')['link']; ?>" class="linkBtn"><?= get_field('button_right')['label']; ?></a>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="restaurant chef pink">
+   <div class="container section-text-image">
+      <div class="side-image">
+         <div class="side-img">
+            <?php echo Utils::imgLazy(get_field('chef_image'), 'medium', '800px'); ?>
+         </div>
+         <p><?= get_field('chef_text'); ?></p>
+      </div>
+      <div class="side-text">
+         <h5><?= get_field('chef_pre_title'); ?></h5>
+         <h1><?= get_field('chef_title'); ?></h1>
+         <div class="signature">
+            <?= file_get_contents(get_field('chef_signature')); ?>
+         </div>
+         <div class="shadow-image">
+            <div class="front">
+               <?= Utils::imgLazy(get_field('chef_gallery')[0], 'medium', '800px'); ?>
+            </div>
+            <div class="shadow">
+               <?= Utils::imgLazy(get_field('chef_gallery')[1], 'medium', '800px'); ?>
+            </div>
          </div>
       </div>
    </div>

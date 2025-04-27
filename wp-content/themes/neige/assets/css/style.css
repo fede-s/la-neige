@@ -9390,8 +9390,14 @@ h6 {
   opacity: 1;
 }
 
+.restaurant {
+  padding-bottom: 100px;
+}
 .restaurant .section-text-image {
   width: auto;
+}
+.restaurant .side-text {
+  text-transform: uppercase;
 }
 .restaurant .side-text h1 {
   padding-bottom: 0;
@@ -9418,9 +9424,14 @@ h6 {
   padding: 70px 10%;
   align-self: flex-start;
 }
+@media (max-width: 1024px) {
+  .restaurant .side-image .buttons {
+    padding: 20px 10%;
+  }
+}
 .restaurant .side-image .side-img {
   display: flex;
-  height: 300px;
+  height: 400px;
   width: 100%;
 }
 .restaurant .side-image .side-img img {
@@ -9428,11 +9439,17 @@ h6 {
   width: 100%;
   object-fit: cover;
 }
+@media (max-width: 1024px) {
+  .restaurant .side-image {
+    padding-top: 100px;
+  }
+}
 
 .shadow-image {
   position: relative;
   display: flex;
-  height: 800px;
+  height: 650px;
+  width: 80%;
 }
 .shadow-image img {
   height: 100%;
@@ -9445,12 +9462,33 @@ h6 {
 }
 .shadow-image .shadow {
   position: absolute;
-  height: 800px;
+  height: 650px;
   width: 100%;
-  left: -5%;
+  left: -7%;
   bottom: -5%;
   z-index: 1;
 }
+@media (max-width: 1024px) {
+  .shadow-image .shadow {
+    height: 450px;
+  }
+}
 .shadow-image .shadow:hover {
   z-index: 2;
+}
+@media (max-width: 1024px) {
+  .shadow-image {
+    margin: 0 10%;
+    height: 450px;
+  }
+}
+
+.chef .shadow {
+  left: auto;
+  right: -7%;
+}
+@media (max-width: 1024px) {
+  .chef .side-image {
+    padding-top: 0;
+  }
 }
