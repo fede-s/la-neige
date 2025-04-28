@@ -279,11 +279,17 @@
 
 .pink {
   background-color: var(--soft-pink);
+  .shadow {
+    background-color: var(--forest-blue);
+  }
 }
 
 .forest-blue {
   background-color: var(--forest-blue);
   color: var(--soft-pink);
+  .shadow {
+    background-color: var(--soft-pink);
+  }
 
   .linkBtn {
     background-color: inherit;

@@ -9185,10 +9185,16 @@ h6 {
 .pink {
   background-color: var(--soft-pink);
 }
+.pink .shadow {
+  background-color: var(--forest-blue);
+}
 
 .forest-blue {
   background-color: var(--forest-blue);
   color: var(--soft-pink);
+}
+.forest-blue .shadow {
+  background-color: var(--soft-pink);
 }
 .forest-blue .linkBtn {
   background-color: inherit;
@@ -9444,6 +9450,11 @@ h6 {
     padding-top: 100px;
   }
 }
+@media (max-width: 1024px) {
+  .restaurant {
+    padding-bottom: 50px;
+  }
+}
 
 .shadow-image {
   position: relative;
@@ -9482,13 +9493,66 @@ h6 {
     height: 450px;
   }
 }
+.shadow-image .lock {
+  z-index: 1 !important;
+}
 
 .chef .shadow {
   left: auto;
   right: -7%;
 }
 @media (max-width: 1024px) {
+  .chef {
+    padding-bottom: 100px;
+  }
   .chef .side-image {
     padding-top: 0;
   }
+}
+
+.opening .side-image {
+  padding-top: 0;
+}
+.opening .side-image .side-img {
+  height: 100%;
+  justify-content: space-between;
+}
+.opening .side-image .side-img img {
+  height: 80%;
+  width: 48%;
+}
+@media (max-width: 1024px) {
+  .opening .side-image .side-img img {
+    height: 400px;
+  }
+}
+@media (max-width: 479px) {
+  .opening .side-image .side-img img {
+    width: 100%;
+  }
+}
+.opening .side-image .side-img img:nth-child(2) {
+  align-self: flex-end;
+}
+@media (max-width: 1024px) {
+  .opening .side-image .side-img img:nth-child(2) {
+    align-self: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .opening .side-image {
+    padding-bottom: 50px;
+  }
+}
+
+.opening .side-text h1 {
+  padding-bottom: 50px;
+  width: 100%;
+}
+.opening .side-text p {
+  padding-left: 0;
+  width: 100%;
+}
+.opening .side-text .linkBtn {
+  margin-left: 0;
 }
