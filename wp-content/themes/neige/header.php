@@ -39,6 +39,7 @@ error_log(json_encode(wp_get_nav_menus()));
 
 <body <?php body_class([$currentSeason]); ?>>
     <?php
+    echo json_encode(wp_get_nav_menus());
     if ($menu_items) { ?>
         <div class="menu-nav-bar">
             <div class="container">

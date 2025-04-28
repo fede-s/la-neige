@@ -89,7 +89,7 @@ class Utils {
 
     static public function getVersion() {
         if (!Utils::$version) {
-            Utils::$version = exec("git log -1 --format='%ad-%h' --date=short");
+            Utils::$version = '1';//exec("git log -1 --format='%ad-%h' --date=short");
         }
         return Utils::$version;
     }
