@@ -3,7 +3,7 @@ name: Publish Website
 on:
   push:
     branches:
-      - master
+      - prod
 
 
 jobs:
@@ -23,5 +23,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no bitnami@${{ secrets.LIGHTSAIL_IP }} << 'EOF'
           cd /opt/bitnami/wordpress
-          git pull --strategy-option=theirs origin master
+          git stash
+          git stash drop
+          git pull --strategy-option=theirs origin prod
           EOF
