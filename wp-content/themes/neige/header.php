@@ -39,26 +39,28 @@ $menu_items = wp_get_nav_menu_items('menu-1');  ?>
     <?php
     if ($menu_items) { ?>
         <div class="menu-nav-bar">
-            <div class="nav-bar-left">
-                <div id="hamburger-menu">
-                    <?= file_get_contents(THEME . '/svg/burger-menu.svg'); ?>
-                </div>
-                <div class="season-selector">
-                    <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
-                        <a href="<?= $currentSeason === 'summer' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('summer') ?></a>
+            <div class="container">
+                <div class="nav-bar-left">
+                    <div id="hamburger-menu">
+                        <?= file_get_contents(THEME . '/svg/burger-menu.svg'); ?>
                     </div>
-                    <div class="season-selector-item <?= $currentSeason === 'winter' ? 'active' : '' ?>">
-                        <a href="<?= $currentSeason === 'winter' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('winter') ?></a>
+                    <div class="season-selector">
+                        <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
+                            <a href="<?= $currentSeason === 'summer' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('summer') ?></a>
+                        </div>
+                        <div class="season-selector-item <?= $currentSeason === 'winter' ? 'active' : '' ?>">
+                            <a href="<?= $currentSeason === 'winter' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('winter') ?></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="menu-logo">
-                <a href="<?= get_permalink(Utils::getSeasonHome()) ?>">
-                    <?= file_get_contents(get_field('logo', 'options')); ?>
-                </a>
-            </div>
-            <div class="nav-bar-right">
+                <div class="menu-logo">
+                    <a href="<?= get_permalink(Utils::getSeasonHome()) ?>">
+                        <?= file_get_contents(get_field('logo', 'options')); ?>
+                    </a>
+                </div>
+                <div class="nav-bar-right">
 
+                </div>
             </div>
         </div>
         <div id="side-menu">
