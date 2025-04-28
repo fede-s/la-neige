@@ -5,7 +5,10 @@ require_once(THEME . '/yama/widgets/lists/Lists.php');
 require_once(THEME . '/yama/widgets/carousel/Carousel.php');
 
 $currentSeason = Utils::getCurrentSeason();
-$menu_items = wp_get_nav_menu_items($currentSeason); ?>
+$menu_items = wp_get_nav_menu_items($currentSeason);
+
+var_dump(wp_get_nav_menus());
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
