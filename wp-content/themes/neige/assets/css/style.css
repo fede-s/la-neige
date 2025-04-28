@@ -8405,6 +8405,12 @@ body.scrolled .menu-nav-bar .menu-logo {
   opacity: 1;
   pointer-events: auto;
 }
+.menu-nav-bar .menu-logo svg {
+  fill: var(--forest-blue);
+}
+.menu-nav-bar .menu-logo svg text {
+  fill: var(--forest-blue) !important;
+}
 .menu-nav-bar .nav-bar-right {
   flex: 1;
 }
@@ -8975,6 +8981,12 @@ body.menu-opened #side-menu {
   top: 50px;
   transform: translateX(-50%);
   z-index: 1;
+}
+.gradient .logo-header svg {
+  fill: var(--forest-blue);
+}
+.gradient .logo-header svg text {
+  fill: var(--forest-blue) !important;
 }
 
 .video-container {

@@ -5,6 +5,12 @@
 	top: 50px;
 	transform: translateX(-50%);
     z-index: 1;
+    svg {
+      fill: var(--forest-blue);
+      text {
+        fill: var(--forest-blue) !important;
+      }
+    }
 }
 .video-container {
   position: absolute;
