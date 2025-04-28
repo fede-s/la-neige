@@ -51,9 +51,11 @@ h6 {
 
 .container {
 	padding: 0 10%;
+	width: 80%;
 
 	@include small-desktop {
 		padding: 0 5%;
+		width: 90%;
 	}
 }
 
@@ -76,7 +78,7 @@ h6 {
 // Menu Nav //
 
 .menu-nav-bar {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	z-index: 9;
@@ -85,17 +87,31 @@ h6 {
 	visibility: visible;
 	opacity: 1;
 	transition: opacity 0.6s ease-in-out, background-color 1s;
-	.container {
-		display: flex;
-		align-items: center;
-		gap: 30px;
-	}
+	background-color: var(--navbar-background);
+	display: flex;
+	align-items: center;
 	body.menu-opened & {
 		opacity: 0;
 		pointer-events: none;
 	}
+	body.page-template-page-home-page & {
+		background: transparent;
+		position: fixed;
+		.menu-logo {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+	body.admin-bar & {
+		top: 32px;
+	}
 	body.scrolled & {
 		background-color: var(--navbar-background);
+	}
+	.container {
+		display: flex;
+		align-items: center;
+		gap: 30px;
 	}
 	.nav-bar-left {
 		flex: 1;
@@ -129,13 +145,15 @@ h6 {
 					text-decoration: none;
 				}
 			}
+			@include small-tablet {
+				display: none;
+			}
 		}
 	}
 	.menu-logo {
 		width: 70px;
 		height: auto;
-		opacity: 0;
-		pointer-events: none;
+		pointer-events: auto;
 		transition: opacity 0.6s ease-in-out, background-color 1s;
 		position: relative;
 		top: 2px;

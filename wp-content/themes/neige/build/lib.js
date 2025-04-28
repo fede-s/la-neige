@@ -36,12 +36,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     body.onscroll = function(e) {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 150) {
             body.classList.add('scrolled');
         } else {
             body.classList.remove('scrolled');
         }
     }
+
+    const seasonSelectors = document.querySelectorAll('.season-selector-item a');
+
+    seasonSelectors.forEach(selector => {
+        selector.addEventListener('click', async (event) => {
+            const currentSeason = event.target.dataset.currentSeason;
+            const selectedSeason = event.target.dataset.newSeason;
+            if (currentSeason !== selectedSeason && !event.target.href.includes(selectedSeason)) {
+                event.preventDefault();
+                await fetch('/wp-json/custom/v1/switch-season', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+                location.href = event.target.href;
+            }
+        });
+    });
 });
 
 

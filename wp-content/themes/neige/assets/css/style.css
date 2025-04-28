@@ -8315,10 +8315,12 @@ h6 {
 
 .container {
   padding: 0 10%;
+  width: 80%;
 }
 @media (max-width: 1200px) {
   .container {
     padding: 0 5%;
+    width: 90%;
   }
 }
 
@@ -8339,7 +8341,7 @@ h6 {
 }
 
 .menu-nav-bar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 9;
@@ -8348,18 +8350,32 @@ h6 {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.6s ease-in-out, background-color 1s;
-}
-.menu-nav-bar .container {
+  background-color: var(--navbar-background);
   display: flex;
   align-items: center;
-  gap: 30px;
 }
 body.menu-opened .menu-nav-bar {
   opacity: 0;
   pointer-events: none;
 }
+body.page-template-page-home-page .menu-nav-bar {
+  background: transparent;
+  position: fixed;
+}
+body.page-template-page-home-page .menu-nav-bar .menu-logo {
+  opacity: 0;
+  pointer-events: none;
+}
+body.admin-bar .menu-nav-bar {
+  top: 32px;
+}
 body.scrolled .menu-nav-bar {
   background-color: var(--navbar-background);
+}
+.menu-nav-bar .container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 .menu-nav-bar .nav-bar-left {
   flex: 1;
@@ -8393,11 +8409,15 @@ body.scrolled .menu-nav-bar {
   text-transform: uppercase;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .menu-nav-bar .nav-bar-left .season-selector {
+    display: none;
+  }
+}
 .menu-nav-bar .menu-logo {
   width: 70px;
   height: auto;
-  opacity: 0;
-  pointer-events: none;
+  pointer-events: auto;
   transition: opacity 0.6s ease-in-out, background-color 1s;
   position: relative;
   top: 2px;
@@ -9052,7 +9072,7 @@ body.menu-opened #side-menu {
   height: 100px;
   width: 100px;
   right: 10%;
-  bottom: -20%;
+  bottom: -42px;
 }
 .section-text-image .side-text .signature svg path {
   fill: var(--olive-green);
@@ -9269,7 +9289,7 @@ body.menu-opened #side-menu {
   width: 100%;
 }
 .instagram .side-text .signature svg {
-  bottom: -30%;
+  bottom: -42px;
 }
 @media (max-width: 1024px) {
   .instagram {

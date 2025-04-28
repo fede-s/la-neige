@@ -259,26 +259,28 @@ class Utils {
     }
 
     public static function getCurrentSeason() {
-        $season = Utils::getSeasonFromURL();
-        if (!$season && !empty($_SESSION['season'])) {
-            $season = $_SESSION['season'];
-        }
-        return $season ?: get_field('current_season', 'option');
+        return $_SESSION['season'];
     }
 
-    public static function getSeasonTerm($season = null) {
+    public static function getSeasonTerm($season = null): WP_Term {
         return get_term_by('slug', $season ?? Utils::getCurrentSeason(), 'season');
     }
 
-    public static function getSeasonPage($season = null) {
-        return Utils::getPostBySlug('page', $season ?? Utils::getCurrentSeason());
+    public static function getSeasonHome($season = null): WP_Post {
+        $season = $season ?: Utils::getCurrentSeason();
+        return Utils::getPostBySlug('page', $season);
     }
 
-    public static function getPageForSeason($slug, $season = null) {
+    public static function getPageForSeason($slug, $season = null): WP_Post | null {
+        if ($slug === 'summer') {
+            return Utils::getSeasonHome($season);
+        } else if ($slug === 'winter') {
+            return Utils::getSeasonHome($season);
+        }
         $posts = get_posts([
             'post_type' => 'page',
             'name' => $slug,
-            'post_parent' => Utils::getSeasonPage($season)->ID
+            'post_parent' => Utils::getSeasonHome($season)->ID
         ]);
         return count($posts) > 0 ? $posts[0] : null;
     }
@@ -295,11 +297,6 @@ class Utils {
 
     public static function getSeasonName($season) {
         return $season === 'winter' ? 'Winter' : 'Summer';
-    }
-
-    public static function getSeasonHome($season = '') {
-        $season = $season ?: Utils::getCurrentSeason();
-        return get_page_by_path($season);
     }
 
     public static function getSeasonIcon($season) {
@@ -332,19 +329,25 @@ class Utils {
         return [];
     }
 
-    public static function getOppositeSeasonLink() {
+    public static function getOppositeSeasonLink(): string {
+        $oppositeSeason = Utils::getOppositeSeason();
+        return Utils::getSeasonLink($oppositeSeason);
+    }
+
+    public static function getSeasonLink($season): string {
         $object = get_queried_object();
-        $season = Utils::getOppositeSeason();
         if (isset($object->post_type)) {
-            $oppositePage = Utils::getPageForSeason($object->post_name, $season);
-            if ($oppositePage) {
-                return get_permalink($oppositePage);
+            if ($object->post_type === 'page') {
+                $page = Utils::getPageForSeason($object->post_name, $season);
+                if ($page) {
+                    return get_permalink($page);
+                } else {
+                    return get_permalink($object);
+                }
+            } else if (has_term(Utils::getSeasonTerm($season), 'season', $object)) {
+                return Utils::getPostLink($object, $season);
             }
-            if (has_term(Utils::getSeasonTerm($season), 'season', $object) || in_array($object->post_name, ['chalet', 'offers', 'restaurants'])) {
-                return Utils::getPostLink($object, Utils::getOppositeSeason());
-            }
-        } else if (isset($object->taxonomy)) {
-            return Utils::getTermLink($object, Utils::getOppositeSeason());
+            return get_permalink($object);
         }
         return home_url($season);
     }

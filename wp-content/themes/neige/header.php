@@ -5,7 +5,7 @@ require_once(THEME . '/yama/widgets/lists/Lists.php');
 require_once(THEME . '/yama/widgets/carousel/Carousel.php');
 
 $currentSeason = Utils::getCurrentSeason();
-$menu_items = wp_get_nav_menu_items('menu-1');  ?>
+$menu_items = wp_get_nav_menu_items('menu-1'); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -34,8 +34,7 @@ $menu_items = wp_get_nav_menu_items('menu-1');  ?>
     <?php wp_head(); ?>
 </head>
 
-
-<body class="<?= Utils::getCurrentSeason() ?>">
+<body <?php body_class([$currentSeason]); ?>>
     <?php
     if ($menu_items) { ?>
         <div class="menu-nav-bar">
@@ -46,10 +45,10 @@ $menu_items = wp_get_nav_menu_items('menu-1');  ?>
                     </div>
                     <div class="season-selector">
                         <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
-                            <a href="<?= $currentSeason === 'summer' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('summer') ?></a>
+                            <a href="<?= Utils::getSeasonLink('summer') ?>" data-current-season="<?= $currentSeason ?>" data-new-season="summer"><?= Utils::getSeasonName('summer') ?></a>
                         </div>
                         <div class="season-selector-item <?= $currentSeason === 'winter' ? 'active' : '' ?>">
-                            <a href="<?= $currentSeason === 'winter' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('winter') ?></a>
+                            <a href="<?= Utils::getSeasonLink('winter') ?>" data-current-season="<?= $currentSeason ?>" data-new-season="winter"><?= Utils::getSeasonName('winter') ?></a>
                         </div>
                     </div>
                 </div>

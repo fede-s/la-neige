@@ -32,4 +32,5 @@ if (function_exists('acf_add_options_page')) {
 include(__DIR__ . '/config-utils.php');
 include(__DIR__ . '/theme-config.php');
 include(YAMA . '/shortcodes/shortcodes.php');
+include(YAMA . '/api/api.php');
 ?>
