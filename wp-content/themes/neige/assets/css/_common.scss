@@ -6,6 +6,9 @@
 	--olive-green-rgb: 150, 150, 60;
 	--forest-blue: #284a46;
 	--forest-blue-rgb: 40, 74, 70;
+	--main-winter-color: var(--soft-pink);
+	--main-summer-color: var(--olive-green);
+	--navbar-background: var(--main-season-color);
 }
 
 // Font //
@@ -77,35 +80,71 @@ h6 {
 	top: 0;
 	left: 0;
 	z-index: 9;
-	width: 100%;
+	width: 90%;
 	height: var(--header-height);
 	padding: 0 5%;
 	display: flex;
 	align-items: center;
 	gap: 30px;
-	#hamburger-menu {
-		height: 30px;
-		width: 30px;
-		cursor: pointer;
-		body.menu-opened & {
-			display: none;
-		}
-		svg {
-			width: 100%;
-			height: 100%;
-			display: block;
-			path {
-				fill: var(--forest-blue);
-			}
-			&:hover path {
-				filter: invert(50%)
-			}
-		}
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.6s ease-in-out, background-color 1s;
+	body.menu-opened & {
+		opacity: 0;
+		pointer-events: none;
 	}
-	.season-selector {
+	body.scrolled & {
+		background-color: var(--navbar-background);
+	}
+	.nav-bar-left {
+		flex: 1;
 		display: flex;
 		align-items: center;
 		gap: 30px;
+		#hamburger-menu {
+			height: 30px;
+			width: 30px;
+			cursor: pointer;
+			svg {
+				width: 100%;
+				height: 100%;
+				display: block;
+				path {
+					fill: var(--forest-blue);
+				}
+				&:hover path {
+					filter: invert(50%)
+				}
+			}
+		}
+		.season-selector {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+			.season-selector-item {
+				a {
+					color: var(--forest-blue);
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.menu-logo {
+		width: 70px;
+		height: auto;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.6s ease-in-out, background-color 1s;
+		position: relative;
+		top: 2px;
+		body.scrolled & {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+	.nav-bar-right {
+		flex: 1;
 	}
 }
 
@@ -125,14 +164,12 @@ h6 {
 	background-color: rgba(0, 0, 0, 0.8);
 	z-index: 999;
 	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0.6s;
+	pointer-events: none;
+	transition: opacity 0.6s ease-in-out;
 	display: flex;
 	body.menu-opened & {
-		visibility: visible;
 		opacity: 1;
-		transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0s;
-		display: flex;
+		pointer-events: auto;
 	}
 }
 

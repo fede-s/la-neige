@@ -8273,6 +8273,9 @@ h2.resp-accordion:first-child {
   --olive-green-rgb: 150, 150, 60;
   --forest-blue: #284a46;
   --forest-blue-rgb: 40, 74, 70;
+  --main-winter-color: var(--soft-pink);
+  --main-summer-color: var(--olive-green);
+  --navbar-background: var(--main-season-color);
 }
 
 body {
@@ -8340,36 +8343,70 @@ h6 {
   top: 0;
   left: 0;
   z-index: 9;
-  width: 100%;
+  width: 90%;
   height: var(--header-height);
   padding: 0 5%;
   display: flex;
   align-items: center;
   gap: 30px;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out, background-color 1s;
 }
-.menu-nav-bar #hamburger-menu {
+body.menu-opened .menu-nav-bar {
+  opacity: 0;
+  pointer-events: none;
+}
+body.scrolled .menu-nav-bar {
+  background-color: var(--navbar-background);
+}
+.menu-nav-bar .nav-bar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.menu-nav-bar .nav-bar-left #hamburger-menu {
   height: 30px;
   width: 30px;
   cursor: pointer;
 }
-body.menu-opened .menu-nav-bar #hamburger-menu {
-  display: none;
-}
-.menu-nav-bar #hamburger-menu svg {
+.menu-nav-bar .nav-bar-left #hamburger-menu svg {
   width: 100%;
   height: 100%;
   display: block;
 }
-.menu-nav-bar #hamburger-menu svg path {
+.menu-nav-bar .nav-bar-left #hamburger-menu svg path {
   fill: var(--forest-blue);
 }
-.menu-nav-bar #hamburger-menu svg:hover path {
+.menu-nav-bar .nav-bar-left #hamburger-menu svg:hover path {
   filter: invert(50%);
 }
-.menu-nav-bar .season-selector {
+.menu-nav-bar .nav-bar-left .season-selector {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+.menu-nav-bar .nav-bar-left .season-selector .season-selector-item a {
+  color: var(--forest-blue);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.menu-nav-bar .menu-logo {
+  width: 70px;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease-in-out, background-color 1s;
+  position: relative;
+  top: 2px;
+}
+body.scrolled .menu-nav-bar .menu-logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu-nav-bar .nav-bar-right {
+  flex: 1;
 }
 
 .menu-icon {
@@ -8387,15 +8424,13 @@ body.menu-opened .menu-nav-bar #hamburger-menu {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0.6s;
+  pointer-events: none;
+  transition: opacity 0.6s ease-in-out;
   display: flex;
 }
 body.menu-opened #side-menu {
-  visibility: visible;
   opacity: 1;
-  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0s;
-  display: flex;
+  pointer-events: auto;
 }
 
 .menu-left {
@@ -8939,7 +8974,7 @@ body.menu-opened #side-menu {
   left: 50%;
   top: 50px;
   transform: translateX(-50%);
-  z-index: 9;
+  z-index: 1;
 }
 
 .video-container {

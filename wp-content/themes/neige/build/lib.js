@@ -34,7 +34,16 @@ document.addEventListener('DOMContentLoaded', function () {
             img.classList.add('show');
         });
     });
+
+    body.onscroll = function(e) {
+        if (window.scrollY > 100) {
+            body.classList.add('scrolled');
+        } else {
+            body.classList.remove('scrolled');
+        }
+    }
 });
+
 
 function displayModal(selector) {
     jQuery(selector).css('display', 'block');

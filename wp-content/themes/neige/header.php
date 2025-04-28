@@ -1,3 +1,11 @@
+<?php
+require_once(THEME . '/yama/utils/Utils.php');
+require_once(THEME . '/yama/widgets/Widgets.php');
+require_once(THEME . '/yama/widgets/lists/Lists.php');
+require_once(THEME . '/yama/widgets/carousel/Carousel.php');
+
+$currentSeason = Utils::getCurrentSeason();
+$menu_items = wp_get_nav_menu_items('menu-1');  ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -13,65 +21,44 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
+    <script>
+        window.version = '<?= Utils::getVersion(); ?>';
+    </script>
+    <style>
+        :root {
+            --main-season-color: <?= $currentSeason === 'winter' ? 'var(--main-winter-color)' : 'var(--main-summer-color)' ?>;
+            --secondary-season-color: <?= $currentSeason === 'winter' ? 'var(--secondary-winter-color)' : 'var(--secondary-summer-color)' ?>;
+            --oposite-season-color: <?= $currentSeason === 'winter' ? 'var(--main-summer-color)' : 'var(--main-winter-color)' ?>;
+        }
+    </style>
     <?php wp_head(); ?>
 </head>
 
 
 <body class="<?= Utils::getCurrentSeason() ?>">
     <?php
-    require_once(THEME . '/yama/utils/Utils.php');
-    require_once(THEME . '/yama/widgets/Widgets.php');
-    require_once(THEME . '/yama/widgets/lists/Lists.php');
-    require_once(THEME . '/yama/widgets/carousel/Carousel.php');
-    ?>
-    <!-- <?php
-            if (has_nav_menu('menu-1')) {
-                $menu_items = wp_get_nav_menu_items('menu-1');
-                $itemsArray = array();
-                foreach ($menu_items as $m) {
-                    $itemsArray[]['title'] = $m->title;
-                }
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'menu-1',
-                        'menu_id' => 'primary-menu',
-                        'container' => 'ul',
-                        'menu_class' => 'gNav_main, list-num-1',
-                    )
-                );
-            } ?> -->
-
-
-    <?php
-    $menu_items = wp_get_nav_menu_items('menu-1');
-
-    if ($menu_items) {
-        function get_svg_content($svg_path)
-        {
-            if (file_exists($svg_path)) {
-                return file_get_contents($svg_path);
-            } else {
-                return '';
-            }
-        }
-
-        $svg_path = get_template_directory_uri() . '/svg/burger-menu.svg';
-        $svg_content = get_svg_content(get_template_directory() . '/svg/burger-menu.svg'); ?>
+    if ($menu_items) { ?>
         <div class="menu-nav-bar">
-            <div id="hamburger-menu">
-                <?= $svg_content ?>
+            <div class="nav-bar-left">
+                <div id="hamburger-menu">
+                    <?= file_get_contents(THEME . '/svg/burger-menu.svg'); ?>
+                </div>
+                <div class="season-selector">
+                    <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
+                        <a href="<?= $currentSeason === 'summer' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('summer') ?></a>
+                    </div>
+                    <div class="season-selector-item <?= $currentSeason === 'winter' ? 'active' : '' ?>">
+                        <a href="<?= $currentSeason === 'winter' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('winter') ?></a>
+                    </div>
+                </div>
             </div>
-            <div class="season-selector">
-                <?php
-                $currentSeason = Utils::getCurrentSeason();
-                ?>
-                <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
-                    <a href="<?= $currentSeason === 'summer' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('summer') ?></a>
-                </div>
-                <div class="season-selector-item <?= $currentSeason === 'winter' ? 'active' : '' ?>">
-                    <a href="<?= $currentSeason === 'winter' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('winter') ?></a>
-                </div>
+            <div class="menu-logo">
+                <a href="<?= get_permalink(Utils::getSeasonHome()) ?>">
+                    <?= file_get_contents(get_field('logo', 'options')); ?>
+                </a>
+            </div>
+            <div class="nav-bar-right">
+
             </div>
         </div>
         <div id="side-menu">

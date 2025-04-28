@@ -1,4 +1,5 @@
 <?php
+
 class Utils {
 
     public static $version;
@@ -24,9 +25,9 @@ class Utils {
         if ($terms) {
             foreach ($terms as $term) {
                 array_push($tax, [
-                        'taxonomy' => $term->taxonomy,
-                        'terms' => $term ? $term->term_id : 0,
-                        'include_children' => false
+                    'taxonomy' => $term->taxonomy,
+                    'terms' => $term ? $term->term_id : 0,
+                    'include_children' => false
                 ]);
             }
         }
@@ -296,6 +297,11 @@ class Utils {
         return $season === 'winter' ? 'Winter' : 'Summer';
     }
 
+    public static function getSeasonHome($season = '') {
+        $season = $season ?: Utils::getCurrentSeason();
+        return get_page_by_path($season);
+    }
+
     public static function getSeasonIcon($season) {
         if ($season === 'winter') {
             return '<i class="fas fa-snowflake"></i>';
@@ -307,13 +313,13 @@ class Utils {
     public static function getPostLink($post, $season = ''): string {
         $link = get_permalink($post);
         $season = $season ? $season : Utils::getCurrentSeason();
-        return str_replace(['/winter/', '/summer/'], '/' .$season . '/', $link);
+        return str_replace(['/winter/', '/summer/'], '/' . $season . '/', $link);
     }
 
     public static function getTermLink($term, $season = ''): string {
         $link = get_term_link($term);
         $season = $season ? $season : Utils::getCurrentSeason();
-        return str_replace(['/winter/', '/summer/'], '/' .$season . '/', $link);
+        return str_replace(['/winter/', '/summer/'], '/' . $season . '/', $link);
     }
 
     public static function getTermsList($post, $taxonomy) {
@@ -343,12 +349,12 @@ class Utils {
         return home_url($season);
     }
 
-    static function truncateString( $string, $length = 100, $append = '&hellip;' ) {
-        $string = trim( $string );
+    static function truncateString($string, $length = 100, $append = '&hellip;') {
+        $string = trim($string);
 
-        if ( strlen( $string ) > $length ) {
-            $string = wordwrap( $string, $length );
-            $string = explode( "\n", $string, 2 );
+        if (strlen($string) > $length) {
+            $string = wordwrap($string, $length);
+            $string = explode("\n", $string, 2);
             $string = $string[0] . $append;
         }
 
