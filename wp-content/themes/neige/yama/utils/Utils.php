@@ -88,9 +88,7 @@ class Utils {
 
     static public function getVersion() {
         if (!Utils::$version) {
-            $file = fopen(THEME . '/version.txt', 'c+');
-            Utils::$version = str_replace(array("\n", "\r"), '', fgets($file));
-            fclose($file);
+            Utils::$version = exec("git log -1 --format='%ad - %h' --date=short");
         }
         return Utils::$version;
     }
