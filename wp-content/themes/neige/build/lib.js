@@ -12,20 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
     //     });
     // });
 
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const sideMenu = document.getElementById('side-menu');
+    const body = document.querySelector('body');
+    const hamburgerMenu = document.querySelector('#hamburger-menu');
     const closeMenu = document.querySelector('.close-menu');
     const menuItems = document.querySelectorAll('.menu-item');
     const menuRight = document.querySelector('.menu-right');
 
     hamburgerMenu.addEventListener('click', function () {
-        sideMenu.classList.remove('hidden');
-        hamburgerMenu.classList.add('hidden');
+        body.classList.add('menu-opened');
     });
 
     closeMenu.addEventListener('click', function () {
-        sideMenu.classList.add('hidden');
-        hamburgerMenu.classList.remove('hidden');
+        body.classList.remove('menu-opened');
     });
 
     menuItems.forEach(item => {

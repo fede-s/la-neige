@@ -8266,6 +8266,7 @@ h2.resp-accordion:first-child {
 }
 
 :root {
+  --header-height: 60px;
   --soft-pink: #fadcdc;
   --soft-pink-rgb: 250, 220, 220;
   --olive-green: #96963c;
@@ -8334,36 +8335,47 @@ h6 {
   padding-bottom: 100px;
 }
 
-#hamburger-menu {
+.menu-nav-bar {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.menu-nav-bar #hamburger-menu {
   height: 30px;
   width: 30px;
-  top: 2%;
-  left: 4%;
-  z-index: 1000;
   cursor: pointer;
 }
-#hamburger-menu svg {
+body.menu-opened .menu-nav-bar #hamburger-menu {
+  display: none;
+}
+.menu-nav-bar #hamburger-menu svg {
   width: 100%;
   height: 100%;
   display: block;
 }
-#hamburger-menu svg path {
+.menu-nav-bar #hamburger-menu svg path {
   fill: var(--forest-blue);
 }
-
-#hamburger-menu svg:hover path {
+.menu-nav-bar #hamburger-menu svg:hover path {
   filter: invert(50%);
+}
+.menu-nav-bar .season-selector {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .menu-icon {
   width: 50px;
   height: auto;
   display: block;
-}
-
-#hamburger-menu.hidden {
-  display: none;
 }
 
 #side-menu {
@@ -8379,14 +8391,7 @@ h6 {
   transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0.6s;
   display: flex;
 }
-
-#side-menu.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0.6s;
-}
-
-#side-menu:not(.hidden) {
+body.menu-opened #side-menu {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0s;
@@ -8425,6 +8430,21 @@ h6 {
 .menu-right img.show {
   display: block;
 }
+.menu-right .logo-header {
+  position: absolute;
+  width: 25%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.menu-right .logo-header svg {
+  width: 100%;
+  height: 100%;
+}
+.menu-right .logo-header svg path {
+  fill: var(--soft-pink);
+}
 @media (max-width: 1024px) {
   .menu-right {
     display: none;
@@ -8443,22 +8463,6 @@ h6 {
   z-index: 2;
 }
 
-.logo-header {
-  position: absolute;
-  width: 25%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-.logo-header svg {
-  width: 100%;
-  height: 100%;
-}
-.logo-header svg path {
-  fill: var(--soft-pink);
-}
-
 .close-menu {
   position: absolute;
   top: 4%;
@@ -8467,6 +8471,7 @@ h6 {
   cursor: pointer;
   margin-bottom: 20px;
   font-size: 1.2em;
+  z-index: 99;
 }
 .close-menu :hover {
   color: var(--olive-green);
@@ -8929,10 +8934,12 @@ h6 {
 }
 
 .gradient .logo-header {
+  position: absolute;
   width: 20%;
   left: 50%;
-  top: 0;
+  top: 50px;
   transform: translateX(-50%);
+  z-index: 9;
 }
 
 .video-container {
@@ -9556,3 +9563,5 @@ h6 {
 .opening .side-text .linkBtn {
   margin-left: 0;
 }
+
+/*# sourceMappingURL=style.css.map */

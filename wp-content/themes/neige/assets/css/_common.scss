@@ -1,4 +1,5 @@
 :root {
+	--header-height: 60px;
 	--soft-pink: #fadcdc;
 	--soft-pink-rgb: 250, 220, 220;
 	--olive-green: #96963c;
@@ -71,38 +72,48 @@ h6 {
 
 // Menu Nav //
 
-#hamburger-menu {
+.menu-nav-bar {
 	position: fixed;
-	height: 30px;
-	width: 30px;
-	top: 2%;
-	left: 4%;
-	z-index: 1000;
-	cursor: pointer;
-
-	svg {
-		width: 100%;
-		height: 100%;
-		display: block;
-
-		path {
-			fill: var(--forest-blue);
+	top: 0;
+	left: 0;
+	z-index: 9;
+	width: 100%;
+	height: var(--header-height);
+	padding: 0 5%;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	#hamburger-menu {
+		height: 30px;
+		width: 30px;
+		cursor: pointer;
+		body.menu-opened & {
+			display: none;
 		}
+		svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+			path {
+				fill: var(--forest-blue);
+			}
+			&:hover path {
+				filter: invert(50%)
+			}
+		}
+	}
+	.season-selector {
+		display: flex;
+		align-items: center;
+		gap: 30px;
 	}
 }
 
-#hamburger-menu svg:hover path {
-	filter: invert(50%)
-}
 
 .menu-icon {
 	width: 50px;
 	height: auto;
 	display: block;
-}
-
-#hamburger-menu.hidden {
-	display: none;
 }
 
 #side-menu {
@@ -117,19 +128,12 @@ h6 {
 	visibility: hidden;
 	transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0.6s;
 	display: flex;
-}
-
-#side-menu.hidden {
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0.6s;
-}
-
-#side-menu:not(.hidden) {
-	visibility: visible;
-	opacity: 1;
-	transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0s;
-	display: flex;
+	body.menu-opened & {
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out 0s;
+		display: flex;
+	}
 }
 
 .menu-left {
@@ -165,6 +169,22 @@ h6 {
 		}
 	}
 
+	.logo-header {
+		position: absolute;
+		width: 25%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		svg {
+			width: 100%;
+			height: 100%;
+			path {
+				fill: var(--soft-pink);
+			}
+		}
+	}
+
 	@include tablet {
 		display: none;
 	}
@@ -182,25 +202,6 @@ h6 {
 	z-index: 2;
 }
 
-.logo-header {
-	position: absolute;
-	width: 25%;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 2;
-
-
-	svg {
-		width: 100%;
-		height: 100%;
-
-		path {
-			fill: var(--soft-pink);
-		}
-	}
-}
-
 .close-menu {
 	position: absolute;
 	top: 4%;
@@ -209,6 +210,7 @@ h6 {
 	cursor: pointer;
 	margin-bottom: 20px;
 	font-size: 1.2em;
+	z-index: 99;
 
 	:hover {
 		color: var(--olive-green);

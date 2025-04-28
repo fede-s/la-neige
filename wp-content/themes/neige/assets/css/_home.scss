@@ -1,8 +1,10 @@
 .gradient .logo-header {
+    position: absolute;
 	width: 20%;
 	left: 50%;
-	top: 0;
+	top: 50px;
 	transform: translateX(-50%);
+    z-index: 9;
 }
 .video-container {
   position: absolute;

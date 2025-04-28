@@ -58,10 +58,23 @@
 
         $svg_path = get_template_directory_uri() . '/svg/burger-menu.svg';
         $svg_content = get_svg_content(get_template_directory() . '/svg/burger-menu.svg'); ?>
-        <div id="hamburger-menu">
-            <?= $svg_content ?>
+        <div class="menu-nav-bar">
+            <div id="hamburger-menu">
+                <?= $svg_content ?>
+            </div>
+            <div class="season-selector">
+                <?php
+                $currentSeason = Utils::getCurrentSeason();
+                ?>
+                <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
+                    <a href="<?= $currentSeason === 'summer' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('summer') ?></a>
+                </div>
+                <div class="season-selector-item <?= $currentSeason === 'winter' ? 'active' : '' ?>">
+                    <a href="<?= $currentSeason === 'winter' ? '#' :Utils::getOppositeSeasonLink() ?>"><?= Utils::getSeasonName('winter') ?></a>
+                </div>
+            </div>
         </div>
-        <div id="side-menu" class="hidden">
+        <div id="side-menu">
             <div class="menu-left">
                 <div class="close-menu">
                     <span class="close-icon">X Close</span>

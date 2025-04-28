@@ -295,7 +295,7 @@ class Utils {
     }
 
     public static function getSeasonName($season) {
-        return $season === 'winter' ? 'Snow season' : 'Green season';
+        return $season === 'winter' ? 'Winter' : 'Summer';
     }
 
     public static function getSeasonIcon($season) {
