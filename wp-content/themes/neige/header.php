@@ -35,7 +35,7 @@ $currentSeason = Utils::getCurrentSeason();
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class([$currentSeason]); ?>>
+<body>
 <div>lalal</div>
 <div>lalal</div>
     <?php
