@@ -7,9 +7,9 @@ if (!defined('_S_VERSION')) {
     define('_S_VERSION', Utils::getVersion());
 }
 
-session_start();
-$seasonFromUrl = Utils::getSeasonFromURL();
-$_SESSION['season'] =  !empty($seasonFromUrl) ? $seasonFromUrl : Utils::getCurrentSeason();
+//session_start();
+//$seasonFromUrl = Utils::getSeasonFromURL();
+//$_SESSION['season'] =  !empty($seasonFromUrl) ? $seasonFromUrl : Utils::getCurrentSeason();
 
 function arphabet_widgets_init() {
 

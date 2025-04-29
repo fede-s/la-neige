@@ -259,7 +259,8 @@ class Utils {
     }
 
     public static function getCurrentSeason() {
-        return !empty($_SESSION['season']) ? $_SESSION['season'] : get_field('current_season', 'option');
+//        return !empty($_SESSION['season']) ? $_SESSION['season'] : get_field('current_season', 'option');
+        return 'winter';
     }
 
     public static function getSeasonTerm($season = null): WP_Term {
