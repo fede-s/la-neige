@@ -6,7 +6,6 @@ require_once(THEME . '/yama/widgets/carousel/Carousel.php');
 
 $currentSeason = Utils::getCurrentSeason();
 $menu_items = wp_get_nav_menu_items($currentSeason);
-
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -37,10 +36,67 @@ $menu_items = wp_get_nav_menu_items($currentSeason);
 </head>
 
 <body <?php body_class([$currentSeason]); ?>>
-    <div>lala</div>
-    <div>lala</div>
-    <div>lala</div>
-    <div>lala</div>
     <?php
-    var_dump('lalala');
-    var_dump(wp_get_nav_menus()); ?>
+    if (!empty($menu_items)) { ?>
+        <div class="menu-nav-bar">
+            <div class="container">
+                <div class="nav-bar-left">
+                    <div id="hamburger-menu">
+                        <?= file_get_contents(get_template_directory_uri() . '/svg/burger-menu.svg'); ?>
+                    </div>
+                    <div class="season-selector">
+                        <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
+                            <a href="<?= Utils::getSeasonLink('summer') ?>" data-current-season="<?= $currentSeason ?>" data-new-season="summer"><?= Utils::getSeasonName('summer') ?></a>
+                        </div>
+                        <div class="season-selector-item <?= $currentSeason === 'winter' ? 'active' : '' ?>">
+                            <a href="<?= Utils::getSeasonLink('winter') ?>" data-current-season="<?= $currentSeason ?>" data-new-season="winter"><?= Utils::getSeasonName('winter') ?></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-logo">
+                    <a href="<?= get_permalink(Utils::getSeasonHome()) ?>">
+                        <?= file_get_contents(get_field('logo', 'options')); ?>
+                    </a>
+                </div>
+                <div class="nav-bar-right">
+
+                </div>
+            </div>
+        </div>
+        <div id="side-menu">
+            <div class="menu-left">
+                <div class="close-menu">
+                    <span class="close-icon">X Close</span>
+                </div>
+                <ul class="menu-items">
+                    <?php
+                    foreach ($menu_items as $item) {
+                        $slug = get_post_field('post_name', $item->object_id); ?>
+                        <li class="menu-item" data-featured-image="<?= $slug ?>">
+                            <a href="<?= $item->url; ?>"> <?= $item->title ?></a>
+                        </li>
+                    <?php
+                    } ?>
+                </ul>
+                <div class="container social-media top-100">
+                    <a href="<?= get_field('instagram', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/instagram.svg'); ?></a>
+                    <a href="<?= get_field('facebook', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/facebook.svg'); ?></a>
+                    <a href="<?= get_field('youtube', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/youtube.svg'); ?></a>
+                    <a href="<?= get_field('tiktok', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/tiktok.svg'); ?></a>
+                </div>
+            </div>
+            <div class="menu-right">
+                <div class="logo-header">
+                    <?= file_get_contents(get_field('logo', 'options')); ?>
+                </div>
+                <?php
+                foreach ($menu_items as $item) {
+                    $slug = get_post_field('post_name', $item->object_id);
+                    echo Utils::imgLazyFromPost($item->object_id, 'large', '100vw', '', $slug);
+                } ?>
+            </div>
+        </div>
+    <?php
+    }
+
+    ?>
