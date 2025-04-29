@@ -8,12 +8,8 @@ if (!defined('_S_VERSION')) {
 }
 
 session_start();
-$seasonFromURL = Utils::getSeasonFromURL();
-if ($seasonFromURL) {
-    $_SESSION['season'] = $seasonFromURL;
-} else {
-    $_SESSION['season'] = !empty($_SESSION['season']) ? $_SESSION['season'] : get_field('current_season', 'option');
-}
+$seasonFromUrl = Utils::getSeasonFromURL();
+$_SESSION['season'] =  !empty($seasonFromUrl) ? $seasonFromUrl : Utils::getCurrentSeason();
 
 function arphabet_widgets_init() {
 
