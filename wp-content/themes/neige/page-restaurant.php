@@ -23,7 +23,7 @@ get_header(); ?>
 <section class="restaurant forest-blue">
    <div class="container section-text-image">
       <div class="side-text">
-         <h5><?= get_field('restaurant_pre_title'); ?></h5>
+         <h5><?= $fields['restaurant_pre_title']; ?></h5>
          <h1><?= get_field('restaurant_title'); ?></h1>
          <?php if (get_field('restaurant_signature')) {
          ?>

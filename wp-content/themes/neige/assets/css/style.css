@@ -9477,9 +9477,6 @@ body.menu-opened #side-menu {
 .restaurant .section-text-image {
   width: auto;
 }
-.restaurant .side-text {
-  text-transform: uppercase;
-}
 .restaurant .side-text h1 {
   padding-bottom: 0;
 }
@@ -9631,5 +9628,3 @@ body.menu-opened #side-menu {
 .opening .side-text .linkBtn {
   margin-left: 0;
 }
-
-/*# sourceMappingURL=style.css.map */
