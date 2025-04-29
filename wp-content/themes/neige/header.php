@@ -42,7 +42,7 @@ $menu_items = wp_get_nav_menu_items($currentSeason);
             <div class="container">
                 <div class="nav-bar-left">
                     <div id="hamburger-menu">
-                        <?= file_get_contents(get_template_directory_uri() . '/svg/burger-menu.svg'); ?>
+<!--                        --><?php //= file_get_contents(get_template_directory_uri() . '/svg/burger-menu.svg'); ?>
                     </div>
                     <div class="season-selector">
                         <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
@@ -55,7 +55,7 @@ $menu_items = wp_get_nav_menu_items($currentSeason);
                 </div>
                 <div class="menu-logo">
                     <a href="<?= get_permalink(Utils::getSeasonHome()) ?>">
-                        <?= file_get_contents(get_field('logo', 'options')); ?>
+<!--                        --><?php //= file_get_contents(get_field('logo', 'options')); ?>
                     </a>
                 </div>
                 <div class="nav-bar-right">
@@ -79,15 +79,15 @@ $menu_items = wp_get_nav_menu_items($currentSeason);
                     } ?>
                 </ul>
                 <div class="container social-media top-100">
-                    <a href="<?= get_field('instagram', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/instagram.svg'); ?></a>
-                    <a href="<?= get_field('facebook', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/facebook.svg'); ?></a>
-                    <a href="<?= get_field('youtube', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/youtube.svg'); ?></a>
-                    <a href="<?= get_field('tiktok', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/tiktok.svg'); ?></a>
+<!--                    <a href="--><?php //= get_field('instagram', 'options'); ?><!--">--><?php //= file_get_contents(get_template_directory_uri() . '/svg/instagram.svg'); ?><!--</a>-->
+<!--                    <a href="--><?php //= get_field('facebook', 'options'); ?><!--">--><?php //= file_get_contents(get_template_directory_uri() . '/svg/facebook.svg'); ?><!--</a>-->
+<!--                    <a href="--><?php //= get_field('youtube', 'options'); ?><!--">--><?php //= file_get_contents(get_template_directory_uri() . '/svg/youtube.svg'); ?><!--</a>-->
+<!--                    <a href="--><?php //= get_field('tiktok', 'options'); ?><!--">--><?php //= file_get_contents(get_template_directory_uri() . '/svg/tiktok.svg'); ?><!--</a>-->
                 </div>
             </div>
             <div class="menu-right">
                 <div class="logo-header">
-                    <?= file_get_contents(get_field('logo', 'options')); ?>
+<!--                    --><?php //= file_get_contents(get_field('logo', 'options')); ?>
                 </div>
                 <?php
                 foreach ($menu_items as $item) {
