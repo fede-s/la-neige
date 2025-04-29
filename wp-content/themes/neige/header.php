@@ -38,6 +38,6 @@ $menu_items = wp_get_nav_menu_items($currentSeason);
 <body <?php body_class([$currentSeason]); ?>>
 <div>lalal</div>
     <?php
-    var_dump($menu_items);
+//    var_dump($menu_items);
 
     ?>
