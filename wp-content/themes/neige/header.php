@@ -38,6 +38,7 @@ $menu_items = wp_get_nav_menu_items($currentSeason);
 
 <body <?php body_class([$currentSeason]); ?>>
     <?php
+    var_dump('lalala');
     var_dump(wp_get_nav_menus());
     if (!empty($menu_items)) { ?>
         <div class="menu-nav-bar">
