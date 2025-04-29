@@ -7,7 +7,6 @@ require_once(THEME . '/yama/widgets/carousel/Carousel.php');
 $currentSeason = Utils::getCurrentSeason();
 $menu_items = wp_get_nav_menu_items($currentSeason);
 
-error_log(json_encode(wp_get_nav_menus()));
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -39,8 +38,8 @@ error_log(json_encode(wp_get_nav_menus()));
 
 <body <?php body_class([$currentSeason]); ?>>
     <?php
-    echo json_encode(wp_get_nav_menus());
-    if ($menu_items) { ?>
+    var_dump(wp_get_nav_menus());
+    if (!empty($menu_items)) { ?>
         <div class="menu-nav-bar">
             <div class="container">
                 <div class="nav-bar-left">
