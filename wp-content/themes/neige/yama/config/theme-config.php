@@ -95,7 +95,7 @@ add_action('init', function () {
          'menu_position' => 5,
          'hierarchical' => false,
          'rewrite' => [
-             'slug' => 'season/activities',
+             'slug' => '/season/activities',
              'with_front' => false
          ],
          'labels' => create_post_type_labels('Activity', 'Activities'),

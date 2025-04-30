@@ -20,22 +20,29 @@ get_header(); ?>
    </div>
 </div>
 
-<section class="container">
+<section class="container bottom-30 forest-blue">
    <div class="activities">
       <?php
-      $activities = Utils::getCurrentSeasonPosts('activities');
+      $activities = Utils::getCurrentSeasonPosts('activity');  
       foreach ($activities as $activity) { ?>
          <div class="activity">
-            <div class="acivity-img">
+            <a class="cta-link" href="<?= Utils::getPostLink($activity->ID); ?>"></a>
+            <div class="activity-img">
             <?= Utils::imgLazyFromPost($activity, 'medium', '400px'); ?>
             </div>
-            <h5></h5>
-            <h1></h1>
-            <p></p>
-
+            <div class="content">
+               <h5><?= Utils::getSeasonField($activity, 'pre_title') ;?></h5>
+               <h3><?= $activity->post_title ;?></h3>
+               <p><?= Utils::getSeasonField($activity, 'short_description') ;?></p>
+               <a class="discover">Discover More</a>
+            </div>
          </div>
       <?php } ?>
 
    </div>
 
 </section>
+
+
+
+<?php get_footer(); ?>
