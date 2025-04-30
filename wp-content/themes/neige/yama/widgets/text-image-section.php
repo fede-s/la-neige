@@ -5,6 +5,7 @@ $name = ($type == 1) ? 'about' : (($type == 2) ? 'features' : (($type == 3) ? 'r
 $preTitle = get_field($name . '_pre_title');
 $title = get_field($name . '_title');
 $signature = get_field($name . '_signature');
+$signatureSize = get_field($name . '_signature_size');
 $text = get_field($name . '_text');
 $button = get_field($name . '_button');
 $gallery = get_field($name . '_gallery');
@@ -45,7 +46,7 @@ $icons = get_field($name);
         <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : ''; ?>">
             <h5><?= $preTitle; ?></h5>
             <div class="signature">
-            <h1><?= $title; ?> <?= file_get_contents($signature); ?></h1>
+            <h1><?= $title; ?> <div class="sig-svg" style=" width:<?= $signatureSize ;?>px"><?= file_get_contents($signature); ?></div></h1>
                 
             </div>
             <p><?= $text; ?></p>

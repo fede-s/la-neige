@@ -65,6 +65,9 @@ h6 {
 
 .top-100 {
 	padding-top: 100px;
+	@include tablet {
+		padding-top: 0;
+	}
 }
 
 .bottom-30 {
@@ -396,10 +399,6 @@ h6 {
 		a:hover {
 			color: var(--olive-green);
 			text-decoration: underline;
-		}
-
-		.adress {
-			width: 15%;
 		}
 
 		.tel,

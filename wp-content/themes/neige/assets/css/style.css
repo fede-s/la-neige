@@ -8331,6 +8331,11 @@ h6 {
 .top-100 {
   padding-top: 100px;
 }
+@media (max-width: 1024px) {
+  .top-100 {
+    padding-top: 0;
+  }
+}
 
 .bottom-30 {
   padding-bottom: 30px;
@@ -8647,9 +8652,6 @@ body.menu-opened #side-menu {
 .footer .info a:hover {
   color: var(--olive-green);
   text-decoration: underline;
-}
-.footer .info .adress {
-  width: 15%;
 }
 .footer .info .tel,
 .footer .info .email {
@@ -8971,7 +8973,7 @@ body.menu-opened #side-menu {
 @media (max-width: 768px) {
   .top-image {
     width: 100%;
-    height: auto;
+    height: 250px;
     left: 0;
     bottom: 0;
     padding-bottom: 15px;
@@ -8991,7 +8993,7 @@ body.menu-opened #side-menu {
 @media (max-width: 768px) {
   .base-image {
     width: 100%;
-    height: auto;
+    height: 250px;
   }
 }
 
@@ -9066,13 +9068,18 @@ body.menu-opened #side-menu {
 }
 .section-text-image .side-text .signature {
   padding-bottom: 50px;
+  width: 80%;
+}
+.section-text-image .side-text .signature h1 {
+  display: inline;
+}
+.section-text-image .side-text .signature .sig-svg {
+  position: absolute;
+  right: 10%;
 }
 .section-text-image .side-text .signature svg {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  right: 10%;
-  bottom: -42px;
+  height: 100%;
+  width: 100%;
 }
 .section-text-image .side-text .signature svg path {
   fill: var(--olive-green);
@@ -9162,7 +9169,7 @@ body.menu-opened #side-menu {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: auto;
+    height: 250px;
   }
 }
 @media (max-width: 768px) {
@@ -9288,8 +9295,8 @@ body.menu-opened #side-menu {
 .instagram .side-text {
   width: 100%;
 }
-.instagram .side-text .signature svg {
-  bottom: -42px;
+.instagram .side-text .signature {
+  width: 70%;
 }
 @media (max-width: 1024px) {
   .instagram {

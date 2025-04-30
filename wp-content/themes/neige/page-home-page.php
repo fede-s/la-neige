@@ -3,8 +3,12 @@
 /**
  * Template Name: Home Page
  */
+global $post;
+
+$fields = get_fields($post);
 
 get_header(); ?>
+
 
 <?php $videoId = Utils::getVimeoVideoId(get_field('video')); ?>
 <div class="header">
@@ -41,8 +45,11 @@ Widgets::textImageSection($type);
         <div class="side-text">
             <h5><?= get_field('instagram_pre_title'); ?></h5>
             <div class="signature">
-                <h1><?= get_field('instagram_title');
-                    echo file_get_contents(get_field('instagram_signature')); ?></h1>
+                <h1><?= get_field('instagram_title'); ?>
+                <div class="sig-svg" style=" width:<?= $fields['instagram_signature_size'] ;?>px">
+                    <?= file_get_contents(get_field('instagram_signature')) ;?>
+                </div>
+                </h1>
             </div>
 
         </div>
