@@ -1,4 +1,3 @@
-
 .activities {
    display: flex;
    justify-content: center;
@@ -6,25 +5,35 @@
    flex-wrap: wrap;
    gap: 5%;
    padding-top: 100px;
+
    .activity {
       position: relative;
       border: 3px solid var(--soft-pink);
       width: 25%;
-      .activity-img, h5, h3, p {
+
+      .activity-img,
+      h5,
+      h3,
+      p {
          margin-bottom: 15px;
       }
+
       h5 {
          color: var(--olive-green);
       }
+
       h3 {
          font-size: clamp(26px, 2.5vw, 30px);
       }
+
       p {
          font-size: clamp(15px, 1.5vw, 16px);
       }
+
       .activity-img {
          width: 100%;
          overflow: hidden;
+
          img {
             width: 100%;
             height: 300px;
@@ -32,9 +41,11 @@
             transition: 0.35s ease-in-out;
          }
       }
+
       .content {
          padding: 25px;
          word-wrap: break-word;
+
          .discover {
             color: var(--olive-green);
             text-decoration: underline;
@@ -44,6 +55,7 @@
             font-weight: bold;
          }
       }
+
       .cta-link {
          position: absolute;
          top: 0;
@@ -52,21 +64,85 @@
          height: 100%;
          z-index: 8;
       }
+
       @include tablet {
          width: 100%;
          margin-top: 50px;
       }
    }
+
    .activity:hover {
       img {
          transform: scale(1.07);
       }
    }
+
    .activity:nth-child(3n - 1) {
       margin-top: 50px;
    }
+
    @include tablet {
       padding-top: 0;
    }
 }
 
+
+//  Activity
+
+
+
+.activity-header {
+   height: 80vh;
+}
+
+.activity-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+   word-wrap: break-word;
+   font-size: 14px;
+
+   .info-left,
+   .info-right {
+      width: 45%;
+   }
+
+   .title-with-line {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 10px;
+
+      span {
+         flex: 1;
+         height: 1px;
+         background-color: var(--olive-green)
+      }
+
+      span:first-child {
+         margin-right: 20px;
+      }
+
+      span:last-child {
+         margin-left: 20px;
+      }
+   }
+
+   .book-button-wrapper {
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   @include tablet {
+      flex-direction: column;
+
+      .info-left,
+      .info-right {
+         width: 100%;
+      }
+      .info-right {
+         padding-top: 50px;
+      }
+   }
+}
