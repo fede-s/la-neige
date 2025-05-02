@@ -9075,14 +9075,26 @@ body.menu-opened #side-menu {
 }
 .section-text-image .side-text .signature .sig-svg {
   position: absolute;
-  right: 10%;
+  right: -10%;
+}
+@media (max-width: 1024px) {
+  .section-text-image .side-text .signature .sig-svg {
+    position: relative;
+    right: auto;
+  }
 }
 .section-text-image .side-text .signature svg {
+  display: block;
   height: 100%;
   width: 100%;
 }
 .section-text-image .side-text .signature svg path {
   fill: var(--olive-green);
+}
+@media (max-width: 1024px) {
+  .section-text-image .side-text .signature {
+    padding-bottom: 0px !important;
+  }
 }
 @media (max-width: 1200px) {
   .section-text-image .side-text h1 {

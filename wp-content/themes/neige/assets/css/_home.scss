@@ -82,17 +82,24 @@
       }
       .sig-svg {
         position: absolute;
-        right: 10%;
+        right: -10%;
         // bottom: -42px;
+        @include tablet {
+          position: relative;
+          right: auto;
+        }
       }
       svg {
+        display: block;
         height: 100%;
         width: 100%;
         path {
           fill: var(--olive-green);
         }
       }
-      
+      @include tablet {
+        padding-bottom: 0px !important;
+      }
     }
 
 

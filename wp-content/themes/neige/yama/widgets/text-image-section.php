@@ -45,7 +45,7 @@ $icons = get_field($name);
         <?php } ?>
         <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : ''; ?>">
             <h5><?= $preTitle; ?></h5>
-            <div class="signature">
+            <div class="signature" style="padding-bottom: <?= $signatureSize*0.4 ?>px ;">
             <h1><?= $title; ?> <div class="sig-svg" style=" width:<?= $signatureSize ;?>px"><?= file_get_contents($signature); ?></div></h1>
                 
             </div>
