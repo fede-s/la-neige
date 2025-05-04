@@ -9566,7 +9566,7 @@ body.menu-opened #side-menu {
   position: absolute;
   height: 650px;
   width: 100%;
-  left: -7%;
+  left: -8%;
   bottom: -5%;
   z-index: 1;
 }
@@ -9590,7 +9590,7 @@ body.menu-opened #side-menu {
 
 .chef .shadow {
   left: auto;
-  right: -7%;
+  right: -8%;
 }
 @media (max-width: 1024px) {
   .chef {
@@ -9796,4 +9796,45 @@ body.menu-opened #side-menu {
 }
 .more-list .owl-carousel .owl-dots span {
   display: none;
+}
+
+.contact-title {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-title h1 {
+  padding-bottom: 0;
+}
+
+.contact .side-image {
+  padding-top: 0;
+}
+.contact .shadow {
+  left: auto;
+  right: -8%;
+}
+.contact .side-text {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contact .side-text p {
+  padding: 0;
+  margin: 0;
+}
+.contact .side-text h5 {
+  width: auto;
+  color: var(--olive-green);
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media (max-width: 1024px) {
+  .contact .side-text {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
 }

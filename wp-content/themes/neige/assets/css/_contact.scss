@@ -1,0 +1,43 @@
+.contact-title {
+   padding-top: 50px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   h1 {
+      padding-bottom: 0;
+   }
+}
+
+.contact {
+   .side-image {
+      padding-top: 0;
+   }
+
+   .shadow {
+      left: auto;
+      right: -8%;
+   }
+
+   .side-text {
+      padding-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      p {
+         padding: 0;
+         margin: 0;
+      }
+      h5 {
+         width: auto;
+         color: var(--olive-green);
+         padding-top: 20px;
+         padding-bottom: 40px;
+      }
+      @include tablet {
+         padding-top: 0;
+         padding-bottom: 50px;
+      }
+   }
+}

@@ -32,7 +32,7 @@ get_header(); ?>
                   <?= file_get_contents(get_field('restaurant_signature')); ?>
                </div>
             </h1>
-         </div>
+            </div>
          <?php }
          if (get_field('restaurant_gallery')[0]) {
          ?>
