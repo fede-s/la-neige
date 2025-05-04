@@ -12,7 +12,7 @@ class Carousel {
          $images = array_map(function ($image) {
             return [
                'image' => $image['id'],
-               'caption' => $image['caption']
+               // 'caption' => $image['caption']
             ];
          }, $gallery);
          Carousel::gallery($images, $wide, $sizes, $modalID, $ratio);
@@ -29,6 +29,27 @@ class Carousel {
    static function simple($items, $title = '') {
       $item_view = __DIR__ . '/simple-item-view.php';
       include(__DIR__ . '/carousel-list-view.php');
+   }
+
+   static function generic($posts, $actualPost) {
+      $items = [];
+
+      foreach ($posts as $post) {
+         $fields = get_fields($post);
+         $image = get_post_thumbnail_id($post);
+         $items[] = [
+             'image' => $image,
+             'id' => $post->ID,
+             'title' => $post->post_title,
+             'pre_title' => Utils::getSeasonField($post, 'pre_title'),
+             'link' => Utils::getPostLink($post->ID),
+         ];
+      }
+      shuffle($items);
+      $maxItems = 3;
+      $class = 'more-list';
+      $item_view = __DIR__ . '/generic-item.php';
+      include(YAMA . '/widgets/carousel/carousel-list-view.php');
    }
 }
 ?>

@@ -146,3 +146,40 @@
       }
    }
 }
+
+
+.more {
+   a{
+      text-decoration: none;
+      color: inherit;
+   }
+   .title {
+      font-weight: bold;
+      padding-top: 12px;
+      font-size: 23px;
+   }
+   .pre-title {
+      padding-top: 10px;
+      font-size: 17px;
+      font-weight: 400;
+      padding-bottom: 0;
+   }
+
+}
+.more-list {
+   .owl-nav {
+
+      .owl-next:hover,
+      .owl-prev:hover {
+        background: inherit;
+      }
+    }
+  
+    .owl-carousel {
+      .owl-dots {
+        span {
+          display: none;
+        }
+      }
+    }
+}

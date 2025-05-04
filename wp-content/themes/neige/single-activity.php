@@ -13,8 +13,10 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
 </div>
 <section class="container">
    <div class="spacer"></div>
+   <div class="spacer"></div>
    <div class="container">
       <h1><?= the_title(); ?></h1>
+      <div class="spacer"></div>
       <div class="activity-info">
          <div class="info-left">
             <?= Utils::getSeasonField($fields, 'intro') ?>
@@ -59,17 +61,20 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
       </div>
    <?php
    }
-   if (!empty($featured) && count($featured) > 0) { ?>
+    ?>
       <div class="spacer large"></div>
       <div class="container">
-         <h2 class="text-center"><?= $featuredTitle ?></h2>
+         <h2 class="text-center">More</h2>
       </div>
       <div class="container large">
          <div class="spacer sm"></div>
-         <?php Carousel::generic($featured, $featuredTaxonomy, $season); ?>
+         <?php
+         $activities = Utils::getCurrentSeasonPosts('activity');
+         $actualPost = get_the_ID(); 
+          Carousel::generic($activities, $actualPost); ?>
       </div>
    <?php
-   }
+   
    if ($post->post_type === 'post') { ?>
       <div class="spacer medium"></div>
       <div class="text-center">
@@ -78,6 +83,8 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
    <?php
    } ?>
    <div class="spacer large"></div>
+
+
 
 </section>
 <?php

@@ -15,6 +15,7 @@ $id = $id ?? rand(); ?>
         jQuery('#<?= $id ?>').owlCarousel({
             margin: 10,
             nav: true,
+            dots: false,
             loop: true,
             responsive: {
                 0: {

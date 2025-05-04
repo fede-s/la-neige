@@ -9773,3 +9773,27 @@ body.menu-opened #side-menu {
     padding-top: 50px;
   }
 }
+
+.more a {
+  text-decoration: none;
+  color: inherit;
+}
+.more .title {
+  font-weight: bold;
+  padding-top: 12px;
+  font-size: 23px;
+}
+.more .pre-title {
+  padding-top: 10px;
+  font-size: 17px;
+  font-weight: 400;
+  padding-bottom: 0;
+}
+
+.more-list .owl-nav .owl-next:hover,
+.more-list .owl-nav .owl-prev:hover {
+  background: inherit;
+}
+.more-list .owl-carousel .owl-dots span {
+  display: none;
+}
