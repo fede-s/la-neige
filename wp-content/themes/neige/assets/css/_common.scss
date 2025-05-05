@@ -423,7 +423,7 @@ h6 {
 			order: 3;
 		}
 		position: relative;
-		padding-top: 120px;
+		padding: 70px 0;
 		background-color: var(--soft-pink);
 
 		p {
@@ -449,7 +449,6 @@ h6 {
 		}
 
 		@include tablet {
-			padding-top: 50px;
 			display: flex;
 			flex-direction: column;
 		}

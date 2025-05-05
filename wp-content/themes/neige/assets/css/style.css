@@ -8670,7 +8670,7 @@ body.menu-opened #side-menu {
 }
 .footer .info {
   position: relative;
-  padding-top: 120px;
+  padding: 70px 0;
   background-color: var(--soft-pink);
 }
 .footer .info .contact {
@@ -8695,7 +8695,6 @@ body.menu-opened #side-menu {
 }
 @media (max-width: 1024px) {
   .footer .info {
-    padding-top: 50px;
     display: flex;
     flex-direction: column;
   }
