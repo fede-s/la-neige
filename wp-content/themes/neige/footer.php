@@ -54,7 +54,7 @@ $options = get_fields('options'); ?>
          <?= file_get_contents(get_field('footer_signature', 'options')); ?>
       </div>
       <div class="logo-footer">
-         <?= file_get_contents(get_field('logo', 'options')); ?>
+         <?= Utils::imgLazy($options['logo'], 'large', '200px'); ?>
       </div>
    </section>
 </footer>

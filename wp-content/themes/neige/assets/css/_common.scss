@@ -287,12 +287,10 @@ h6 {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 2;
-		svg {
+		img {
+			display: block;
 			width: 100%;
-			height: 100%;
-			path {
-				fill: var(--soft-pink);
-			}
+			height: auto;
 		}
 	}
 
@@ -510,7 +508,7 @@ h6 {
 
 .logo-footer {
 	position: absolute;
-	width: 15%;
+	width: 200px;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 20%;
@@ -527,7 +525,6 @@ h6 {
 	}
 
 	@include tablet {
-		width: 50%;
 		position: relative;
 	}
 }

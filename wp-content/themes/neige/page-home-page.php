@@ -14,7 +14,7 @@ get_header(); ?>
 <div class="header">
     <div class="gradient">
         <div class="logo-header">
-            <?= file_get_contents(get_field('logo', 'options')); ?>
+            <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px'); ?>
         </div>
         <?php if (get_field('video')) {
         ?>

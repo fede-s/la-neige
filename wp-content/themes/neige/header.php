@@ -49,7 +49,7 @@ $options = get_fields('options');
                 </div>
                 <div class="menu-logo">
                     <a href="<?= get_permalink(Utils::getSeasonHome()) ?>">
-                        <?= file_get_contents(get_field('logo', 'options')); ?>
+                        <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '150px'); ?>
                     </a>
                 </div>
                 <div class="nav-bar-right">
@@ -82,7 +82,7 @@ $options = get_fields('options');
             </div>
             <div class="menu-right">
                 <div class="logo-header">
-                    <?= file_get_contents(get_field('logo', 'options')); ?>
+                    <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px'); ?>
                 </div>
                 <?php
                 foreach ($menu_items as $item) {
