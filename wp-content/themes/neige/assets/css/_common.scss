@@ -148,12 +148,15 @@ h6 {
 		}
 	}
 	.menu-logo {
-		width: 70px;
+		width: 110px;
 		height: auto;
 		pointer-events: auto;
 		transition: opacity 0.6s ease-in-out, background-color 1s;
 		position: relative;
 		top: 2px;
+		@include small-tablet {
+			width: 90px;
+		}
 		body.scrolled & {
 			opacity: 1;
 			pointer-events: auto;

@@ -8418,12 +8418,17 @@ body.scrolled .menu-nav-bar {
   filter: invert(50%);
 }
 .menu-nav-bar .menu-logo {
-  width: 70px;
+  width: 110px;
   height: auto;
   pointer-events: auto;
   transition: opacity 0.6s ease-in-out, background-color 1s;
   position: relative;
   top: 2px;
+}
+@media (max-width: 768px) {
+  .menu-nav-bar .menu-logo {
+    width: 90px;
+  }
 }
 body.scrolled .menu-nav-bar .menu-logo {
   opacity: 1;
