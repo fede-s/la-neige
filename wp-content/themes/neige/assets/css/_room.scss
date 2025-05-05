@@ -48,23 +48,16 @@
    flex-wrap: wrap;
    padding: 0;
 
-   div {
+   li {
       display: flex;
       gap: 20px;
       align-items: center;
-   }
-
-   li {
       list-style: none;
    }
 
-   svg {
-      height: 30px;
-      width: 30px;
-
-      path {
-         fill: var(--soft-pink);
-      }
+   img {
+      height: 50px;
+      width: 50px;
    }
 }
 .this-suite{

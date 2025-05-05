@@ -56,12 +56,11 @@ $icons = get_field($name);
             if ($type == 2) { ?>
                 <ul class="amenities basic-info">
                     <?php
-                    foreach ($icons as $icon) {
-                    ?>
-                        <div>
-                            <?= file_get_contents($icon['icon']); ?>
-                            <li><?= $icon['text']; ?></li>
-                        </div>
+                    foreach ($icons as $icon) {?>
+                        <li>
+                            <?= Utils::imgLazy($icon['icon'], 'large', '100px'); ?>
+                            <div><?= $icon['text']; ?></div>
+                        </li>
                     <?php }
                     ?>
                 </ul>

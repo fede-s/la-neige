@@ -8904,20 +8904,15 @@ body.menu-opened #side-menu {
   flex-wrap: wrap;
   padding: 0;
 }
-.amenities div {
+.amenities li {
   display: flex;
   gap: 20px;
   align-items: center;
-}
-.amenities li {
   list-style: none;
 }
-.amenities svg {
-  height: 30px;
-  width: 30px;
-}
-.amenities svg path {
-  fill: var(--soft-pink);
+.amenities img {
+  height: 50px;
+  width: 50px;
 }
 
 .this-suite ul {

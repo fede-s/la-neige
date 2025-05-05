@@ -41,12 +41,11 @@ get_header(); ?>
                     if ($amenities) {
                         foreach ($amenities as $term_id) {
                             $amenity = get_term($term_id);
-                            $icon_url = get_term_meta($term_id, 'icon', true);
-                            $image_data = wp_get_attachment_image_src($icon_url, 'thumbnail'); ?>
-                            <div>
-                                <?= file_get_contents($image_data[0]); ?>
-                                <li><?= $amenity->name; ?></li>
-                            </div>
+                            $icon = get_field('icon', $amenity); ?>
+                            <li>
+                                <?= Utils::imgLazy($icon, 'large', '100px') ?>
+                                <div><?= $amenity->name; ?></div>
+                            </li>
                         <?php }
                     }
                     ?>
