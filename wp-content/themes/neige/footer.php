@@ -1,3 +1,6 @@
+<?php
+$options = get_fields('options'); ?>
+
 <footer class="footer">
    <section class="newsletter-section">
       <div class="container newsletter-container">
@@ -37,10 +40,10 @@
          <p class="adress"><?= get_field('adress', 'options'); ?></p>
       </div>
       <div class="container social-media top-100">
-         <a href="<?= get_field('instagram', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/instagram.svg'); ?></a>
-         <a href="<?= get_field('facebook', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/facebook.svg'); ?></a>
-         <a href="<?= get_field('youtube', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/youtube.svg'); ?></a>
-         <a href="<?= get_field('tiktok', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/tiktok.svg'); ?></a>
+         <a href="<?= get_field('instagram', 'options'); ?>"><?= Utils::imgLazy($options['instagram_icon'], 'large', '100px') ?></a>
+         <a href="<?= get_field('facebook', 'options'); ?>"><?= Utils::imgLazy($options['facebook_icon'], 'large', '100px') ?></a>
+         <a href="<?= get_field('youtube', 'options'); ?>"><?= Utils::imgLazy($options['youtube_icon'], 'large', '100px') ?></a>
+         <a href="<?= get_field('tiktok', 'options'); ?>"><?= Utils::imgLazy($options['tiktok_icon'], 'large', '100px') ?></a>
       </div>
       <div class="container top-50 copyright">
          <p>

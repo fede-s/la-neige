@@ -98,30 +98,10 @@ Widgets::textImageSection($type);
                         <div class="info">
                             <h3><?= $room->post_title; ?></h3>
                             <ul class="basic-info">
-                                <div>
-                                    <?php
-                                    //  echo file_get_contents(get_field('square_meters_icon', 'options')); 
-                                    ?>
-                                    <li><?= get_post_meta($room->ID, 'square_meters', true); ?></li>
-                                </div>
-                                <div>
-                                    <?php
-                                    //  echo file_get_contents(get_field('people_icon', 'options')); 
-                                    ?>
-                                    <li><?= get_post_meta($room->ID, 'people', true); ?></li>
-                                </div>
-                                <div>
-                                    <?php
-                                    //  echo file_get_contents(get_field('beds_icon', 'options')); 
-                                    ?>
-                                    <li><?= get_post_meta($room->ID, 'beds', true); ?></li>
-                                </div>
-                                <div>
-                                    <?php
-                                    //  echo file_get_contents(get_field('bathrooms_icon', 'options')); 
-                                    ?>
-                                    <li><?= get_post_meta($room->ID, 'bathrooms', true); ?></li>
-                                </div>
+                                <li><?= get_post_meta($room->ID, 'square_meters', true); ?></li>
+                                <li><?= get_post_meta($room->ID, 'people', true); ?></li>
+                                <li><?= get_post_meta($room->ID, 'beds', true); ?></li>
+                                <li><?= get_post_meta($room->ID, 'bathrooms', true); ?></li>
                             </ul>
                         </div>
                     </a>

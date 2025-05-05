@@ -421,18 +421,9 @@ h6 {
 	gap: 15px;
 	order: 4;
 
-	a {
-		height: 25px;
-		width: 25px;
-	}
-
-	svg {
-		height: 100%;
-		width: 100%;
-
-		path {
-			fill: var(--forest-blue);
-		}
+	img {
+		height: 50px;
+		width: 50px;
 	}
 
 	@include tablet {

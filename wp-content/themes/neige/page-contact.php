@@ -73,7 +73,7 @@ get_header(); ?>
          <?php 
          foreach($fields['travel_options'] as $option) { ?>
             <div class="travel-option">
-               <?= file_get_contents($option['icon']) ;?>
+               <?= Utils::imgLazy($option['icon'], 'large', '100px') ;?>
                <h6><?= $option['title'] ;?></h6>
                <p><?= $option['text'] ;?></p>
             </div>

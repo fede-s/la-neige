@@ -8671,16 +8671,9 @@ body.menu-opened #side-menu {
   gap: 15px;
   order: 4;
 }
-.social-media a {
-  height: 25px;
-  width: 25px;
-}
-.social-media svg {
-  height: 100%;
-  width: 100%;
-}
-.social-media svg path {
-  fill: var(--forest-blue);
+.social-media img {
+  height: 50px;
+  width: 50px;
 }
 @media (max-width: 1024px) {
   .social-media {

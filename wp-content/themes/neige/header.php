@@ -5,7 +5,9 @@ require_once(THEME . '/yama/widgets/lists/Lists.php');
 require_once(THEME . '/yama/widgets/carousel/Carousel.php');
 
 $currentSeason = Utils::getCurrentSeason();
-$menu_items = wp_get_nav_menu_items($currentSeason); ?>
+$menu_items = wp_get_nav_menu_items($currentSeason);
+$options = get_fields('options');
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -78,10 +80,10 @@ $menu_items = wp_get_nav_menu_items($currentSeason); ?>
                     } ?>
                 </ul>
                 <div class="container social-media top-100">
-                    <a href="<?= get_field('instagram', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/instagram.svg'); ?></a>
-                    <a href="<?= get_field('facebook', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/facebook.svg'); ?></a>
-                    <a href="<?= get_field('youtube', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/youtube.svg'); ?></a>
-                    <a href="<?= get_field('tiktok', 'options'); ?>"><?= file_get_contents(get_template_directory_uri() . '/svg/tiktok.svg'); ?></a>
+                    <a href="<?= get_field('instagram', 'options'); ?>"><?= Utils::imgLazy($options['instagram_icon'], 'large', '100px') ?></a>
+                    <a href="<?= get_field('facebook', 'options'); ?>"><?= Utils::imgLazy($options['facebook_icon'], 'large', '100px') ?></a>
+                    <a href="<?= get_field('youtube', 'options'); ?>"><?= Utils::imgLazy($options['youtube_icon'], 'large', '100px') ?></a>
+                    <a href="<?= get_field('tiktok', 'options'); ?>"><?= Utils::imgLazy($options['tiktok_icon'], 'large', '100px') ?></a>
                 </div>
             </div>
             <div class="menu-right">
