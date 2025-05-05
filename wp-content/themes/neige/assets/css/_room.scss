@@ -28,8 +28,8 @@
    }
 
    img {
-      height: 50px;
-      width: 50px;
+      height: var(--icon-size);
+      width: var(--icon-size);
    }
 }
 
@@ -47,8 +47,8 @@
    }
 
    img {
-      height: 50px;
-      width: 50px;
+      height: var(--icon-size);
+      width: var(--icon-size);
    }
 }
 .this-suite{

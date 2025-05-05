@@ -8266,8 +8266,8 @@ h2.resp-accordion:first-child {
 }
 
 :root {
-  --header-height: 100px;
-  --header-scrolled-height: 70px;
+  --header-height: 120px;
+  --header-scrolled-height: 90px;
   --soft-pink: #fadcdc;
   --soft-pink-rgb: 250, 220, 220;
   --olive-green: #96963c;
@@ -8276,10 +8276,16 @@ h2.resp-accordion:first-child {
   --forest-blue-rgb: 40, 74, 70;
   --main-winter-color: var(--soft-pink);
   --main-summer-color: var(--olive-green);
+  --icon-size: 70px;
 }
 @media (max-width: 768px) {
   :root {
     --header-height: 60px;
+  }
+}
+@media (max-width: 479px) {
+  :root {
+    --icon-size: 50px;
   }
 }
 
@@ -8468,8 +8474,8 @@ body.scrolled .menu-nav-bar .season-selector .season-selector-item span {
   padding-bottom: 5px;
 }
 .season-selector .season-selector-item a img {
-  width: 50px;
-  height: 50px;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 .menu-icon {
@@ -8706,8 +8712,8 @@ body.menu-opened #side-menu {
   order: 4;
 }
 .social-media img {
-  height: 50px;
-  width: 50px;
+  height: var(--icon-size);
+  width: var(--icon-size);
 }
 @media (max-width: 1024px) {
   .social-media {
@@ -8915,8 +8921,8 @@ body.menu-opened #side-menu {
   list-style: none;
 }
 .basic-info img {
-  height: 50px;
-  width: 50px;
+  height: var(--icon-size);
+  width: var(--icon-size);
 }
 
 .amenities {
@@ -8932,8 +8938,8 @@ body.menu-opened #side-menu {
   list-style: none;
 }
 .amenities img {
-  height: 50px;
-  width: 50px;
+  height: var(--icon-size);
+  width: var(--icon-size);
 }
 
 .this-suite ul {

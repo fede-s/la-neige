@@ -1,6 +1,6 @@
 :root {
-	--header-height: 100px;
-	--header-scrolled-height: 70px;
+	--header-height: 120px;
+	--header-scrolled-height: 90px;
 	--soft-pink: #fadcdc;
 	--soft-pink-rgb: 250, 220, 220;
 	--olive-green: #96963c;
@@ -9,8 +9,12 @@
 	--forest-blue-rgb: 40, 74, 70;
 	--main-winter-color: var(--soft-pink);
 	--main-summer-color: var(--olive-green);
+	--icon-size: 70px;
 	@include small-tablet {
 		--header-height: 60px;
+	}
+	@include phone {
+		--icon-size: 50px;
 	}
 }
 
@@ -204,8 +208,8 @@ h6 {
 				padding-bottom: 5px;
 			}
 			img {
-				width: 50px;
-				height: 50px;
+				width: var(--icon-size);
+				height: var(--icon-size);
 			}
 		}
 	}
@@ -461,8 +465,8 @@ h6 {
 	order: 4;
 
 	img {
-		height: 50px;
-		width: 50px;
+		height: var(--icon-size);
+		width: var(--icon-size);
 	}
 
 	@include tablet {
