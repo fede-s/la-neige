@@ -8,7 +8,6 @@
 	--forest-blue-rgb: 40, 74, 70;
 	--main-winter-color: var(--soft-pink);
 	--main-summer-color: var(--olive-green);
-	--navbar-background: var(--main-season-color);
 }
 
 // Font //
@@ -90,7 +89,7 @@ h6 {
 	visibility: visible;
 	opacity: 1;
 	transition: opacity 0.6s ease-in-out, background-color 1s;
-	background-color: var(--navbar-background);
+	background-color: var(--soft-pink);
 	display: flex;
 	align-items: center;
 	body.menu-opened & {
@@ -109,7 +108,7 @@ h6 {
 		top: 32px;
 	}
 	body.scrolled & {
-		background-color: var(--navbar-background);
+		background-color: var(--soft-pink);
 	}
 	.container {
 		display: flex;
