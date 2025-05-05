@@ -8879,23 +8879,17 @@ body.menu-opened #side-menu {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 0;
-  padding-bottom: 50px;
+  padding: 0 0 50px;
 }
-.basic-info div {
+.basic-info li {
   display: flex;
   gap: 10px;
   align-items: center;
-}
-.basic-info li {
   list-style: none;
 }
-.basic-info svg {
-  height: 28px;
-  width: 28px;
-}
-.basic-info svg path {
-  fill: var(--soft-pink);
+.basic-info img {
+  height: 50px;
+  width: 50px;
 }
 
 .amenities {

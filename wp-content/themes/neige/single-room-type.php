@@ -15,22 +15,22 @@ get_header(); ?>
             <h1 class="post-title"><?php the_title(); ?></h1>
             <h6><?= Utils::getSeasonField($fields, 'sub_title') ?></h6>
             <ul class="basic-info">
-                <div>
-                    <?= file_get_contents(get_field('square_meters_icon', 'options')); ?>
-                    <li><?= Utils::getSeasonField($fields, 'square_meters'); ?></li>
-                </div>
-                <div>
-                    <?= file_get_contents(get_field('people_icon', 'options')); ?>
-                    <li><?= Utils::getSeasonField($fields, 'people'); ?></li>
-                </div>
-                <div>
-                    <?= file_get_contents(get_field('beds_icon', 'options')); ?>
-                    <li><?= Utils::getSeasonField($fields, 'beds'); ?></li>
-                </div>
-                <div>
-                    <?= file_get_contents(get_field('bathrooms_icon', 'options')); ?>
-                    <li><?= Utils::getSeasonField($fields, 'bathrooms'); ?></li>
-                </div>
+                <li>
+                    <?= Utils::imgLazy(get_field('square_meters_icon', 'options'), 'large', '100px'); ?>
+                    <div><?= Utils::getSeasonField($fields, 'square_meters'); ?></div>
+                </li>
+                <li>
+                    <?= Utils::imgLazy(get_field('people_icon', 'options'), 'large', '100px'); ?>
+                    <div><?= Utils::getSeasonField($fields, 'people'); ?></div>
+                </li>
+                <li>
+                    <?= Utils::imgLazy(get_field('beds_icon', 'options'), 'large', '100px'); ?>
+                    <div><?= Utils::getSeasonField($fields, 'beds'); ?></div>
+                </li>
+                <li>
+                    <?= Utils::imgLazy(get_field('bathrooms_icon', 'options'), 'large', '100px'); ?>
+                    <div><?= Utils::getSeasonField($fields, 'bathrooms'); ?></div>
+                </li>
             </ul>
             <p><?= Utils::getSeasonField($fields, 'description'); ?></p>
             <div class="top-50">
