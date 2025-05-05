@@ -43,5 +43,9 @@ class Widgets {
    public static function textImageSection($type) {
       include(__DIR__ . '/text-image-section.php');
   }
+
+  public static function seasonSwitch() {
+      include(__DIR__ . '/season-switch.php');
+  }
 }
 ?>

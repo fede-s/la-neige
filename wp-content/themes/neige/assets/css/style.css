@@ -8266,7 +8266,8 @@ h2.resp-accordion:first-child {
 }
 
 :root {
-  --header-height: 60px;
+  --header-height: 100px;
+  --header-scrolled-height: 70px;
   --soft-pink: #fadcdc;
   --soft-pink-rgb: 250, 220, 220;
   --olive-green: #96963c;
@@ -8275,6 +8276,11 @@ h2.resp-accordion:first-child {
   --forest-blue-rgb: 40, 74, 70;
   --main-winter-color: var(--soft-pink);
   --main-summer-color: var(--olive-green);
+}
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
 }
 
 body {
@@ -8351,9 +8357,10 @@ h6 {
   z-index: 9;
   width: 100%;
   height: var(--header-height);
+  max-height: var(--header-height);
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.6s ease-in-out, background-color 1s;
+  transition: opacity 0.6s ease-in-out, background-color 1s, max-height 1s;
   background-color: var(--soft-pink);
   display: flex;
   align-items: center;
@@ -8375,6 +8382,7 @@ body.admin-bar .menu-nav-bar {
 }
 body.scrolled .menu-nav-bar {
   background-color: var(--soft-pink);
+  max-height: var(--header-scrolled-height);
 }
 .menu-nav-bar .container {
   display: flex;
@@ -8403,21 +8411,6 @@ body.scrolled .menu-nav-bar {
 .menu-nav-bar .nav-bar-left #hamburger-menu svg:hover path {
   filter: invert(50%);
 }
-.menu-nav-bar .nav-bar-left .season-selector {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.menu-nav-bar .nav-bar-left .season-selector .season-selector-item a {
-  color: var(--forest-blue);
-  text-transform: uppercase;
-  text-decoration: none;
-}
-@media (max-width: 768px) {
-  .menu-nav-bar .nav-bar-left .season-selector {
-    display: none;
-  }
-}
 .menu-nav-bar .menu-logo {
   width: 70px;
   height: auto;
@@ -8438,6 +8431,45 @@ body.scrolled .menu-nav-bar .menu-logo {
 }
 .menu-nav-bar .nav-bar-right {
   flex: 1;
+}
+.menu-nav-bar .season-selector .season-selector-item span {
+  max-height: 20px;
+  opacity: 1;
+  padding-bottom: 5px;
+  overflow: hidden;
+  transition: opacity 0.5s, max-height 1s, padding-bottom 1s;
+}
+body.scrolled .menu-nav-bar .season-selector .season-selector-item span {
+  opacity: 0;
+  max-height: 0;
+  padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .menu-nav-bar .season-selector {
+    display: none;
+  }
+}
+
+.season-selector {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.season-selector .season-selector-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--forest-blue);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.season-selector .season-selector-item a span {
+  padding-bottom: 5px;
+}
+.season-selector .season-selector-item a img {
+  width: 50px;
+  height: 50px;
 }
 
 .menu-icon {
@@ -8473,6 +8505,9 @@ body.menu-opened #side-menu {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.menu-left .season-selector {
+  padding-bottom: 50px;
 }
 @media (max-width: 1024px) {
   .menu-left {

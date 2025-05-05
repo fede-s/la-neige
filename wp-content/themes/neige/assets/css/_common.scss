@@ -1,5 +1,6 @@
 :root {
-	--header-height: 60px;
+	--header-height: 100px;
+	--header-scrolled-height: 70px;
 	--soft-pink: #fadcdc;
 	--soft-pink-rgb: 250, 220, 220;
 	--olive-green: #96963c;
@@ -8,6 +9,9 @@
 	--forest-blue-rgb: 40, 74, 70;
 	--main-winter-color: var(--soft-pink);
 	--main-summer-color: var(--olive-green);
+	@include small-tablet {
+		--header-height: 60px;
+	}
 }
 
 // Font //
@@ -86,9 +90,10 @@ h6 {
 	z-index: 9;
 	width: 100%;
 	height: var(--header-height);
+	max-height: var(--header-height);
 	visibility: visible;
 	opacity: 1;
-	transition: opacity 0.6s ease-in-out, background-color 1s;
+	transition: opacity 0.6s ease-in-out, background-color 1s, max-height 1s;
 	background-color: var(--soft-pink);
 	display: flex;
 	align-items: center;
@@ -109,6 +114,7 @@ h6 {
 	}
 	body.scrolled & {
 		background-color: var(--soft-pink);
+		max-height: var(--header-scrolled-height);
 	}
 	.container {
 		display: flex;
@@ -136,21 +142,6 @@ h6 {
 				}
 			}
 		}
-		.season-selector {
-			display: flex;
-			align-items: center;
-			gap: 30px;
-			.season-selector-item {
-				a {
-					color: var(--forest-blue);
-					text-transform: uppercase;
-					text-decoration: none;
-				}
-			}
-			@include small-tablet {
-				display: none;
-			}
-		}
 	}
 	.menu-logo {
 		width: 70px;
@@ -172,6 +163,51 @@ h6 {
 	}
 	.nav-bar-right {
 		flex: 1;
+	}
+	.season-selector {
+		.season-selector-item {
+			span {
+				max-height: 20px;
+				opacity: 1;
+				padding-bottom: 5px;
+				overflow: hidden;
+				transition: opacity .5s, max-height 1s, padding-bottom 1s;
+				body.scrolled & {
+					opacity: 0;
+					max-height: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+	@include small-tablet {
+		.season-selector {
+			display: none;
+		}
+	}
+}
+
+.season-selector {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	.season-selector-item {
+		a {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: var(--forest-blue);
+			text-transform: uppercase;
+			text-decoration: none;
+			span {
+				padding-bottom: 5px;
+			}
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
 	}
 }
 
@@ -209,6 +245,10 @@ h6 {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+
+	.season-selector {
+		padding-bottom: 50px;
+	}
 
 	@include tablet {
 		width: 100%;

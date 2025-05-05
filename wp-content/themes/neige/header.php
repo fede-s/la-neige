@@ -45,14 +45,7 @@ $options = get_fields('options');
                     <div id="hamburger-menu">
                         <?= file_get_contents(THEME . '/svg/burger-menu.svg'); ?>
                     </div>
-                    <div class="season-selector">
-                        <div class="season-selector-item <?= $currentSeason === 'summer' ? 'active' : '' ?>">
-                            <a href="<?= Utils::getSeasonLink('summer') ?>" data-current-season="<?= $currentSeason ?>" data-new-season="summer"><?= Utils::getSeasonName('summer') ?></a>
-                        </div>
-                        <div class="season-selector-item <?= $currentSeason === 'winter' ? 'active' : '' ?>">
-                            <a href="<?= Utils::getSeasonLink('winter') ?>" data-current-season="<?= $currentSeason ?>" data-new-season="winter"><?= Utils::getSeasonName('winter') ?></a>
-                        </div>
-                    </div>
+                    <?php Widgets::seasonSwitch(); ?>
                 </div>
                 <div class="menu-logo">
                     <a href="<?= get_permalink(Utils::getSeasonHome()) ?>">
@@ -69,6 +62,7 @@ $options = get_fields('options');
                 <div class="close-menu">
                     <span class="close-icon">X Close</span>
                 </div>
+                <?php Widgets::seasonSwitch(); ?>
                 <ul class="menu-items">
                     <?php
                     foreach ($menu_items as $item) {
