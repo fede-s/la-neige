@@ -47,6 +47,9 @@
    background-image: linear-gradient(to top, rgba(var(--soft-pink-rgb), 1) 0%, rgba(var(--soft-pink-rgb), 0) 100%);
    pointer-events: none;
 }
+.no-gradient::after {
+   background-image: none;
+}
 
 
 .rooms-container {
