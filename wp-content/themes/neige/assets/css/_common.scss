@@ -19,10 +19,69 @@
 }
 
 // Font //
+/* BigCaslon - Regular */
+@font-face {
+	font-family: 'BigCaslon'; /* Nombre general de la familia */
+	src: url('../webfonts/BigCaslon-Regular.woff2') format('woff2'),
+		  url('../webfonts/BigCaslon-Regular.woff2') format('woff');
+	font-weight: normal; /* Peso normal */
+	font-style: normal; /* Estilo normal */
+ }
+ 
+ /* BigCaslon - Italic (Regular Italic) */
+ @font-face {
+	font-family: 'BigCaslon';
+	src: url('fonts/BigCaslon-RegularItalic.woff2') format('woff2'),
+		  url('fonts/BigCaslon-RegularItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic; /* Estilo itálico */
+ }
+ 
+ /* BigCaslon - Bold */
+ @font-face {
+	font-family: 'BigCaslon';
+	src: url('fonts/BigCaslon-Bold.woff2') format('woff2'),
+		  url('fonts/BigCaslon-Bold.woff') format('woff');
+	font-weight: bold; /* Peso negrita */
+	font-style: normal;
+ }
+ 
+ /* BigCaslon - Bold Italic */
+ @font-face {
+	font-family: 'BigCaslon';
+	src: url('fonts/BigCaslon-BoldItalic.woff2') format('woff2'),
+		  url('fonts/BigCaslon-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+ }
+ 
+ /* BigCaslon - Black */
+ @font-face {
+	font-family: 'BigCaslon';
+	src: url('fonts/BigCaslon-Black.woff2') format('woff2'),
+		  url('fonts/BigCaslon-Black.woff') format('woff');
+	font-weight: 900; /* Peso extra negrita (Black) */
+	font-style: normal;
+ }
+ 
+ /* BigCaslon - Black Italic */
+ @font-face {
+	font-family: 'BigCaslon';
+	src: url('fonts/BigCaslon-BlackItalic.woff2') format('woff2'),
+		  url('fonts/BigCaslon-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+ }
 
 body {
 	font-family: "Montserrat", sans-serif;
 	color: var(--forest-blue);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'BigCaslon';
+	font-weight: normal; /* Peso normal */
+	font-style: normal; /* Estilo normal */
+
 }
 
 h1 {
