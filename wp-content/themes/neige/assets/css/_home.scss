@@ -81,6 +81,7 @@
       .sig-svg {
         position: absolute;
         right: -10%;
+        width: 150px;
         // bottom: -42px;
         @include tablet {
           position: relative;
@@ -142,6 +143,9 @@
     .owl-carousel,
     .carousel-gallery {
       height: 100%;
+    }
+    .three-two-ratio {
+      aspect-ratio: 1;
     }
 
     p {
