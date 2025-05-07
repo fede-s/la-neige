@@ -31,6 +31,10 @@ get_header(); ?>
                     <?= Utils::imgLazy(get_field('bathrooms_icon', 'options'), 'large', '100px'); ?>
                     <div><?= Utils::getSeasonField($fields, 'bathrooms'); ?></div>
                 </li>
+                <li>
+                    <?= Utils::imgLazy(get_field('sofa_icon', 'options'), 'large', '100px'); ?>
+                    <div><?= Utils::getSeasonField($fields, 'sofa'); ?></div>
+                </li>
             </ul>
             <p><?= Utils::getSeasonField($fields, 'description'); ?></p>
             <div class="top-50">
@@ -52,7 +56,7 @@ get_header(); ?>
                 </ul>
             </div>
             <div class="this-suite top-50">
-                <h4>What’s included in this suite?</h4>
+                <h4>What's included in this room type?</h4>
                 <?= Utils::getSeasonField($fields, 'this_suite'); ?>
             </div>
 
