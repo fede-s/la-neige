@@ -36,6 +36,7 @@ $ratio = empty($ratio) ? 'three-two-ratio' : $ratio; ?>
 </div>
 <script>
     jQuery('#<?= $carousel_id ?>').owlCarousel({
+        center: true,
         loop: true,
         touchDrag: true,
         mouseDrag: true,
