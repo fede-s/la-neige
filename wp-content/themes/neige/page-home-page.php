@@ -16,6 +16,9 @@ get_header(); ?>
         <div class="logo-header">
             <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px'); ?>
         </div>
+        <div class="signature-header">
+        <?php echo Utils::imgLazy(get_field('header_signature'), 'large', '2000px'); ?>
+        </div>
         <?php if (get_field('video')) {
         ?>
             <div class="video-container">
@@ -25,9 +28,11 @@ get_header(); ?>
                     allow="autoplay; fullscreen; picture-in-picture">
                 </iframe>
             </div>
-        <?php } else {
-            echo Utils::imgLazy(get_field('header_image'), 'large', '2000px');
-        } ?>
+        <?php } else { ?>
+            <div class="image-header">
+                <?php echo Utils::imgLazy(get_field('header_image'), 'large', '2000px'); ?>
+            </div>
+        <?php } ?>
 
     </div>
 </div>
