@@ -7,7 +7,7 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
 ?>
 
 <div class="header activity-header">
-   <div class="gradient">
+   <div class="gradient no-gradient">
       <?= Utils::imgLazyFromPost($post, 'large', '2000px'); ?>
    </div>
 </div>
