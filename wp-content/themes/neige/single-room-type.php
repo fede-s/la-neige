@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: room type
  */
@@ -50,7 +51,7 @@ get_header(); ?>
                                 <?= Utils::imgLazy($icon, 'large', '100px') ?>
                                 <div><?= $amenity->name; ?></div>
                             </li>
-                        <?php }
+                    <?php }
                     }
                     ?>
                 </ul>
@@ -72,15 +73,15 @@ get_header(); ?>
                         <div class="base-image">
                             <?php echo Utils::imgLazy($image, 'medium', '800px'); ?>
                         </div>
-                        <?php
+                    <?php
                     } else { ?>
                         <div class="top-image">
                             <?php echo Utils::imgLazy($image, 'medium', '800px'); ?>
                         </div>
-                        <?php
+                    <?php
                     }
                     ?>
-                <?php }
+            <?php }
             } ?>
         </div>
     </div>
@@ -89,6 +90,46 @@ get_header(); ?>
     ?>
     <?php Carousel::galleryFromACF($gallery); ?>
 </div>
+
+<section class="container top-100 bottom-100 pink">
+    <div class="discover-more">
+        <h5>
+            Discover More Accommodations
+        </h5>
+        <h3>
+            <a href="stay">
+                Explore All Accommodations ----
+            </a>
+        </h3>
+    </div>
+    <div class="rooms-display bottom-30 top-100">
+        <div id="rooms" class="owl-carousel owl-theme">
+            <?php
+            $roomTypes = Utils::getPosts('room-type');
+            $actualPost = get_the_ID();
+            foreach ($roomTypes as $room) {
+                if ($actualPost != $room->ID) {
+            ?>
+                    <div class="item">
+                        <a href="<?= get_permalink($room->ID); ?>" target="_blank">
+                            <?= Utils::imgLazyFromPost($room, 'medium', '400px'); ?>
+                            <div class="info">
+                                <h3><?= $room->post_title; ?></h3>
+                                <ul class="basic-info">
+                                    <li><?= get_post_meta($room->ID, 'square_meters', true); ?></li>
+                                    <li><?= get_post_meta($room->ID, 'people', true); ?></li>
+                                    <li><?= get_post_meta($room->ID, 'beds', true); ?></li>
+                                    <li><?= get_post_meta($room->ID, 'bathrooms', true); ?></li>
+                                    <li><?= get_post_meta($room->ID, 'sofa', true); ?></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+            <?php }
+            } ?>
+        </div>
+    </div>
+</section>
 
 
 <?php get_footer(); ?>
