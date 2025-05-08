@@ -15,6 +15,9 @@
 }
 
 .basic-info {
+   font-family: 'BigCaslon';
+	font-weight: normal;
+	font-style: normal;
    display: flex;
    flex-wrap: wrap;
    gap: 10px;
@@ -34,6 +37,9 @@
 }
 
 .amenities {
+   font-family: 'BigCaslon';
+	font-weight: normal;
+	font-style: normal;
    display: grid;
    grid-template-columns: 1fr 1fr;
    flex-wrap: wrap;

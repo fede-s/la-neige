@@ -76,7 +76,7 @@ Widgets::textImageSection($type);
     </div>
 </section>
 <section class="container top-100 bottom-100 pink">
-    <div class="discover">
+    <div class="discover-more">
         <h5>
             Discover Our Accommodations
         </h5>
@@ -102,6 +102,7 @@ Widgets::textImageSection($type);
                                 <li><?= get_post_meta($room->ID, 'people', true); ?></li>
                                 <li><?= get_post_meta($room->ID, 'beds', true); ?></li>
                                 <li><?= get_post_meta($room->ID, 'bathrooms', true); ?></li>
+                                <li><?= get_post_meta($room->ID, 'sofa', true); ?></li>
                             </ul>
                         </div>
                     </a>

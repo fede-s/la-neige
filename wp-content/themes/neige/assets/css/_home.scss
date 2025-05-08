@@ -1,15 +1,17 @@
 .gradient .logo-header {
-    position: absolute;
-	width: max(150px, min(20%, 250px));
-	left: 50%;
-	top: 50px;
-	transform: translateX(-50%);
-    z-index: 1;
-    img {
-      width: 100%;
-      height: auto;
-    }
+  position: absolute;
+  width: max(150px, min(20%, 250px));
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
+
 .video-container {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -72,30 +74,37 @@
       margin-left: 10%;
 
     }
+
     .signature {
       padding-bottom: 50px;
       width: 80%;
+
       h1 {
         display: inline;
       }
+
       .sig-svg {
         position: absolute;
         right: -10%;
         width: 150px;
+
         // bottom: -42px;
         @include tablet {
           position: relative;
           right: auto;
         }
       }
+
       svg {
         display: block;
         height: 100%;
         width: 100%;
+
         path {
           fill: var(--olive-green);
         }
       }
+
       @include tablet {
         padding-bottom: 0px !important;
       }
@@ -144,6 +153,7 @@
     .carousel-gallery {
       height: 100%;
     }
+
     .three-two-ratio {
       aspect-ratio: 1;
     }
@@ -302,6 +312,7 @@
 
 .pink {
   background-color: var(--soft-pink);
+
   .shadow {
     background-color: var(--forest-blue);
   }
@@ -310,6 +321,7 @@
 .forest-blue {
   background-color: var(--forest-blue);
   color: var(--soft-pink);
+
   .shadow {
     background-color: var(--soft-pink);
   }
@@ -333,6 +345,7 @@
 
   .side-text {
     width: 100%;
+
     .signature {
       width: 70%;
       // svg {
@@ -425,7 +438,7 @@
     }
 
     @include tablet {
-      width: 50%; 
+      width: 50%;
       height: 300px;
       right: auto;
     }
@@ -433,7 +446,7 @@
 
 }
 
-.discover {
+.discover-more {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -533,6 +546,7 @@
     align-items: center;
 
     .basic-info {
+      font-family: "Montserrat", sans-serif;
       gap: 20px;
       padding: 0;
     }

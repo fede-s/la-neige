@@ -10,9 +10,11 @@
 	--main-winter-color: var(--soft-pink);
 	--main-summer-color: var(--olive-green);
 	--icon-size: 70px;
+
 	@include small-tablet {
 		--header-height: 60px;
 	}
+
 	@include phone {
 		--icon-size: 50px;
 	}
@@ -21,66 +23,72 @@
 // Font //
 /* BigCaslon - Regular */
 @font-face {
-	font-family: 'BigCaslon'; /* Nombre general de la familia */
+	font-family: 'BigCaslon';
 	src: url('../webfonts/BigCaslon-Regular.woff2') format('woff2'),
-		  url('../webfonts/BigCaslon-Regular.woff2') format('woff');
-	font-weight: normal; /* Peso normal */
-	font-style: normal; /* Estilo normal */
- }
- 
- /* BigCaslon - Italic (Regular Italic) */
- @font-face {
-	font-family: 'BigCaslon';
-	src: url('fonts/BigCaslon-RegularItalic.woff2') format('woff2'),
-		  url('fonts/BigCaslon-RegularItalic.woff') format('woff');
+		url('../webfonts/BigCaslon-Regular.woff2') format('woff');
 	font-weight: normal;
-	font-style: italic; /* Estilo itálico */
- }
- 
- /* BigCaslon - Bold */
- @font-face {
-	font-family: 'BigCaslon';
-	src: url('fonts/BigCaslon-Bold.woff2') format('woff2'),
-		  url('fonts/BigCaslon-Bold.woff') format('woff');
-	font-weight: bold; /* Peso negrita */
 	font-style: normal;
- }
- 
- /* BigCaslon - Bold Italic */
- @font-face {
+}
+
+/* BigCaslon - Italic (Regular Italic) */
+@font-face {
 	font-family: 'BigCaslon';
-	src: url('fonts/BigCaslon-BoldItalic.woff2') format('woff2'),
-		  url('fonts/BigCaslon-BoldItalic.woff') format('woff');
+	src: url('../webfonts/BigCaslon-RegularItalic.woff2') format('woff2'),
+		url('../webfonts/BigCaslon-RegularItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* BigCaslon - Bold */
+@font-face {
+	font-family: 'BigCaslon';
+	src: url('../webfonts/BigCaslon-Bold.woff2') format('woff2'),
+		url('../webfonts/BigCaslon-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* BigCaslon - Bold Italic */
+@font-face {
+	font-family: 'BigCaslon';
+	src: url('../webfonts/BigCaslon-BoldItalic.woff2') format('woff2'),
+		url('../webfonts/BigCaslon-BoldItalic.woff') format('woff');
 	font-weight: bold;
 	font-style: italic;
- }
- 
- /* BigCaslon - Black */
- @font-face {
+}
+
+/* BigCaslon - Black */
+@font-face {
 	font-family: 'BigCaslon';
-	src: url('fonts/BigCaslon-Black.woff2') format('woff2'),
-		  url('fonts/BigCaslon-Black.woff') format('woff');
-	font-weight: 900; /* Peso extra negrita (Black) */
+	src: url('../webfonts/BigCaslon-Black.woff2') format('woff2'),
+		url('../webfonts/BigCaslon-Black.woff') format('woff');
+	font-weight: 900;
 	font-style: normal;
- }
- 
- /* BigCaslon - Black Italic */
- @font-face {
+}
+
+/* BigCaslon - Black Italic */
+@font-face {
 	font-family: 'BigCaslon';
-	src: url('fonts/BigCaslon-BlackItalic.woff2') format('woff2'),
-		  url('fonts/BigCaslon-BlackItalic.woff') format('woff');
+	src: url('../webfonts/BigCaslon-BlackItalic.woff2') format('woff2'),
+		url('../webfonts/BigCaslon-BlackItalic.woff') format('woff');
 	font-weight: 900;
 	font-style: italic;
- }
+}
 
 body {
 	font-family: "Montserrat", sans-serif;
 	color: var(--forest-blue);
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'BigCaslon';
-	font-weight: normal; /* Peso normal */
-	font-style: normal; /* Estilo normal */
+	font-weight: normal;
+	font-style: normal;
 
 }
 
@@ -131,6 +139,7 @@ h6 {
 
 .top-100 {
 	padding-top: 100px;
+
 	@include tablet {
 		padding-top: 0;
 	}
@@ -160,52 +169,64 @@ h6 {
 	background-color: var(--soft-pink);
 	display: flex;
 	align-items: center;
+
 	body.menu-opened & {
 		opacity: 0;
 		pointer-events: none;
 	}
+
 	body.page-template-page-home-page & {
 		background: transparent;
 		position: fixed;
+
 		.menu-logo {
 			opacity: 0;
 			pointer-events: none;
 		}
 	}
+
 	body.admin-bar & {
 		top: 32px;
 	}
+
 	body.scrolled & {
 		background-color: var(--soft-pink);
 		max-height: var(--header-scrolled-height);
 	}
+
 	.container {
 		display: flex;
 		align-items: center;
 		gap: 30px;
 	}
+
 	.nav-bar-left {
 		flex: 1;
 		display: flex;
 		align-items: center;
 		gap: 30px;
+
 		#hamburger-menu {
 			height: 30px;
 			width: 30px;
 			cursor: pointer;
+
 			svg {
 				width: 100%;
 				height: 100%;
 				display: block;
+
 				path {
 					fill: var(--forest-blue);
 				}
+
 				&:hover path {
 					filter: invert(50%)
 				}
 			}
 		}
 	}
+
 	.menu-logo {
 		width: 110px;
 		height: auto;
@@ -213,23 +234,29 @@ h6 {
 		transition: opacity 0.6s ease-in-out, background-color 1s;
 		position: relative;
 		top: 2px;
+
 		@include small-tablet {
 			width: 90px;
 		}
+
 		body.scrolled & {
 			opacity: 1;
 			pointer-events: auto;
 		}
+
 		svg {
 			fill: var(--forest-blue);
+
 			text {
 				fill: var(--forest-blue) !important;
 			}
 		}
 	}
+
 	.nav-bar-right {
 		flex: 1;
 	}
+
 	.season-selector {
 		.season-selector-item {
 			span {
@@ -238,6 +265,7 @@ h6 {
 				padding-bottom: 5px;
 				overflow: hidden;
 				transition: opacity .5s, max-height 1s, padding-bottom 1s;
+
 				body.scrolled & {
 					opacity: 0;
 					max-height: 0;
@@ -246,6 +274,7 @@ h6 {
 			}
 		}
 	}
+
 	@include small-tablet {
 		.season-selector {
 			display: none;
@@ -257,6 +286,7 @@ h6 {
 	display: flex;
 	align-items: center;
 	gap: 30px;
+
 	.season-selector-item {
 		a {
 			display: flex;
@@ -266,9 +296,14 @@ h6 {
 			color: var(--forest-blue);
 			text-transform: uppercase;
 			text-decoration: none;
+
 			span {
+				font-family: 'BigCaslon';
+				font-weight: normal;
+				font-style: normal;
 				padding-bottom: 5px;
 			}
+
 			img {
 				width: var(--icon-size);
 				height: var(--icon-size);
@@ -296,6 +331,7 @@ h6 {
 	pointer-events: none;
 	transition: opacity 0.6s ease-in-out;
 	display: flex;
+
 	body.menu-opened & {
 		opacity: 1;
 		pointer-events: auto;
@@ -346,6 +382,7 @@ h6 {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 2;
+
 		img {
 			display: block;
 			width: 100%;
@@ -386,6 +423,9 @@ h6 {
 }
 
 .menu-items {
+	font-family: 'BigCaslon';
+	font-weight: normal;
+	font-style: normal;
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -436,6 +476,9 @@ h6 {
 }
 
 .newsletter-form {
+	font-family: 'BigCaslon';
+	font-weight: normal;
+	font-style: normal;
 	margin-bottom: 10px;
 	width: 50%;
 	text-align: right;
@@ -486,6 +529,7 @@ h6 {
 		.contact {
 			order: 3;
 		}
+
 		position: relative;
 		padding: 70px 0;
 		background-color: var(--soft-pink);
@@ -536,6 +580,9 @@ h6 {
 
 .copyright {
 	order: 5;
+	font-family: 'BigCaslon';
+	font-weight: normal;
+	font-style: normal;
 
 	p {
 		font-size: 12px;
@@ -591,6 +638,9 @@ h6 {
 // Button //
 
 .linkBtn {
+	font-family: 'BigCaslon';
+	font-weight: normal;
+	font-style: normal;
 	display: inline-block;
 	padding: 12px 16px;
 	font-size: 16px;
