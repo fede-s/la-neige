@@ -41,15 +41,18 @@ $type = 3;
 Widgets::textImageSection($type);
 ?>
 <section class="container top-100 bottom-100 pink">
-    <div class="discover-more">
-        <h5>
-            Discover Our Accommodations
-        </h5>
-        <h3>
-            <a href="stay">
-                Explore All Accommodations ----
-            </a>
-        </h3>
+    <div class="section-text-image">
+        <div class="side-text discover-more">
+            <h5>Discover Our Accommodations</h5>
+            <div class="signature">
+                <h1><a href="room-types">
+                        Explore All Accommodations ----
+                    </a>
+                    <div class="sig-svg">
+                    </div>
+                </h1>
+            </div>
+        </div>
     </div>
     <div class="rooms-display bottom-30 top-100">
         <div id="rooms" class="owl-carousel owl-theme">
@@ -82,9 +85,9 @@ Widgets::textImageSection($type);
             <h5><?= get_field('instagram_pre_title'); ?></h5>
             <div class="signature">
                 <h1><?= get_field('instagram_title'); ?>
-                <div class="sig-svg">
-                    <?= file_get_contents(get_field('instagram_signature')) ;?>
-                </div>
+                    <div class="sig-svg">
+                        <?= file_get_contents(get_field('instagram_signature')); ?>
+                    </div>
                 </h1>
             </div>
 

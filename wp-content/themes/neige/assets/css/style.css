@@ -9516,20 +9516,9 @@ body.menu-opened #side-menu {
   }
 }
 
-.discover-more {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
 .discover-more a {
   text-decoration: none;
   color: var(--forest-blue);
-}
-@media (max-width: 1024px) {
-  .discover-more {
-    padding-top: 50px;
-    flex-direction: column;
-  }
 }
 
 .rooms-display {

@@ -91,16 +91,19 @@ get_header(); ?>
     <?php Carousel::galleryFromACF($gallery); ?>
 </div>
 
-<section class="container top-100 bottom-100 pink">
-    <div class="discover-more">
-        <h5>
-            Discover More Accommodations
-        </h5>
-        <h3>
-            <a href="stay">
-                Explore All Accommodations ----
-            </a>
-        </h3>
+<section class="container top-100 bottom-100">
+    <div class="section-text-image">
+        <div class="side-text discover-more">
+            <h5>Looking for more?</h5>
+            <div class="signature">
+                <h1><a href="room-types">
+                Discover Our Accommodations
+                    </a>
+                    <div class="sig-svg">
+                    </div>
+                </h1>
+            </div>
+        </div>
     </div>
     <div class="rooms-display bottom-30 top-100">
         <div id="rooms" class="owl-carousel owl-theme">
