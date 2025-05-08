@@ -66,7 +66,7 @@ $options = get_fields('options');
                 <ul class="menu-items">
                     <?php
                     foreach ($menu_items as $item) {
-                        $slug = get_post_field('post_name', $item->object_id); ?>
+                        $slug = get_post_field('post_name', $item->object_id). 'Image'; ?>
                         <li class="menu-item" data-featured-image="<?= $slug ?>">
                             <a href="<?= $item->url; ?>"> <?= $item->title ?></a>
                         </li>
@@ -86,7 +86,7 @@ $options = get_fields('options');
                 </div>
                 <?php
                 foreach ($menu_items as $item) {
-                    $slug = get_post_field('post_name', $item->object_id);
+                    $slug = get_post_field('post_name', $item->object_id). 'Image';
                     echo Utils::imgLazyFromPost($item->object_id, 'large', '100vw', '', $slug);
                 } ?>
             </div>
