@@ -40,41 +40,6 @@ Widgets::textImageSection($type);
 $type = 3;
 Widgets::textImageSection($type);
 ?>
-<section class="insta">
-    <div class="container section-text-image instagram">
-        <div class="side-text">
-            <h5><?= get_field('instagram_pre_title'); ?></h5>
-            <div class="signature">
-                <h1><?= get_field('instagram_title'); ?>
-                <div class="sig-svg">
-                    <?= file_get_contents(get_field('instagram_signature')) ;?>
-                </div>
-                </h1>
-            </div>
-
-        </div>
-    </div>
-    <div class="post one">
-        <a href="<?= get_field('post_1')['link']['url'] ?>">
-            <?= Utils::imgLazy(get_field('post_1')['image'], 'large', '800px') ?>
-        </a>
-    </div>
-    <div class="post two">
-        <a href="<?= get_field('post_2')['link']['url'] ?>">
-            <?= Utils::imgLazy(get_field('post_2')['image'], 'large', '800px') ?>
-        </a>
-    </div>
-    <div class="post three">
-        <a href="<?= get_field('post_3')['link']['url'] ?>">
-            <?= Utils::imgLazy(get_field('post_3')['image'], 'large', '800px') ?>
-        </a>
-    </div>
-    <div class="post four">
-        <a href="<?= get_field('post_4')['link']['url'] ?>">
-            <?= Utils::imgLazy(get_field('post_4')['image'], 'large', '800px') ?>
-        </a>
-    </div>
-</section>
 <section class="container top-100 bottom-100 pink">
     <div class="discover-more">
         <h5>
@@ -109,6 +74,41 @@ Widgets::textImageSection($type);
                 </div>
             <?php } ?>
         </div>
+    </div>
+</section>
+<section class="insta">
+    <div class="container section-text-image instagram">
+        <div class="side-text">
+            <h5><?= get_field('instagram_pre_title'); ?></h5>
+            <div class="signature">
+                <h1><?= get_field('instagram_title'); ?>
+                <div class="sig-svg">
+                    <?= file_get_contents(get_field('instagram_signature')) ;?>
+                </div>
+                </h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="post one">
+        <a href="<?= get_field('post_1')['link']['url'] ?>">
+            <?= Utils::imgLazy(get_field('post_1')['image'], 'large', '800px') ?>
+        </a>
+    </div>
+    <div class="post two">
+        <a href="<?= get_field('post_2')['link']['url'] ?>">
+            <?= Utils::imgLazy(get_field('post_2')['image'], 'large', '800px') ?>
+        </a>
+    </div>
+    <div class="post three">
+        <a href="<?= get_field('post_3')['link']['url'] ?>">
+            <?= Utils::imgLazy(get_field('post_3')['image'], 'large', '800px') ?>
+        </a>
+    </div>
+    <div class="post four">
+        <a href="<?= get_field('post_4')['link']['url'] ?>">
+            <?= Utils::imgLazy(get_field('post_4')['image'], 'large', '800px') ?>
+        </a>
     </div>
 </section>
 
