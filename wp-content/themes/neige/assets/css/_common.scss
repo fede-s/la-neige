@@ -339,17 +339,19 @@ h6 {
 }
 
 .menu-left {
+	position: relative;
 	width: 50%;
 	background-color: var(--soft-pink);
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	text-align: center;
 
 	.season-selector {
 		padding-bottom: 50px;
+	}
+	.season-selector, .menu-item, .social-media {
+		padding-left: 10%;
 	}
 
 	@include tablet {
@@ -409,11 +411,10 @@ h6 {
 
 .close-menu {
 	position: absolute;
-	top: 4%;
-	padding-left: 12px;
+	top: 2%;
+	right: 2%;
 	color: var(--forest-blue);
 	cursor: pointer;
-	margin-bottom: 20px;
 	font-size: 1.2em;
 	z-index: 99;
 
@@ -427,13 +428,13 @@ h6 {
 	font-weight: normal;
 	font-style: normal;
 	list-style: none;
-	padding: 0;
 	margin: 0;
+	padding-left: 0;
 }
 
 .menu-item a {
 	display: block;
-	padding: 10px;
+	padding: 10px 0;
 	color: var(--forest-blue);
 	text-decoration: none;
 	transition: color 0.3s;

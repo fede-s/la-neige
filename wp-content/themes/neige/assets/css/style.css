@@ -8564,17 +8564,19 @@ body.menu-opened #side-menu {
 }
 
 .menu-left {
+  position: relative;
   width: 50%;
   background-color: var(--soft-pink);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 .menu-left .season-selector {
   padding-bottom: 50px;
+}
+.menu-left .season-selector, .menu-left .menu-item, .menu-left .social-media {
+  padding-left: 10%;
 }
 @media (max-width: 1024px) {
   .menu-left {
@@ -8631,11 +8633,10 @@ body.menu-opened #side-menu {
 
 .close-menu {
   position: absolute;
-  top: 4%;
-  padding-left: 12px;
+  top: 2%;
+  right: 2%;
   color: var(--forest-blue);
   cursor: pointer;
-  margin-bottom: 20px;
   font-size: 1.2em;
   z-index: 99;
 }
@@ -8648,13 +8649,13 @@ body.menu-opened #side-menu {
   font-weight: normal;
   font-style: normal;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding-left: 0;
 }
 
 .menu-item a {
   display: block;
-  padding: 10px;
+  padding: 10px 0;
   color: var(--forest-blue);
   text-decoration: none;
   transition: color 0.3s;

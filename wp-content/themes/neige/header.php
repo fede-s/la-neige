@@ -73,7 +73,7 @@ $options = get_fields('options');
                     <?php
                     } ?>
                 </ul>
-                <div class="container social-media top-100">
+                <div class="social-media top-100">
                     <a href="<?= get_field('instagram', 'options'); ?>"><?= Utils::imgLazy($options['instagram_icon'], 'large', '100px') ?></a>
                     <a href="<?= get_field('facebook', 'options'); ?>"><?= Utils::imgLazy($options['facebook_icon'], 'large', '100px') ?></a>
                     <a href="<?= get_field('youtube', 'options'); ?>"><?= Utils::imgLazy($options['youtube_icon'], 'large', '100px') ?></a>
