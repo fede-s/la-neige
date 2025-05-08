@@ -9024,7 +9024,15 @@ body.menu-opened #side-menu {
   height: var(--icon-size);
   width: var(--icon-size);
 }
+@media (max-width: 1024px) {
+  .amenities {
+    grid-template-columns: 1fr;
+  }
+}
 
+.this-suite {
+  padding-bottom: 50px;
+}
 .this-suite ul {
   padding: 0 0 0 20px;
   display: flex;

@@ -56,8 +56,12 @@
       height: var(--icon-size);
       width: var(--icon-size);
    }
+   @include tablet {
+      grid-template-columns: 1fr;
+   }
 }
 .this-suite{
+   padding-bottom: 50px;
    ul {
       padding: 0 0 0 20px;
       display: flex;
