@@ -9112,9 +9112,9 @@ body.menu-opened #side-menu {
 
 .gradient .logo-header {
   position: absolute;
-  width: max(150px, min(20%, 250px));
+  width: max(200px, min(50%, 250px));
   left: 50%;
-  top: 50px;
+  top: 5%;
   transform: translateX(-50%);
   z-index: 3;
 }
@@ -9122,25 +9122,30 @@ body.menu-opened #side-menu {
   width: 100%;
   height: auto;
 }
+@media (max-width: 768px) {
+  .gradient .logo-header {
+    top: 10%;
+  }
+}
 
 .signature-header {
   position: absolute;
   z-index: 3;
   width: max(250px, min(50%, 400px));
   left: 50%;
-  bottom: 5%;
+  bottom: 10%;
   transform: translateX(-50%);
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .signature-header {
-    bottom: 15%;
+    bottom: 20%;
   }
 }
 
 .image-header {
   position: absolute;
   z-index: 1;
-  width: max(850px, min(110%, 100vw));
+  width: max(450px, min(100%, 1000px));
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
