@@ -8495,6 +8495,14 @@ body.scrolled .menu-nav-bar .menu-logo {
 }
 .menu-nav-bar .nav-bar-right {
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu-nav-bar .nav-bar-right .book-btn {
+  background: var(--forest-blue);
+  color: var(--soft-pink);
+  padding: 13px min(4vw, 50px) 10px;
 }
 .menu-nav-bar .season-selector .season-selector-item span {
   max-height: 20px;
@@ -8729,6 +8737,7 @@ body.menu-opened #side-menu {
 }
 .newsletter-section .newsletter-container input[type=submit] {
   margin: 0 !important;
+  border: 1px solid var(--soft-pink) !important;
 }
 
 .footer .info {

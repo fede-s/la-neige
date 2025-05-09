@@ -54,7 +54,7 @@ $options = get_fields('options');
                     </a>
                 </div>
                 <div class="nav-bar-right">
-
+                    <a href="" class="linkBtn book-btn">BOOK</a>
                 </div>
             </div>
         </div>
