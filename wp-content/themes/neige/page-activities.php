@@ -16,9 +16,13 @@ get_header(); ?>
       <?= Utils::imgLazy(get_field('header_image'), 'large', '2000px') ?>
    </div>
    <div class="header-text">
-      <?= get_field('header_text'); ?>
+      <h5><?= $fields['pre_title'] ;?></h5>
+      <h1><?= $fields['title'] ;?></h1>
    </div>
 </div>
+ <div class="introduction-text">
+   <p><?= $fields['activities_introduction_text'] ;?></p>
+ </div>
 
 <section class="container bottom-30 forest-blue">
    <div class="activities">

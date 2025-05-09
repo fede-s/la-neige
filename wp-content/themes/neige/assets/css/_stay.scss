@@ -56,21 +56,20 @@
 
 .introduction-text {
    text-align: center;
-   padding: 0 30%;
-   padding-top: 50px;
+   padding: 50px 30%;
+   
    @include tablet {
-      padding: 0 15%;
-      padding-top: 50px;
+      padding: 50px 15%;
+     
    }
    @include phone {
-      padding: 0 5%;
-      padding-top: 50px;
+      padding: 50px 5%;
+      
    }
 }
 
 
 .rooms-container {
-   padding-top: 50px;
    display: flex;
    flex-wrap: wrap;
    gap: 15px;
