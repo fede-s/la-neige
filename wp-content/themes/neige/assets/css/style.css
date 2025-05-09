@@ -8668,9 +8668,14 @@ body.menu-opened #side-menu {
 
 .newsletter-section {
   width: 100%;
-  padding: 70px 0;
+  padding: 60px 0 70px;
   background-color: var(--forest-blue);
   color: var(--soft-pink);
+}
+@media (max-width: 1024px) {
+  .newsletter-section {
+    padding: 70px 0;
+  }
 }
 .newsletter-section .newsletter-container {
   display: flex;
@@ -8691,7 +8696,7 @@ body.menu-opened #side-menu {
   gap: 20px;
 }
 .newsletter-section .newsletter-container h1 {
-  font-size: min(3.8vw, 55px);
+  font-size: min(3.7vw, 55px);
   padding: 0;
   width: 50%;
   text-align: left;

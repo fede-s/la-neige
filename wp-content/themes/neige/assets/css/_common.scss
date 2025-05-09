@@ -450,9 +450,12 @@ h6 {
 
 .newsletter-section {
 	width: 100%;
-	padding: 70px 0;
+	padding: 60px 0 70px;
 	background-color: var(--forest-blue);
 	color: var(--soft-pink);
+	@include tablet {
+		padding: 70px 0;
+	}
 	.newsletter-container {
 		display: flex;
 		justify-content: space-between;
@@ -471,7 +474,7 @@ h6 {
 			gap: 20px;
 		}
 		h1 {
-			font-size: min(3.8vw, 55px);
+			font-size: min(3.7vw, 55px);
 			padding: 0;
 			width: 50%;
 			text-align: left;
