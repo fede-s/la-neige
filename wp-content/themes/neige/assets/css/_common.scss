@@ -475,13 +475,17 @@ h6 {
 			padding: 0;
 			width: 50%;
 			text-align: left;
+			position: relative;
+			top: .7vw;
 			@include tablet {
 				font-size: 20px;
 				width: 100%;
 				min-width: unset;
+				top: 0;
 			}
 		}
 		input[type="email"] {
+			font-family: 'BigCaslon', ui-sans-serif;
 			padding: 10px;
 			border: none !important;
 			border-bottom: 1px solid var(--soft-pink) !important;

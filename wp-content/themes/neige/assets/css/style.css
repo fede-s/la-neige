@@ -8695,15 +8695,19 @@ body.menu-opened #side-menu {
   padding: 0;
   width: 50%;
   text-align: left;
+  position: relative;
+  top: 0.7vw;
 }
 @media (max-width: 1024px) {
   .newsletter-section .newsletter-container h1 {
     font-size: 20px;
     width: 100%;
     min-width: unset;
+    top: 0;
   }
 }
 .newsletter-section .newsletter-container input[type=email] {
+  font-family: "BigCaslon", ui-sans-serif;
   padding: 10px;
   border: none !important;
   border-bottom: 1px solid var(--soft-pink) !important;
@@ -8950,7 +8954,7 @@ body.menu-opened #side-menu {
   line-height: 1.5;
 }
 .room .room-link {
-  font-family: "BigCaslon";
+  font-family: "BigCaslon", nor;
   font-weight: normal;
   font-style: normal;
   display: inline;
