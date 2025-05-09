@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const seasonSelectors = document.querySelectorAll('.season-selector-item a');
 
-    seasonSelectors.forEach(selector => {
-        selector.addEventListener('click', async (event) => {
-            const currentSeason = event.target.dataset.currentSeason;
-            const selectedSeason = event.target.dataset.newSeason;
-            if (currentSeason !== selectedSeason && !event.target.href.includes(selectedSeason)) {
+    seasonSelectors.forEach(el => {
+        el.addEventListener('click', async (event) => {
+            const currentSeason = el.dataset.currentSeason;
+            const selectedSeason = el.dataset.newSeason;
+            if (currentSeason !== selectedSeason && !el.href.includes(selectedSeason)) {
                 event.preventDefault();
                 await fetch('/wp-json/custom/v1/switch-season', {
                     method: 'GET',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         'Content-Type': 'application/json',
                     },
                 });
-                location.href = event.target.href;
+                location.href = el.href;
             }
         });
     });
