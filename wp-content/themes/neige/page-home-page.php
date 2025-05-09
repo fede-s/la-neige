@@ -48,12 +48,13 @@ Widgets::textImageSection($type);
 <section class="container top-100 bottom-100 pink">
     <div class="section-text-image">
         <div class="side-text discover-more">
-            <h5>Discover Our Accommodations</h5>
+            <h5><?= $fields['room_preview_pre_title'] ;?></h5>
             <div class="signature">
                 <h1><a href="room-types">
-                        Explore All Accommodations ----
+                <?= $fields['room_preview_title'] ;?>
                     </a>
                     <div class="sig-svg">
+                    <?= file_get_contents(get_field('room_preview_signature')); ?>
                     </div>
                 </h1>
             </div>
