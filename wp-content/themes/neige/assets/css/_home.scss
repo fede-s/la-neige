@@ -10,10 +10,12 @@
     width: 100%;
     height: auto;
   }
+
   @include small-tablet {
     top: 10%;
   }
 }
+
 .signature-header {
   position: absolute;
   z-index: 3;
@@ -21,11 +23,13 @@
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
+
   @include small-tablet {
     bottom: 20%;
   }
 
 }
+
 .image-header {
   position: absolute;
   z-index: 1;
@@ -59,9 +63,14 @@
   }
 }
 
-
+.sections {
+  position: relative;
+  overflow: hidden;
+}
 
 .section-text-image {
+  position: relative;
+  z-index: 5;
   padding-top: 100px;
   display: flex;
   justify-content: space-between;
@@ -279,6 +288,7 @@
   }
 
   .image-left {
+    z-index: 5;
     position: relative;
     left: 10%;
     height: 60vh;
@@ -302,6 +312,7 @@
   }
 
   .image-right {
+    z-index: 5;
     right: 0;
     bottom: 0;
     position: absolute;
@@ -573,4 +584,30 @@
   }
 
 
+}
+
+.background-image {
+  position: absolute;
+  z-index: 1;
+  width: 1000px;
+  height: auto;
+
+}
+
+.type-2 {
+  transform: scaleX(-1);
+  bottom: -23%;
+  left: -10%;
+}
+
+.type-3 {
+  bottom: -9%;
+  left: 23%;
+}
+
+.footer-image {
+  width: 800px;
+  height: auto;
+  right: -6%;
+  bottom: -20%;
 }

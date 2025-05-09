@@ -527,7 +527,9 @@ h6 {
 
 .footer {
 	.info {
+		overflow: hidden;
 		.contact {
+			z-index: 2;
 			order: 3;
 		}
 
@@ -565,6 +567,7 @@ h6 {
 }
 
 .social-media {
+	z-index: 2;
 	display: flex;
 	gap: 15px;
 	order: 4;
@@ -580,6 +583,7 @@ h6 {
 }
 
 .copyright {
+	z-index: 2;
 	order: 5;
 	font-family: 'BigCaslon';
 	font-weight: normal;
@@ -591,6 +595,7 @@ h6 {
 }
 
 .signature-footer {
+	z-index: 2;
 	position: absolute;
 	width: 15%;
 	bottom: 0;
@@ -614,6 +619,7 @@ h6 {
 }
 
 .logo-footer {
+	z-index: 2;
 	position: absolute;
 	width: 200px;
 	left: 50%;

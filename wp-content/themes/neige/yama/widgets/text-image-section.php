@@ -9,14 +9,18 @@ $text = get_field($name . '_text');
 $button = get_field($name . '_button');
 $gallery = get_field($name . '_gallery');
 $icons = get_field($name);
+$backGround = get_field($name . '_background_image');
 
 
 ?>
 
 
 
-<section class="container <?php echo ($type == 1) ? 'bottom-100' : '';
-                            echo ($type == 2) ? 'pink bottom-100' : (($type == 3) ? 'forest-blue' : ''); ?>">
+<section class="container sections <?php echo ($type == 1) ? 'bottom-100' : '';
+                                    echo ($type == 2) ? 'pink bottom-100' : (($type == 3) ? 'forest-blue' : ''); ?>">
+    <?php if($type == 2) {
+     echo Utils::imgLazy($backGround, 'large', '2000px', '', 'background-image type-2'); 
+    }?>
     <div class="section-text-image">
         <?php
         if ($type == 2) { ?>
@@ -45,8 +49,9 @@ $icons = get_field($name);
         <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : ''; ?>">
             <h5><?= $preTitle; ?></h5>
             <div class="signature">
-            <h1><?= $title; ?> <div class="sig-svg"><?= file_get_contents($signature); ?></div></h1>
-                
+                <h1><?= $title; ?> <div class="sig-svg"><?= file_get_contents($signature); ?></div>
+                </h1>
+
             </div>
             <p><?= $text; ?></p>
             <?php if ($type == 1 || $type == 3) { ?>
@@ -55,7 +60,7 @@ $icons = get_field($name);
             if ($type == 2) { ?>
                 <ul class="amenities basic-info">
                     <?php
-                    foreach ($icons as $icon) {?>
+                    foreach ($icons as $icon) { ?>
                         <li>
                             <?= Utils::imgLazy($icon['icon'], 'large', '100px'); ?>
                             <div><?= $icon['text']; ?></div>
@@ -80,6 +85,9 @@ $icons = get_field($name);
     <?php
     if ($type == 3) { ?>
         <div class="float-img forest-blue">
+        <?php if($type == 3) {
+     echo Utils::imgLazy(get_field('background_image_restaurant'), 'large', '2000px', '', 'background-image type-3'); 
+    }?>
             <div class="image-left top-100">
                 <?= Utils::imgLazy($gallery[1], 'medium', '800px') ?>
             </div>

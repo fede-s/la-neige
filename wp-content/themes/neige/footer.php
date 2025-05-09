@@ -17,6 +17,7 @@ $options = get_fields('options'); ?>
       </div>
    </section>
    <section class="info">
+      <?= Utils::imgLazy(get_field('footer_background_image', 'options'), 'large', '2000px', '', 'background-image footer-image'); ;?>
       <div class="container contact">
          <h5>GET IN TOUCH</h5>
          <div class="tel">

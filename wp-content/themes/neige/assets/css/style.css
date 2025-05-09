@@ -8741,11 +8741,13 @@ body.menu-opened #side-menu {
   }
 }
 .footer .info {
+  overflow: hidden;
   position: relative;
   padding: 70px 0;
   background-color: var(--soft-pink);
 }
 .footer .info .contact {
+  z-index: 2;
   order: 3;
 }
 .footer .info p {
@@ -8773,6 +8775,7 @@ body.menu-opened #side-menu {
 }
 
 .social-media {
+  z-index: 2;
   display: flex;
   gap: 15px;
   order: 4;
@@ -8788,6 +8791,7 @@ body.menu-opened #side-menu {
 }
 
 .copyright {
+  z-index: 2;
   order: 5;
   font-family: "BigCaslon";
   font-weight: normal;
@@ -8798,6 +8802,7 @@ body.menu-opened #side-menu {
 }
 
 .signature-footer {
+  z-index: 2;
   position: absolute;
   width: 15%;
   bottom: 0;
@@ -8820,6 +8825,7 @@ body.menu-opened #side-menu {
 }
 
 .logo-footer {
+  z-index: 2;
   position: absolute;
   width: 200px;
   left: 50%;
@@ -9174,7 +9180,14 @@ body.menu-opened #side-menu {
     width: 100vw;
   }
 }
+.sections {
+  position: relative;
+  overflow: hidden;
+}
+
 .section-text-image {
+  position: relative;
+  z-index: 5;
   padding-top: 100px;
   display: flex;
   justify-content: space-between;
@@ -9369,6 +9382,7 @@ body.menu-opened #side-menu {
   }
 }
 .float-img .image-left {
+  z-index: 5;
   position: relative;
   left: 10%;
   height: 60vh;
@@ -9392,6 +9406,7 @@ body.menu-opened #side-menu {
   object-fit: cover;
 }
 .float-img .image-right {
+  z-index: 5;
   right: 0;
   bottom: 0;
   position: absolute;
@@ -9621,6 +9636,31 @@ body.menu-opened #side-menu {
 }
 .rooms-display .center .info {
   opacity: 1;
+}
+
+.background-image {
+  position: absolute;
+  z-index: 1;
+  width: 1000px;
+  height: auto;
+}
+
+.type-2 {
+  transform: scaleX(-1);
+  bottom: -23%;
+  left: -10%;
+}
+
+.type-3 {
+  bottom: -9%;
+  left: 23%;
+}
+
+.footer-image {
+  width: 800px;
+  height: auto;
+  right: -6%;
+  bottom: -20%;
 }
 
 .restaurant {
