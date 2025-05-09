@@ -197,14 +197,14 @@ h6 {
 	.container {
 		display: flex;
 		align-items: center;
-		gap: 30px;
+		gap: 1.5vw;
 	}
 
 	.nav-bar-left {
 		flex: 1;
 		display: flex;
 		align-items: center;
-		gap: 30px;
+		gap: 1.5vw;
 
 		#hamburger-menu {
 			height: 30px;
@@ -275,7 +275,7 @@ h6 {
 		}
 	}
 
-	@include small-tablet {
+	@include tablet {
 		.season-selector {
 			display: none;
 		}
@@ -647,4 +647,43 @@ h6 {
 .linkBtn:hover {
 	background-color: var(--forest-blue);
 	color: var(--soft-pink);
+}
+
+.trp_language_switcher_shortcode {
+	position: relative;
+	top: 2px;
+	padding: 0 12px 0 0;
+	.trp-language-switcher {
+		display: flex;
+		align-items: center;
+		width: auto;
+		height: auto;
+		&:after {
+			cursor: pointer;
+			content: '\f078';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			position: absolute;
+			right: 0;
+		}
+		.trp-ls-shortcode-current-language {
+			background: var(--soft-pink);
+			border: none;
+			padding: 0;
+		}
+		.trp-ls-shortcode-language {
+			background: var(--soft-pink);
+			border: none;
+			padding: 0;
+		}
+		> div > a {
+			text-align: center;
+			cursor: pointer;
+			color: var(--forest-blue);
+			font-family: 'BigCaslon', ui-sans-serif;
+			&:hover {
+				background: var(--soft-pink);
+			}
+		}
+	}
 }

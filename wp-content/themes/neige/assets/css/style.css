@@ -8446,13 +8446,13 @@ body.scrolled .menu-nav-bar {
 .menu-nav-bar .container {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 1.5vw;
 }
 .menu-nav-bar .nav-bar-left {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 1.5vw;
 }
 .menu-nav-bar .nav-bar-left #hamburger-menu {
   height: 30px;
@@ -8508,7 +8508,7 @@ body.scrolled .menu-nav-bar .season-selector .season-selector-item span {
   max-height: 0;
   padding-bottom: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .menu-nav-bar .season-selector {
     display: none;
   }
@@ -8858,6 +8858,45 @@ body.menu-opened #side-menu {
 .linkBtn:hover {
   background-color: var(--forest-blue);
   color: var(--soft-pink);
+}
+
+.trp_language_switcher_shortcode {
+  position: relative;
+  top: 2px;
+  padding: 0 12px 0 0;
+}
+.trp_language_switcher_shortcode .trp-language-switcher {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+.trp_language_switcher_shortcode .trp-language-switcher:after {
+  cursor: pointer;
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+}
+.trp_language_switcher_shortcode .trp-language-switcher .trp-ls-shortcode-current-language {
+  background: var(--soft-pink);
+  border: none;
+  padding: 0;
+}
+.trp_language_switcher_shortcode .trp-language-switcher .trp-ls-shortcode-language {
+  background: var(--soft-pink);
+  border: none;
+  padding: 0;
+}
+.trp_language_switcher_shortcode .trp-language-switcher > div > a {
+  text-align: center;
+  cursor: pointer;
+  color: var(--forest-blue);
+  font-family: "BigCaslon", ui-sans-serif;
+}
+.trp_language_switcher_shortcode .trp-language-switcher > div > a:hover {
+  background: var(--soft-pink);
 }
 
 .header {

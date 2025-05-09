@@ -45,6 +45,7 @@ $options = get_fields('options');
                     <div id="hamburger-menu">
                         <?= file_get_contents(THEME . '/svg/burger-menu.svg'); ?>
                     </div>
+                    <?= do_shortcode('[language-switcher]'); ?>
                     <?php Widgets::seasonSwitch(); ?>
                 </div>
                 <div class="menu-logo">
