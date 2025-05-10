@@ -9313,7 +9313,14 @@ body.menu-opened #side-menu {
   display: inline;
 }
 .section-text-image .side-text .signature .sig-svg {
+  font-size: 30px;
+  margin: 0;
+  line-height: 0.9;
+  font-weight: 100;
+  color: var(--olive-green);
+  font-family: "DesMontilles";
   position: absolute;
+  transform: rotate(-5deg);
   right: -10%;
   width: 150px;
 }

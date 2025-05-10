@@ -49,7 +49,7 @@ $backGround = get_field($name . '_background_image');
         <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : ''; ?>">
             <h5><?= $preTitle; ?></h5>
             <div class="signature">
-                <h1><?= $title; ?> <div class="sig-svg"><?= file_get_contents($signature); ?></div>
+                <h1><?= $title; ?> <div class="sig-svg"><?= $signature; ?></div>
                 </h1>
 
             </div>

@@ -20,6 +20,7 @@
   object-fit: contain !important;
   z-index: 3;
   width: max(250px, min(50%, 400px)) !important;
+
   @include tablet {
     padding-right: 0;
     align-self: auto;
@@ -121,7 +122,14 @@
       }
 
       .sig-svg {
+        font-size: 30px;
+        margin: 0;
+        line-height: 0.9;
+        font-weight: 100;
+        color: var(--olive-green);
+        font-family: "DesMontilles";
         position: absolute;
+        transform: rotate(-5deg);
         right: -10%;
         width: 150px;
 

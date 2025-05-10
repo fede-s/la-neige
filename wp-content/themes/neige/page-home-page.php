@@ -51,7 +51,7 @@ Widgets::textImageSection($type);
                 <?= $fields['room_preview_title'] ;?>
                     </a>
                     <div class="sig-svg">
-                    <?= file_get_contents(get_field('room_preview_signature')); ?>
+                    <?= $fields['room_preview_signature']; ?>
                     </div>
                 </h1>
             </div>
@@ -89,7 +89,7 @@ Widgets::textImageSection($type);
             <div class="signature">
                 <h1><?= get_field('instagram_title'); ?>
                     <div class="sig-svg">
-                        <?= file_get_contents(get_field('instagram_signature')); ?>
+                        <?= $fields['instagram_signature']; ?>
                     </div>
                 </h1>
             </div>
