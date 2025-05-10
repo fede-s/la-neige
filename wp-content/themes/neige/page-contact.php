@@ -15,8 +15,8 @@ get_header(); ?>
 <section class="contact container restaurant forest-blue">
    <div class="contact-title">
       <h1><?= $fields['title']; ?></h1>
-      <div class="sig-svg">
-
+      <div class="contact-signature">
+         <?= $fields['signature']; ?>
       </div>
       <div class="contact-data">
          <?php
@@ -63,23 +63,26 @@ get_header(); ?>
          <div class="contact-title">
             <h1><?= $fields['access_title'] ?? '' ?></h1>
          </div>
+         <div class="contact-signature">
+            <?= $fields['access_signature']; ?>
+         </div>
          <p class="access-text"><?= $fields['access_text'] ?? '' ?></p>
          <?php
          if (!empty($fields['travel_options'])) {
-         foreach($fields['travel_options'] as $option) { ?>
-             <div class="travel-option">
-                 <?= Utils::imgLazy($option['icon'], 'large', '100px') ;?>
-                 <h6><?= $option['title'] ;?></h6>
-                 <p><?= $option['text'] ;?></p>
-             </div>
-            <?php
+            foreach ($fields['travel_options'] as $option) { ?>
+               <div class="travel-option">
+                  <?= Utils::imgLazy($option['icon'], 'large', '100px'); ?>
+                  <h6><?= $option['title']; ?></h6>
+                  <p><?= $option['text']; ?></p>
+               </div>
+         <?php
             }
          } ?>
       </div>
 
       <div class="side-image">
-         <?php 
-         if(!empty($fields['map_image'])) {
+         <?php
+         if (!empty($fields['map_image'])) {
             echo Utils::imgLazy($fields['map_image'], 'medium', '1000px');
          } else {
             echo $fields['map'] ?? '';
