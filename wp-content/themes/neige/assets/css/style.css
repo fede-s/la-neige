@@ -9173,44 +9173,51 @@ body.menu-opened #side-menu {
 }
 
 .gradient .logo-header {
-  position: absolute;
   width: max(200px, min(50%, 250px));
-  left: 50%;
-  top: 5%;
-  transform: translateX(-50%);
+  height: 20vh !important;
+  object-fit: contain !important;
   z-index: 3;
-}
-.gradient .logo-header img {
-  width: 100%;
-  height: auto;
 }
 @media (max-width: 768px) {
   .gradient .logo-header {
-    top: 10%;
+    padding-top: 70px;
   }
+}
+
+.header-home {
+  height: 100vh;
 }
 
 .signature-header {
-  position: absolute;
+  padding-right: 10%;
+  align-self: end;
+  height: 15vh !important;
+  object-fit: contain !important;
   z-index: 3;
-  width: max(250px, min(50%, 400px));
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
+  width: max(250px, min(50%, 400px)) !important;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .signature-header {
-    bottom: 20%;
+    padding-right: 0;
+    align-self: auto;
   }
 }
 
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .image-header {
-  position: absolute;
+  aspect-ratio: 1.6;
+  height: auto !important;
+  max-height: 60% !important;
+  object-fit: contain !important;
   z-index: 1;
-  width: max(450px, min(100%, 1000px));
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: max(450px, min(100%, 1000px)) !important;
 }
 
 .video-container {
@@ -10148,5 +10155,3 @@ body.menu-opened #side-menu {
   height: 100%;
   object-fit: cover;
 }
-
-/*# sourceMappingURL=style.css.map */

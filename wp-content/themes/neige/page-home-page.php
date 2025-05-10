@@ -11,14 +11,8 @@ get_header(); ?>
 
 
 <?php $videoId = Utils::getVimeoVideoId(get_field('video')); ?>
-<div class="header">
+<div class="header header-home">
     <div class="gradient no-gradient">
-        <div class="logo-header">
-            <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px'); ?>
-        </div>
-        <div class="signature-header">
-        <?php echo Utils::imgLazy(get_field('header_signature'), 'large', '2000px'); ?>
-        </div>
         <?php if (get_field('video')) {
         ?>
             <div class="video-container">
@@ -29,9 +23,12 @@ get_header(); ?>
                 </iframe>
             </div>
         <?php } else { ?>
-            <div class="image-header">
-                <?php echo Utils::imgLazy(get_field('header_image'), 'large', '2000px'); ?>
+            <div class="header-content">
+            <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px', '', 'logo-header'); ?>
+            <?php echo Utils::imgLazy(get_field('header_image'), 'large', '2000px', '', 'image-header'); ?>
+            <?php echo Utils::imgLazy(get_field('header_signature'), 'large', '2000px', '', 'signature-header'); ?>
             </div>
+            
         <?php } ?>
 
     </div>
