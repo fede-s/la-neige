@@ -39,7 +39,7 @@ get_header(); ?>
             </ul>
             <p><?= Utils::getSeasonField($fields, 'description'); ?></p>
             <div class="top-50">
-                <h4>Room Amenities</h4>
+                <h4>ROOM AMENITIES</h4>
                 <ul class="amenities basic-info">
                     <?php
                     $amenities = Utils::getSeasonField($fields, 'amenities');
@@ -57,7 +57,7 @@ get_header(); ?>
                 </ul>
             </div>
             <div class="this-suite top-50">
-                <h4>What's included in this room type?</h4>
+                <h4>FEATURES AND HIGHLIGHTS</h4>
                 <?= Utils::getSeasonField($fields, 'this_suite'); ?>
             </div>
 
@@ -89,15 +89,16 @@ get_header(); ?>
     $gallery = Utils::getSeasonField($fields, 'room_gallery');
     ?>
     <?php Carousel::galleryFromACF($gallery); ?>
+    <div class="spacer medium"></div>
 </div>
 
-<section class="container top-100 bottom-100">
+<section class="container bottom-100 pink">
     <div class="section-text-image">
-        <div class="side-text discover-more">
-            <h5>Looking for more?</h5>
+        <div class="side-text discover-more discover-room">
+            <h5>THERE IS MORE</h5>
             <div class="signature">
                 <h1><a href="room-types">
-                Discover Our Accommodations
+                MORE WAYS TO STAY
                     </a>
                     <div class="sig-svg">
                     </div>

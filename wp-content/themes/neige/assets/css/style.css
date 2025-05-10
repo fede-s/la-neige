@@ -9047,6 +9047,12 @@ body.menu-opened #side-menu {
     width: 100%;
   }
 }
+.details h1 {
+  font-size: 56px;
+}
+.details h6 {
+  font-size: 18px;
+}
 
 .basic-info {
   font-family: "BigCaslon";
@@ -9170,6 +9176,13 @@ body.menu-opened #side-menu {
     width: 100%;
     height: 250px;
   }
+}
+
+.discover-room h1 {
+  font-size: 36px !important;
+}
+.discover-room h5 {
+  font-size: 16px !important;
 }
 
 .gradient .logo-header {
@@ -9306,11 +9319,6 @@ body.menu-opened #side-menu {
 }
 .section-text-image .side-text .signature svg path {
   fill: var(--olive-green);
-}
-@media (max-width: 1024px) {
-  .section-text-image .side-text .signature {
-    padding-bottom: 0px !important;
-  }
 }
 @media (max-width: 1200px) {
   .section-text-image .side-text h1 {
