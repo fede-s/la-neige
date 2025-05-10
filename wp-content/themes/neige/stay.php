@@ -19,6 +19,7 @@ get_header(); ?>
 </div>
  <div class="introduction-text">
    <p><?= $fields['introduction_text'] ;?></p>
+   <p class="prueba"> Hola</p>
  </div>
 
 <div class="rooms-container container">

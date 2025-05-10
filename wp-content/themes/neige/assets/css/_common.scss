@@ -75,6 +75,13 @@
 	font-style: italic;
 }
 
+/* DesMontilles */
+@font-face {
+	font-family: "DesMontilles";
+	src: url('../webfonts/font.woff2') format('woff2'),
+	 url('../webfonts/font.woff') format('woff');
+ }
+
 body {
 	font-family: "Montserrat", sans-serif;
 	color: var(--forest-blue);
