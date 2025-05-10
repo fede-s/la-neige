@@ -88,7 +88,7 @@ get_header(); ?>
     <?php
     $gallery = Utils::getSeasonField($fields, 'room_gallery');
     ?>
-    <?php Carousel::galleryFromACF($gallery); ?>
+    <?php Carousel::galleryFromACF($gallery, true, '', true); ?>
     <div class="spacer medium"></div>
 </div>
 
