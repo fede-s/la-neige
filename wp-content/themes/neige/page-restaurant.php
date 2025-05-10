@@ -33,7 +33,7 @@ get_header(); ?>
             <div class="signature">
                <h1><?= $fields['restaurant_title']; ?>
                <div class="sig-svg">
-                  <?= file_get_contents(get_field('restaurant_signature')); ?>
+                  <?= $fields['restaurant_signature']; ?>
                </div>
             </h1>
             </div>
@@ -81,7 +81,7 @@ get_header(); ?>
             <div class="signature">
                <h1><?= $fields['chef_title']; ?>
                <div class="sig-svg">
-                  <?= file_get_contents(get_field('chef_signature')); ?>
+                  <?= $fields['chef_signature']; ?>
                </div>
             </h1>
          </div>

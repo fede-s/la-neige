@@ -9761,10 +9761,8 @@ body.menu-opened #side-menu {
 .restaurant .side-text h1 {
   padding-bottom: 0;
 }
-.restaurant .side-text .signature svg {
-  position: relative;
-  right: auto;
-  bottom: auto;
+.restaurant .side-text .signature {
+  padding-bottom: 100px;
 }
 .restaurant .side-image {
   padding-top: 150px;
