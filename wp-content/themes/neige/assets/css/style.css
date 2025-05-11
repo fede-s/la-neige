@@ -9201,18 +9201,22 @@ body.menu-opened #side-menu {
     padding-top: 70px;
   }
 }
+@media (max-width: 479px) {
+  .gradient .logo-header {
+    padding-top: 100px;
+  }
+}
 
 .header-home {
   height: 100vh;
 }
 
 .signature-header {
-  padding-right: 10%;
+  padding-right: 15%;
+  font-size: clamp(35px, 10vw, 60px) !important;
   align-self: end;
   height: 15vh !important;
-  object-fit: contain !important;
   z-index: 3;
-  width: max(250px, min(50%, 400px)) !important;
 }
 @media (max-width: 1024px) {
   .signature-header {
@@ -9235,7 +9239,12 @@ body.menu-opened #side-menu {
   max-height: 60% !important;
   object-fit: contain !important;
   z-index: 1;
-  width: max(450px, min(100%, 1000px)) !important;
+  width: max(350px, min(100%, 1000px)) !important;
+}
+@media (max-width: 479px) {
+  .image-header {
+    width: 340px !important;
+  }
 }
 
 .video-container {

@@ -7,6 +7,9 @@
   @include small-tablet {
     padding-top: 70px;
   }
+  @include phone {
+    padding-top: 100px;
+  }
 }
 
 .header-home {
@@ -14,12 +17,11 @@
 }
 
 .signature-header {
-  padding-right: 10%;
+  padding-right: 15%;
+  font-size: clamp(35px, 10vw, 60px) !important;
   align-self: end;
   height: 15vh !important;
-  object-fit: contain !important;
   z-index: 3;
-  width: max(250px, min(50%, 400px)) !important;
 
   @include tablet {
     padding-right: 0;
@@ -42,7 +44,12 @@
   max-height: 60% !important;
   object-fit: contain !important;
   z-index: 1;
-  width: max(450px, min(100%, 1000px)) !important;
+  width: max(350px, min(100%, 1000px)) !important;
+  @include phone {
+    width: 340px !important;
+  }
+  
+  
 }
 
 .video-container {

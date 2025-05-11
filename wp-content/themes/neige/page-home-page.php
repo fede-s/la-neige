@@ -26,7 +26,9 @@ get_header(); ?>
             <div class="header-content">
             <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px', '', 'logo-header'); ?>
             <?php echo Utils::imgLazy(get_field('header_image'), 'large', '2000px', '', 'image-header'); ?>
-            <?php echo Utils::imgLazy(get_field('header_signature'), 'large', '2000px', '', 'signature-header'); ?>
+            <div class="signature-header contact-signature">
+                <?php echo $fields['header_signature']; ?>
+            </div>
             </div>
             
         <?php } ?>
