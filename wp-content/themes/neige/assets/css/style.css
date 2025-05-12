@@ -9313,14 +9313,11 @@ body.menu-opened #side-menu {
   margin-left: 10%;
 }
 .section-text-image .side-text .signature {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   width: 80%;
 }
-.section-text-image .side-text .signature h1 {
-  display: inline;
-}
 .section-text-image .side-text .signature .sig-svg {
-  font-size: 30px;
+  font-size: 45px;
   margin: 0;
   line-height: 0.9;
   font-weight: 100;
@@ -9328,8 +9325,7 @@ body.menu-opened #side-menu {
   font-family: "DesMontilles";
   position: absolute;
   transform: rotate(-5deg);
-  right: -10%;
-  width: 150px;
+  right: -20%;
 }
 @media (max-width: 1024px) {
   .section-text-image .side-text .signature .sig-svg {
@@ -9344,6 +9340,11 @@ body.menu-opened #side-menu {
 }
 .section-text-image .side-text .signature svg path {
   fill: var(--olive-green);
+}
+@media (max-width: 1024px) {
+  .section-text-image .side-text .signature {
+    padding-bottom: 50px;
+  }
 }
 @media (max-width: 1200px) {
   .section-text-image .side-text h1 {
@@ -9556,7 +9557,7 @@ body.menu-opened #side-menu {
 
 .instagram {
   position: absolute;
-  width: 20%;
+  width: 30%;
 }
 .instagram .side-text {
   width: 100%;
@@ -9577,7 +9578,7 @@ body.menu-opened #side-menu {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
-  height: 95vh;
+  height: 1000px;
 }
 @media (max-width: 1024px) {
   .insta {
