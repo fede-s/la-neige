@@ -72,7 +72,7 @@ get_header(); ?>
             </div>
 
         </div>
-        <div class="side-img">
+        <div class="side-img base-top-image">
             <?php
             $sideGallery = Utils::getSeasonField($fields, 'side_images');
             if ($sideGallery) {

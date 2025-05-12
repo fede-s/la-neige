@@ -215,7 +215,7 @@
     img {
       position: relative;
       width: 126.3%;
-      height: 100%;
+      aspect-ratio: 1;
       object-fit: cover;
 
       @include small-desktop {
@@ -246,19 +246,29 @@
     @include tablet {
       height: auto;
     }
+    .base-image {
+      aspect-ratio: 0.746;
+      height: auto;
+      @include small-tablet{
+        height: 300px;
+
+      }
+    }
 
     .top-image {
       left: 21%;
       bottom: 41%;
       width: 65%;
-      height: 400px;
+      height: auto;
+      aspect-ratio: 1;
+      // height: 400px;
       z-index: 1;
 
       @include small-tablet {
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 250px;
+        height: 300px;
       }
     }
 
@@ -288,7 +298,8 @@
 
 .float-img {
   position: relative;
-  height: 126.4vh;
+  // height: 126.4vh;
+  aspect-ratio: 1.15;
   margin: 0 -12.5%;
   display: grid;
 
@@ -307,7 +318,8 @@
     z-index: 5;
     position: relative;
     left: 10%;
-    height: 60vh;
+    // height: 60vh;
+    aspect-ratio: 0.86;
     width: 30%;
 
     @include tablet {
@@ -335,6 +347,7 @@
     // position: relative;
     // height: 80vh;
     width: 35%;
+    aspect-ratio: 1.5;
     // left: 65%;
     // top: -30%;
 
@@ -414,6 +427,9 @@
   grid-template-columns: repeat(4, 1fr);
   position: relative;
   height: 1000px;
+  @include small-desktop {
+    height: 900px;
+  }
 
   @include tablet {
     display: flex;
@@ -427,10 +443,10 @@
     }
   }
 
+
   .post {
     position: absolute;
     width: 100%;
-    height: 400px;
 
     img {
       width: 100%;
@@ -445,14 +461,14 @@
 
   .one {
     bottom: 0;
-    width: 400px;
-    height: 55%;
+    width: 24%;
+    aspect-ratio: 0.72;
   }
 
   .two {
     right: 45%;
-    width: 380px;
-    height: 39%;
+    width: 23%;
+    aspect-ratio: 1;
 
     @include medium-desktop {
       right: 38%;
@@ -462,8 +478,8 @@
   .three {
     bottom: 0;
     right: 35%;
-    width: 380px;
-    height: 39%;
+    width: 23%;
+    aspect-ratio: 1;
 
     @include medium-desktop {
       right: 25%;
@@ -472,8 +488,8 @@
 
   .four {
     right: 0;
-    width: 400px;
-    height: 55%;
+    width: 24%;
+    aspect-ratio: 0.72;
   }
 
   .one,

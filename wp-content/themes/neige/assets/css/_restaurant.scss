@@ -43,6 +43,7 @@
       .side-img {
          display: flex;
          height: 400px;
+         // aspect-ratio: 1.81;
          width: 100%;
 
          img {
@@ -64,7 +65,8 @@
 .shadow-image {
    position: relative;
    display: flex;
-   height: 650px;
+   // height: 650px;
+   aspect-ratio: 0.89;
    width: 80%;
 
    img {
@@ -81,7 +83,8 @@
 
    .shadow {
       position: absolute;
-      height: 650px;
+      // height: 650px;
+      aspect-ratio: 0.89;
       width: 100%;
       left: -8%;
       bottom: -5%;

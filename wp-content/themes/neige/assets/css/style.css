@@ -9214,6 +9214,42 @@ body.menu-opened #side-menu {
   }
 }
 
+.base-top-image {
+  height: 600px;
+}
+.base-top-image .base-image {
+  height: auto;
+  aspect-ratio: 0.66;
+}
+@media (max-width: 1024px) {
+  .base-top-image .base-image {
+    width: 100%;
+    height: 250px;
+    aspect-ratio: none;
+  }
+}
+.base-top-image .top-image {
+  bottom: 55%;
+  height: auto;
+  aspect-ratio: 0.52;
+}
+@media (max-width: 1024px) {
+  .base-top-image .top-image {
+    padding-top: 15px;
+    width: 100%;
+    height: 250px;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 15px;
+    aspect-ratio: none;
+  }
+}
+@media (max-width: 1024px) {
+  .base-top-image {
+    height: auto;
+  }
+}
+
 .discover-room h1 {
   font-size: 36px !important;
 }
@@ -9417,7 +9453,7 @@ body.menu-opened #side-menu {
 .section-text-image .main-image img {
   position: relative;
   width: 126.3%;
-  height: 100%;
+  aspect-ratio: 1;
   object-fit: cover;
 }
 @media (max-width: 1200px) {
@@ -9449,11 +9485,21 @@ body.menu-opened #side-menu {
     height: auto;
   }
 }
+.section-text-image .side-img .base-image {
+  aspect-ratio: 0.746;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .section-text-image .side-img .base-image {
+    height: 300px;
+  }
+}
 .section-text-image .side-img .top-image {
   left: 21%;
   bottom: 41%;
   width: 65%;
-  height: 400px;
+  height: auto;
+  aspect-ratio: 1;
   z-index: 1;
 }
 @media (max-width: 768px) {
@@ -9461,7 +9507,7 @@ body.menu-opened #side-menu {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 250px;
+    height: 300px;
   }
 }
 @media (max-width: 768px) {
@@ -9488,7 +9534,7 @@ body.menu-opened #side-menu {
 
 .float-img {
   position: relative;
-  height: 126.4vh;
+  aspect-ratio: 1.15;
   margin: 0 -12.5%;
   display: grid;
 }
@@ -9509,7 +9555,7 @@ body.menu-opened #side-menu {
   z-index: 5;
   position: relative;
   left: 10%;
-  height: 60vh;
+  aspect-ratio: 0.86;
   width: 30%;
 }
 @media (max-width: 1024px) {
@@ -9535,6 +9581,7 @@ body.menu-opened #side-menu {
   bottom: 0;
   position: absolute;
   width: 35%;
+  aspect-ratio: 1.5;
 }
 @media (max-width: 1200px) {
   .float-img .image-right {
@@ -9607,6 +9654,11 @@ body.menu-opened #side-menu {
   position: relative;
   height: 1000px;
 }
+@media (max-width: 1200px) {
+  .insta {
+    height: 900px;
+  }
+}
 @media (max-width: 1024px) {
   .insta {
     display: flex;
@@ -9622,7 +9674,6 @@ body.menu-opened #side-menu {
 .insta .post {
   position: absolute;
   width: 100%;
-  height: 400px;
 }
 .insta .post img {
   width: 100%;
@@ -9636,13 +9687,13 @@ body.menu-opened #side-menu {
 }
 .insta .one {
   bottom: 0;
-  width: 400px;
-  height: 55%;
+  width: 24%;
+  aspect-ratio: 0.72;
 }
 .insta .two {
   right: 45%;
-  width: 380px;
-  height: 39%;
+  width: 23%;
+  aspect-ratio: 1;
 }
 @media (max-width: 1500px) {
   .insta .two {
@@ -9652,8 +9703,8 @@ body.menu-opened #side-menu {
 .insta .three {
   bottom: 0;
   right: 35%;
-  width: 380px;
-  height: 39%;
+  width: 23%;
+  aspect-ratio: 1;
 }
 @media (max-width: 1500px) {
   .insta .three {
@@ -9662,8 +9713,8 @@ body.menu-opened #side-menu {
 }
 .insta .four {
   right: 0;
-  width: 400px;
-  height: 55%;
+  width: 24%;
+  aspect-ratio: 0.72;
 }
 @media (max-width: 1200px) {
   .insta .one,
@@ -9858,7 +9909,7 @@ body.menu-opened #side-menu {
 .shadow-image {
   position: relative;
   display: flex;
-  height: 650px;
+  aspect-ratio: 0.89;
   width: 80%;
 }
 .shadow-image img {
@@ -9873,7 +9924,7 @@ body.menu-opened #side-menu {
 }
 .shadow-image .shadow {
   position: absolute;
-  height: 650px;
+  aspect-ratio: 0.89;
   width: 100%;
   left: -8%;
   bottom: -5%;
