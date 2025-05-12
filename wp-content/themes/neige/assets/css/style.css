@@ -9079,6 +9079,9 @@ body.menu-opened #side-menu {
 .details h6 {
   font-size: 18px;
 }
+.details .post-title {
+  padding-top: 50px;
+}
 
 .basic-info {
   font-family: "BigCaslon";
