@@ -9771,26 +9771,28 @@ body.menu-opened #side-menu {
 .background-image {
   position: absolute;
   z-index: 1;
-  width: 1000px;
   height: auto;
 }
 
 .type-2 {
+  width: max(350px, min(40%, 650px));
   transform: scaleX(-1);
-  bottom: -23%;
-  left: -10%;
+  bottom: 0%;
+  left: 0%;
 }
 
 .type-3 {
-  bottom: -9%;
-  left: 23%;
+  width: max(350px, min(40%, 1000px));
+  transform: scaleX(-1);
+  bottom: 0%;
+  left: 30%;
 }
 
 .footer-image {
-  width: 800px;
+  width: max(350px, min(40%, 650px));
   height: auto;
-  right: -6%;
-  bottom: -20%;
+  right: 0%;
+  bottom: 0%;
 }
 
 .restaurant {
