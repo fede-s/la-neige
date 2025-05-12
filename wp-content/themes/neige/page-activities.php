@@ -20,8 +20,14 @@ get_header(); ?>
       <h1><?= $fields['title'] ;?></h1>
    </div>
 </div>
- <div class="introduction-text">
+<div class="introduction-text">
    <p><?= $fields['activities_introduction_text'] ;?></p>
+   <?php if(!empty($fields['introduction_signature'])) {
+    ?>
+   <div class="intro-signature">
+      <?= $fields['introduction_signature'] ;?>
+   </div>
+   <?php } ?>
  </div>
 
 <section class="container bottom-30 forest-blue">

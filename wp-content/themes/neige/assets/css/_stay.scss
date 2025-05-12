@@ -67,6 +67,20 @@
       
    }
 }
+.intro-signature {
+   display: flex;
+   justify-content: flex-end;
+   font-size: clamp(35px, 5vw, 45px);
+   padding-top: 20px;
+   line-height: 0.9;
+   font-weight: 100;
+   color: var(--olive-green);
+   font-family: "DesMontilles";
+   transform: rotate(-5deg);
+   @include tablet {
+      display: block;
+   }
+}
 
 
 .rooms-container {

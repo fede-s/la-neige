@@ -19,6 +19,12 @@ get_header(); ?>
 </div>
  <div class="introduction-text">
    <p><?= $fields['introduction_text'] ;?></p>
+   <?php if(!empty($fields['introduction_signature'])) {
+    ?>
+   <div class="intro-signature">
+      <?= $fields['introduction_signature'] ;?>
+   </div>
+   <?php } ?>
  </div>
 
 <div class="rooms-container container">
