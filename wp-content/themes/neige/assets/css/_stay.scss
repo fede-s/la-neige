@@ -23,7 +23,10 @@
       max-width: 33%;
       font-size: clamp(17px, 2.5vw, 33px);
       h1 {
-         font-size: 56px;
+         font-size: clamp(40px, 5vw, 56px);
+      }
+      @include small-tablet {
+         max-width: none;
       }
    }
 }

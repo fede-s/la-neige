@@ -8943,7 +8943,12 @@ body.menu-opened #side-menu {
   font-size: clamp(17px, 2.5vw, 33px);
 }
 .header .header-text h1 {
-  font-size: 56px;
+  font-size: clamp(40px, 5vw, 56px);
+}
+@media (max-width: 768px) {
+  .header .header-text {
+    max-width: none;
+  }
 }
 
 .gradient {
