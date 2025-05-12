@@ -9721,6 +9721,12 @@ body.menu-opened #side-menu {
   transition: background-color 0.3s ease, opacity 0.3s ease;
   z-index: 2;
 }
+@media (max-width: 1024px) {
+  .rooms-display .owl-stage-outer .owl-stage .owl-item .item::before {
+    background-color: rgba(var(--forest-blue-rgb), 0.5);
+    opacity: 1;
+  }
+}
 .rooms-display .owl-stage-outer .owl-stage .owl-item .item:hover::before {
   background-color: rgba(var(--forest-blue-rgb), 0.5);
   opacity: 1;
