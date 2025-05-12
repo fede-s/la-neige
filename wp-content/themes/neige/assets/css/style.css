@@ -8588,7 +8588,9 @@ body.menu-opened #side-menu {
 .menu-left .season-selector {
   padding-bottom: 50px;
 }
-.menu-left .season-selector, .menu-left .menu-item, .menu-left .social-media {
+.menu-left .season-selector,
+.menu-left .menu-item,
+.menu-left .social-media {
   padding-left: 10%;
 }
 @media (max-width: 1024px) {
@@ -8697,7 +8699,9 @@ body.menu-opened #side-menu {
   flex-wrap: wrap;
   text-transform: uppercase;
 }
-.newsletter-section .newsletter-container #mc_embed_shell, .newsletter-section .newsletter-container #mc_embed_signup, .newsletter-section .newsletter-container form {
+.newsletter-section .newsletter-container #mc_embed_shell,
+.newsletter-section .newsletter-container #mc_embed_signup,
+.newsletter-section .newsletter-container form {
   width: 100%;
   margin: 0 !important;
 }
@@ -8772,6 +8776,16 @@ body.menu-opened #side-menu {
   align-items: baseline;
   gap: 10px;
 }
+.footer .info .header-content {
+  position: absolute;
+  order: 2;
+}
+@media (max-width: 1024px) {
+  .footer .info .header-content {
+    position: relative;
+    padding-bottom: 50px;
+  }
+}
 @media (max-width: 1024px) {
   .footer .info {
     display: flex;
@@ -8807,26 +8821,16 @@ body.menu-opened #side-menu {
 }
 
 .signature-footer {
+  position: relative;
   z-index: 2;
-  position: absolute;
-  width: 15%;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  order: 2;
-}
-.signature-footer svg {
-  width: 100%;
-  height: 100%;
-}
-.signature-footer svg path {
-  fill: var(--olive-green);
-}
-@media (max-width: 1024px) {
-  .signature-footer {
-    width: 50%;
-    position: relative;
-  }
+  bottom: 10%;
+  font-size: clamp(40px, 5vw, 50px);
+  margin: 0;
+  line-height: 0.9;
+  font-weight: 100;
+  color: var(--olive-green);
+  font-family: "DesMontilles";
+  transform: rotate(-3deg);
 }
 
 .logo-footer {

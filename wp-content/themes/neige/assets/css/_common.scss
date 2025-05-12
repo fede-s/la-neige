@@ -79,8 +79,8 @@
 @font-face {
 	font-family: "DesMontilles";
 	src: url('../webfonts/font.woff2') format('woff2'),
-	 url('../webfonts/font.woff') format('woff');
- }
+		url('../webfonts/font.woff') format('woff');
+}
 
 body {
 	font-family: "Montserrat", sans-serif;
@@ -265,6 +265,7 @@ h6 {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+
 		.book-btn {
 			background: var(--forest-blue);
 			color: var(--soft-pink);
@@ -365,7 +366,10 @@ h6 {
 	.season-selector {
 		padding-bottom: 50px;
 	}
-	.season-selector, .menu-item, .social-media {
+
+	.season-selector,
+	.menu-item,
+	.social-media {
 		padding-left: 10%;
 	}
 
@@ -468,19 +472,25 @@ h6 {
 	padding: 60px 0 70px;
 	background-color: var(--forest-blue);
 	color: var(--soft-pink);
+
 	@include tablet {
 		padding: 70px 0;
 	}
+
 	.newsletter-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
 		flex-wrap: wrap;
 		text-transform: uppercase;
-		#mc_embed_shell, #mc_embed_signup, form {
+
+		#mc_embed_shell,
+		#mc_embed_signup,
+		form {
 			width: 100%;
 			margin: 0 !important;
 		}
+
 		#mc_embed_signup_scroll {
 			display: flex;
 			width: 100%;
@@ -488,6 +498,7 @@ h6 {
 			flex-wrap: wrap;
 			gap: 20px;
 		}
+
 		h1 {
 			font-size: min(3.7vw, 55px);
 			padding: 0;
@@ -495,6 +506,7 @@ h6 {
 			text-align: left;
 			position: relative;
 			top: .7vw;
+
 			@include tablet {
 				font-size: 20px;
 				width: 100%;
@@ -502,6 +514,7 @@ h6 {
 				top: 0;
 			}
 		}
+
 		input[type="email"] {
 			font-family: 'BigCaslon', ui-sans-serif;
 			padding: 10px;
@@ -511,11 +524,13 @@ h6 {
 			flex: 1;
 			color: var(--soft-pink) !important;
 			margin: 0 !important;
+
 			@include tablet {
 				width: 100%;
 				flex: unset;
 			}
 		}
+
 		input[type="submit"] {
 			margin: 0 !important;
 			border: 1px solid var(--soft-pink) !important;
@@ -526,6 +541,7 @@ h6 {
 .footer {
 	.info {
 		overflow: hidden;
+
 		.contact {
 			z-index: 2;
 			order: 3;
@@ -555,6 +571,14 @@ h6 {
 			align-items: baseline;
 			gap: 10px;
 
+		}
+		.header-content {
+			position: absolute;
+			order: 2;
+			@include tablet {
+				position: relative;
+				padding-bottom: 50px;
+			}
 		}
 
 		@include tablet {
@@ -593,27 +617,16 @@ h6 {
 }
 
 .signature-footer {
+	position: relative;
 	z-index: 2;
-	position: absolute;
-	width: 15%;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	order: 2;
-
-	svg {
-		width: 100%;
-		height: 100%;
-
-		path {
-			fill: var(--olive-green);
-		}
-	}
-
-	@include tablet {
-		width: 50%;
-		position: relative;
-	}
+	bottom: 10%;
+	font-size: clamp(40px, 5vw, 50px);
+	margin: 0;
+	line-height: 0.9;
+	font-weight: 100;
+	color: var(--olive-green);
+	font-family: "DesMontilles";
+	transform: rotate(-3deg);
 }
 
 .logo-footer {
@@ -669,11 +682,13 @@ h6 {
 	position: relative;
 	top: 2px;
 	padding: 0 12px 0 0;
+
 	.trp-language-switcher {
 		display: flex;
 		align-items: center;
 		width: auto;
 		height: auto;
+
 		&:after {
 			cursor: pointer;
 			content: '\f078';
@@ -682,21 +697,25 @@ h6 {
 			position: absolute;
 			right: 0;
 		}
+
 		.trp-ls-shortcode-current-language {
 			background: var(--soft-pink);
 			border: none;
 			padding: 0;
 		}
+
 		.trp-ls-shortcode-language {
 			background: var(--soft-pink);
 			border: none;
 			padding: 0;
 		}
-		> div > a {
+
+		>div>a {
 			text-align: center;
 			cursor: pointer;
 			color: var(--forest-blue);
 			font-family: 'BigCaslon', ui-sans-serif;
+
 			&:hover {
 				background: var(--soft-pink);
 			}

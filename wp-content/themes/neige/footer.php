@@ -42,8 +42,10 @@ $options = get_fields('options'); ?>
                 <?= date("Y"); ?> © LA NEIGE
             </p>
         </div>
-        <div class="signature-footer">
-
+        <div class="header-content">
+            <div class="signature-footer">
+                <?= $options['footer_signature']; ?>
+            </div>
         </div>
         <div class="logo-footer">
             <?= Utils::imgLazy($options['logo'], 'large', '200px'); ?>
