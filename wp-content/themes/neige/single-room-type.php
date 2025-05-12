@@ -16,26 +16,36 @@ get_header(); ?>
             <h1 class="post-title"><?php the_title(); ?></h1>
             <h6><?= Utils::getSeasonField($fields, 'sub_title') ?></h6>
             <ul class="basic-info">
-                <li>
-                    <?= Utils::imgLazy(get_field('square_meters_icon', 'options'), 'large', '100px'); ?>
-                    <div><?= Utils::getSeasonField($fields, 'square_meters'); ?></div>
-                </li>
-                <li>
-                    <?= Utils::imgLazy(get_field('people_icon', 'options'), 'large', '100px'); ?>
-                    <div><?= Utils::getSeasonField($fields, 'people'); ?></div>
-                </li>
-                <li>
-                    <?= Utils::imgLazy(get_field('beds_icon', 'options'), 'large', '100px'); ?>
-                    <div><?= Utils::getSeasonField($fields, 'beds'); ?></div>
-                </li>
-                <li>
-                    <?= Utils::imgLazy(get_field('bathrooms_icon', 'options'), 'large', '100px'); ?>
-                    <div><?= Utils::getSeasonField($fields, 'bathrooms'); ?></div>
-                </li>
-                <li>
-                    <?= Utils::imgLazy(get_field('sofa_icon', 'options'), 'large', '100px'); ?>
-                    <div><?= Utils::getSeasonField($fields, 'sofa'); ?></div>
-                </li>
+                <?php if (!empty($fields['square_meters'])) { ?>
+                    <li>
+                        <?= Utils::imgLazy(get_field('square_meters_icon', 'options'), 'large', '100px'); ?>
+                        <div><?= Utils::getSeasonField($fields, 'square_meters'); ?></div>
+                    </li>
+                <?php } ?>
+                <?php if (!empty($fields['people'])) { ?>
+                    <li>
+                        <?= Utils::imgLazy(get_field('people_icon', 'options'), 'large', '100px'); ?>
+                        <div><?= Utils::getSeasonField($fields, 'people'); ?></div>
+                    </li>
+                <?php } ?>
+                <?php if (!empty($fields['beds'])) { ?>
+                    <li>
+                        <?= Utils::imgLazy(get_field('beds_icon', 'options'), 'large', '100px'); ?>
+                        <div><?= Utils::getSeasonField($fields, 'beds'); ?></div>
+                    </li>
+                <?php } ?>
+                <?php if (!empty($fields['bathrooms'])) { ?>
+                    <li>
+                        <?= Utils::imgLazy(get_field('bathrooms_icon', 'options'), 'large', '100px'); ?>
+                        <div><?= Utils::getSeasonField($fields, 'bathrooms'); ?></div>
+                    </li>
+                <?php } ?>
+                <?php if (!empty($fields['sofa'])) { ?>
+                    <li>
+                        <?= Utils::imgLazy(get_field('sofa_icon', 'options'), 'large', '100px'); ?>
+                        <div><?= Utils::getSeasonField($fields, 'sofa'); ?></div>
+                    </li>
+                <?php } ?>
             </ul>
             <p><?= Utils::getSeasonField($fields, 'description'); ?></p>
             <div class="top-50">
@@ -98,7 +108,7 @@ get_header(); ?>
             <h5>THERE IS MORE</h5>
             <div class="signature">
                 <h1><a href="room-types">
-                MORE WAYS TO STAY
+                        MORE WAYS TO STAY
                     </a>
                     <div class="sig-svg">
                     </div>
