@@ -543,6 +543,10 @@
           pointer-events: none;
           transition: background-color 0.3s ease, opacity 0.3s ease;
           z-index: 2;
+          @include tablet {
+            background-color: rgba(var(--forest-blue-rgb), 0.5);
+          opacity: 1;
+          }
         }
 
         .item:hover::before {
