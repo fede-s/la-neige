@@ -30,5 +30,21 @@ get_header(); ?>
    <?php } ?>
  </div>
 
+ <section class="container">
+   <?php foreach($fields['features'] as $feature) { 
+   ?>
+   <div class="feature-image-text">
+      <div class="feature-image">
+      <?= Utils::imgLazy($feature['image'], 'large', '500px') ?>
+      </div>
+      <div class="feature-text">
+      <?= $feature['text'] ;?>
+      </div>
+
+   </div>
+   <?php } ?>
+
+ </section>
+
 
 <?php get_footer(); ?>
