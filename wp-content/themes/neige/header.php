@@ -4,9 +4,14 @@ require_once(THEME . '/yama/widgets/Widgets.php');
 require_once(THEME . '/yama/widgets/lists/Lists.php');
 require_once(THEME . '/yama/widgets/carousel/Carousel.php');
 
+global $TRP_LANGUAGE;
 $currentSeason = Utils::getCurrentSeason();
 $menu_items = wp_get_nav_menu_items($currentSeason);
 $options = get_fields('options');
+$lang = substr($TRP_LANGUAGE, 0, 2);
+$langAndLocale = $lang === 'en' ? 'en-US' : ($lang === 'ja' ? 'ja-JP' : '');
+$theme = $currentSeason === 'summer' ? 'HHGSummer' : 'HHGWinter';
+$bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hotel=48088&locale={$langAndLocale}&theme={$theme}";
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -54,7 +59,7 @@ $options = get_fields('options');
                     </a>
                 </div>
                 <div class="nav-bar-right">
-                    <a href="" class="linkBtn book-btn">BOOK</a>
+                    <a href="<?= $bookingURL ?>" target="_blank" class="linkBtn book-btn">BOOK</a>
                 </div>
             </div>
         </div>
