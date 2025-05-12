@@ -997,7 +997,7 @@ script {
 }
 
 .owl-nav button:hover {
-  transform: scale(1.3, 1.3);
+  transform: scale(1.1, 1.1);
 }
 
 .owl-nav button:active {
@@ -2024,6 +2024,70 @@ h2.resp-tab-active {
 
 h2.resp-accordion:first-child {
   border-top: 1px solid #c1c1c1 !important;
+}
+
+.owl-carousel {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.owl-carousel .owl-stage-outer {
+  width: 100%;
+}
+.owl-carousel .owl-nav {
+  display: flex !important;
+  gap: 5px;
+  margin: 0;
+}
+.owl-carousel .owl-nav > button {
+  position: static;
+  width: auto;
+  margin: 0 !important;
+}
+.owl-carousel .owl-nav .owl-prev span {
+  display: none;
+}
+.owl-carousel .owl-nav .owl-prev:after {
+  display: block;
+  content: "";
+  background-image: url("../images/arrow-left.png");
+  background-size: contain;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+.owl-carousel .owl-nav .owl-next span {
+  display: none;
+}
+.owl-carousel .owl-nav .owl-next:after {
+  display: block;
+  content: "";
+  background-image: url("../images/arrow-right.png");
+  background-size: contain;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+.owl-carousel .owl-dots {
+  position: static;
+  width: unset;
+  margin: 0 !important;
+}
+.owl-carousel .owl-dots button.owl-dot {
+  background-color: transparent;
+  border: 1px solid var(--forest-blue);
+  color: #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  margin-right: 6px;
+  transition: width 0.5s, background-color 0.5s;
+}
+.owl-carousel .owl-dots button.owl-dot.active {
+  background-color: var(--forest-blue);
+  width: 30px;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -9429,12 +9493,13 @@ body.menu-opened #side-menu {
   width: 47.5%;
 }
 .section-text-image .side-image .three-two-ratio {
-  aspect-ratio: 0;
+  aspect-ratio: unset;
   height: 100%;
 }
 @media (max-width: 1024px) {
   .section-text-image .side-image .three-two-ratio {
     aspect-ratio: 3/2;
+    height: unset;
   }
 }
 .section-text-image .side-image .owl-item,
@@ -9443,9 +9508,6 @@ body.menu-opened #side-menu {
 .section-text-image .side-image .owl-carousel,
 .section-text-image .side-image .carousel-gallery {
   height: 100%;
-}
-.section-text-image .side-image .three-two-ratio {
-  aspect-ratio: 1;
 }
 .section-text-image .side-image p {
   display: none;
@@ -10332,3 +10394,5 @@ body.menu-opened #side-menu {
 .feature-image:hover img, .feature-image-text:hover img {
   transform: scale(1.07);
 }
+
+/*# sourceMappingURL=style.css.map */

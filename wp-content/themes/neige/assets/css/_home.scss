@@ -186,11 +186,11 @@
     width: 47.5%;
 
     .three-two-ratio {
-      aspect-ratio: 0;
+      aspect-ratio: unset;
       height: 100%;
-
       @include tablet {
         aspect-ratio: 3 / 2;
+        height: unset;
       }
     }
 
@@ -200,10 +200,6 @@
     .owl-carousel,
     .carousel-gallery {
       height: 100%;
-    }
-
-    .three-two-ratio {
-      aspect-ratio: 1;
     }
 
     p {

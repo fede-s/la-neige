@@ -48,7 +48,7 @@ $bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hote
             <div class="container">
                 <div class="nav-bar-left">
                     <div id="hamburger-menu">
-                        <?= file_get_contents(THEME . '/svg/burger-menu.svg'); ?>
+                        <?= file_get_contents(THEME . '/assets/images/burger-menu.svg'); ?>
                     </div>
                     <?= do_shortcode('[language-switcher]'); ?>
                     <?php Widgets::seasonSwitch(); ?>
