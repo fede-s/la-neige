@@ -31,7 +31,9 @@ get_header(); ?>
  </div>
 
  <section class="container">
+   <?php if(!empty($fields['features'])) { ?>
    <?php foreach($fields['features'] as $feature) { 
+      if (!empty($feature['image']) && !empty($feature['text'])) {
    ?>
    <div class="feature-image-text">
       <div class="feature-image">
@@ -42,9 +44,17 @@ get_header(); ?>
       </div>
 
    </div>
-   <?php } ?>
+   <?php }}}?>
 
  </section>
+
+ <?php if(!empty($fields['gallery'])) { ?>
+ <section class="container">
+ <?php Carousel::galleryFromACF($fields['gallery'], true, '', true); ?>
+ </section>
+
+ <div class="spacer"></div>
+ <?php } ?>
 
 
 <?php get_footer(); ?>
