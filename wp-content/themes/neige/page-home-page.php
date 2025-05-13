@@ -24,9 +24,9 @@ get_header(); ?>
             </div>
         <?php } else { ?>
             <div class="header-content">
-            <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px', '', 'logo-header'); ?>
-            <?php echo Utils::imgLazy(get_field('header_image'), 'large', '2000px', '', 'image-header'); ?>
-            <div class="signature-header contact-signature">
+            <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px', '', 'logo-header fadeIn'); ?>
+            <?php echo Utils::imgLazy(get_field('header_image'), 'large', '2000px', '', 'image-header fadeIn'); ?>
+            <div class="signature-header contact-signature fadeIn">
                 <?php echo $fields['header_signature']; ?>
             </div>
             </div>

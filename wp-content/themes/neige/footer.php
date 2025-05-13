@@ -3,15 +3,15 @@ $options = get_fields('options'); ?>
 
 <footer class="footer">
     <section class="newsletter-section">
-        <div class="container newsletter-container">
+        <div class="container newsletter-container fadeIn">
             <?php include(YAMA . '/widgets/subscribe-form.php'); ?>
         </div>
     </section>
     <section class="info">
-        <?= Utils::imgLazy(get_field('footer_background_image', 'options'), 'large', '2000px', '', 'background-image footer-image');; ?>
+        <?= Utils::imgLazy(get_field('footer_background_image', 'options'), 'large', '2000px', '', 'background-image footer-image fadeIn');; ?>
         <div class="container contact">
-            <h5>GET IN TOUCH</h5>
-            <div class="tel">
+            <h5 class="fadeIn">GET IN TOUCH</h5>
+            <div class="tel fadeIn">
                 <?php
                 $tel = get_field('telephone', 'options');
                 if (!empty($tel)) { ?>
@@ -19,7 +19,7 @@ $options = get_fields('options'); ?>
                     <p><a href="tel:<?= $tel ?>"><?= $tel; ?></a></p>
                 <?php } ?>
             </div>
-            <div class="email">
+            <div class="email fadeIn">
                 <?php
                 $mail = get_field('email', 'options');
                 if (!empty($mail)) { ?>
@@ -27,28 +27,28 @@ $options = get_fields('options'); ?>
                     <p><a href="mailto:<?= $mail; ?>"><?= $mail; ?></a></p>
                 <?php } ?>
             </div>
-            <a href="<?= get_field('url', 'options'); ?>"><?= get_field('url', 'options'); ?></a>
-            <h5 class="top-50">KK LA NEIGE</h5>
-            <p class="adress"><?= get_field('adress', 'options'); ?></p>
+            <a class="fadeIn" href="<?= get_field('url', 'options'); ?>"><?= get_field('url', 'options'); ?></a>
+            <h5 class="top-50 fadeIn">KK LA NEIGE</h5>
+            <p class="adress fadeIn"><?= get_field('adress', 'options'); ?></p>
         </div>
-        <div class="container social-media top-100">
+        <div class="container social-media top-100 fadeIn">
             <a href="<?= get_field('instagram', 'options'); ?>"><?= Utils::imgLazy($options['instagram_icon'], 'large', '100px') ?></a>
             <a href="<?= get_field('facebook', 'options'); ?>"><?= Utils::imgLazy($options['facebook_icon'], 'large', '100px') ?></a>
             <a href="<?= get_field('youtube', 'options'); ?>"><?= Utils::imgLazy($options['youtube_icon'], 'large', '100px') ?></a>
             <a href="<?= get_field('tiktok', 'options'); ?>"><?= Utils::imgLazy($options['tiktok_icon'], 'large', '100px') ?></a>
         </div>
-        <div class="container top-50 copyright">
+        <div class="container top-50 copyright fadeIn">
             <p>
                 <?= date("Y"); ?> © LA NEIGE
             </p>
         </div>
         <div class="header-content">
-            <div class="signature-footer">
+            <div class="signature-footer fadeIn">
                 <?= $options['footer_signature']; ?>
             </div>
         </div>
         <div class="logo-footer">
-            <?= Utils::imgLazy($options['logo'], 'large', '200px'); ?>
+            <?= Utils::imgLazy($options['logo'], 'large', '200px', '', 'fadeIn'); ?>
         </div>
     </section>
 </footer>
