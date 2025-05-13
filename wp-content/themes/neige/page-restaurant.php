@@ -15,16 +15,16 @@ get_header(); ?>
    <div class="gradient">
       <?= Utils::imgLazy(get_field('header_image'), 'large', '2000px') ?>
    </div>
-   <div class="header-text">
+   <div class="header-text fadeIn">
       <h5><?= $fields['pre_title'] ;?></h5>
       <h1><?= $fields['title'] ;?></h1>
    </div>
 </div>
 <div class="introduction-text">
-   <p><?= $fields['introduction_text'] ;?></p>
+   <p class="fadeIn"><?= $fields['introduction_text'] ;?></p>
    <?php if(!empty($fields['introduction_signature'])) {
     ?>
-   <div class="intro-signature">
+   <div class="intro-signature fadeIn">
       <?= $fields['introduction_signature'] ;?>
    </div>
    <?php } ?>
@@ -33,10 +33,10 @@ get_header(); ?>
 <section class="restaurant forest-blue">
    <div class="container section-text-image">
       <div class="side-text">
-         <h5><?= $fields['restaurant_pre_title']; ?></h5>
+         <h5 class="fadeIn"><?= $fields['restaurant_pre_title']; ?></h5>
          <?php if (get_field('restaurant_signature')) {
          ?>
-            <div class="signature">
+            <div class="signature fadeIn">
                <h1><?= $fields['restaurant_title']; ?>
                <div class="sig-svg">
                   <?= $fields['restaurant_signature']; ?>
@@ -46,11 +46,11 @@ get_header(); ?>
          <?php }
          if (get_field('restaurant_gallery')[0]) {
          ?>
-            <div class="shadow-image">
-               <div class="front">
+            <div class="shadow-image fadeIn">
+               <div class="front fadeIn">
                   <?= Utils::imgLazy(get_field('restaurant_gallery')[0], 'medium', '800px'); ?>
                </div>
-               <div class="shadow <?= (get_field('restaurant_gallery')[1] == null) ? 'lock' : ''; ?>">
+               <div class="shadow fadeIn <?= (get_field('restaurant_gallery')[1] == null) ? 'lock' : ''; ?>">
                   <?php if (get_field('restaurant_gallery')[1]) { ?>
                      <?= Utils::imgLazy(get_field('restaurant_gallery')[1], 'medium', '800px'); ?>
                   <?php } ?>
@@ -61,10 +61,10 @@ get_header(); ?>
 
       <div class="side-image">
          <div class="side-img image-aspect">
-            <?php echo Utils::imgLazy(get_field('restaurant_image'), 'medium', '800px', '', 'image-aspect'); ?>
+            <?php echo Utils::imgLazy(get_field('restaurant_image'), 'medium', '800px', '', 'image-aspect fadeIn'); ?>
          </div>
-         <p><?= get_field('restaurant_text'); ?></p>
-         <div class="buttons">
+         <p class="fadeIn"><?= get_field('restaurant_text'); ?></p>
+         <div class="buttons fadeIn">
             <a href="<?= get_field('button_left')['link']; ?>" class="linkBtn"><?= get_field('button_left')['label']; ?></a>
             <a href="<?= get_field('button_right')['link']; ?>" class="linkBtn"><?= get_field('button_right')['label']; ?></a>
          </div>
@@ -76,15 +76,15 @@ get_header(); ?>
    <div class="container section-text-image">
       <div class="side-image">
          <div class="side-img image-aspect">
-            <?php echo Utils::imgLazy(get_field('chef_image'), 'medium', '800px', '', 'image-aspect'); ?>
+            <?php echo Utils::imgLazy(get_field('chef_image'), 'medium', '800px', '', 'image-aspect fadeIn'); ?>
          </div>
-         <p><?= get_field('chef_text'); ?></p>
+         <p class="fadeIn"><?= get_field('chef_text'); ?></p>
       </div>
       <div class="side-text">
-         <h5><?= get_field('chef_pre_title'); ?></h5>
+         <h5 class="fadeIn"><?= get_field('chef_pre_title'); ?></h5>
          <?php if (get_field('chef_signature')) {
          ?>
-            <div class="signature">
+            <div class="signature fadeIn">
                <h1><?= $fields['chef_title']; ?>
                <div class="sig-svg">
                   <?= $fields['chef_signature']; ?>
@@ -94,11 +94,11 @@ get_header(); ?>
          <?php }
           if (get_field('chef_gallery')[0]) {
          ?>
-            <div class="shadow-image">
-               <div class="front">
+            <div class="shadow-image fadeIn">
+               <div class="front fadeIn">
                   <?= Utils::imgLazy(get_field('chef_gallery')[0], 'medium', '800px'); ?>
                </div>
-               <div class="shadow <?= (get_field('chef_gallery')[1] == null) ? 'lock' : ''; ?>">
+               <div class="shadow fadeIn <?= (get_field('chef_gallery')[1] == null) ? 'lock' : ''; ?>">
                   <?php if (get_field('chef_gallery')[1]) { ?>
                      <?= Utils::imgLazy(get_field('chef_gallery')[1], 'medium', '800px'); ?>
                   <?php } ?>
@@ -113,15 +113,17 @@ get_header(); ?>
    <div class="container section-text-image">
       <div class="side-image">
          <div class="side-img">
-            <?php echo Utils::imgLazy(get_field('opening_gallery')[0], 'medium', '800px'); ?>
-            <?php echo Utils::imgLazy(get_field('opening_gallery')[1], 'medium', '800px'); ?>
+            <?php echo Utils::imgLazy(get_field('opening_gallery')[0], 'medium', '800px', '', 'fadeIn'); ?>
+            <?php echo Utils::imgLazy(get_field('opening_gallery')[1], 'medium', '800px', '', 'fadeIn'); ?>
          </div>
       </div>
       <div class="side-text">
-         <h5><?= get_field('opening_pre_title'); ?></h5>
-         <h1><?= get_field('opening_title'); ?></h1>
-         <?= get_field('opening_text'); ?>
-         <div class="buttons">
+         <h5 class="fadeIn"><?= get_field('opening_pre_title'); ?></h5>
+         <h1 class="fadeIn"><?= get_field('opening_title'); ?></h1>
+         <div class="fadeIn">
+            <?= get_field('opening_text'); ?>
+         </div>
+         <div class="buttons fadeIn">
             <a href="<?= get_field('opening_button')['link']; ?>" class="linkBtn"><?= get_field('button_left')['label']; ?></a>
          </div>
       </div>
