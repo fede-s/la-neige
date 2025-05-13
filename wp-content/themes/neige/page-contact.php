@@ -14,11 +14,11 @@ get_header(); ?>
 
 <section class="contact container restaurant forest-blue">
    <div class="contact-title">
-      <h1><?= $fields['title']; ?></h1>
-      <div class="contact-signature">
+      <h1 class="fadeIn"><?= $fields['title']; ?></h1>
+      <div class="contact-signature fadeIn">
          <?= $fields['signature']; ?>
       </div>
-      <div class="contact-data">
+      <div class="contact-data fadeIn">
          <?php
          if (!empty($fields['tel'])) { ?>
             <div>
@@ -34,7 +34,7 @@ get_header(); ?>
       </div>
    </div>
    <div class="section-text-image">
-      <div class="side-text">
+      <div class="side-text fadeIn">
          <?= $fields['text'] ?? '' ?>
       </div>
 
@@ -42,11 +42,11 @@ get_header(); ?>
          <?php
          if (!empty($fields['gallery'][0])) {
          ?>
-            <div class="shadow-image">
-               <div class="front">
+            <div class="shadow-image fadeIn">
+               <div class="front fadeIn">
                   <?= Utils::imgLazy($fields['gallery'][0], 'medium', '800px'); ?>
                </div>
-               <div class="shadow <?= ($fields['gallery'][1] == null) ? 'lock' : ''; ?>">
+               <div class="shadow fadeIn <?= ($fields['gallery'][1] == null) ? 'lock' : ''; ?>">
                   <?php if (!empty($fields['gallery'][1])) { ?>
                      <?= Utils::imgLazy($fields['gallery'][1], 'medium', '800px'); ?>
                   <?php } ?>
@@ -61,26 +61,26 @@ get_header(); ?>
    <div class="section-text-image">
       <div class="side-text">
          <div class="contact-title">
-            <h1><?= $fields['access_title'] ?? '' ?></h1>
+            <h1 class="fadeIn"><?= $fields['access_title'] ?? '' ?></h1>
          </div>
-         <div class="contact-signature">
+         <div class="contact-signature fadeIn">
             <?= $fields['access_signature']; ?>
          </div>
-         <p class="access-text"><?= $fields['access_text'] ?? '' ?></p>
+         <p class="access-text fadeIn"><?= $fields['access_text'] ?? '' ?></p>
          <?php
          if (!empty($fields['travel_options'])) {
             foreach ($fields['travel_options'] as $option) { ?>
                <div class="travel-option">
-                  <?= Utils::imgLazy($option['icon'], 'large', '100px'); ?>
-                  <h6><?= $option['title']; ?></h6>
-                  <p><?= $option['text']; ?></p>
+                  <?= Utils::imgLazy($option['icon'], 'large', '100px', '', 'fadeIn'); ?>
+                  <h6 class="fadeIn"><?= $option['title']; ?></h6>
+                  <p class="fadeIn"><?= $option['text']; ?></p>
                </div>
          <?php
             }
          } ?>
       </div>
 
-      <div class="side-image">
+      <div class="side-image fadeIn">
          <?php
          if (!empty($fields['map_image'])) {
             echo Utils::imgLazy($fields['map_image'], 'medium', '1000px');

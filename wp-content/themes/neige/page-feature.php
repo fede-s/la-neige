@@ -15,16 +15,16 @@ get_header(); ?>
    <div class="gradient">
       <?= Utils::imgLazy(get_field('header_image'), 'large', '2000px') ?>
    </div>
-   <div class="header-text">
+   <div class="header-text fadeIn">
       <h5><?= $fields['pre_title']; ?></h5>
       <h1><?= $fields['title']; ?></h1>
    </div>
 </div>
 <div class="introduction-text">
-   <p><?= $fields['introduction_text']; ?></p>
+   <p class="fadeIn"><?= $fields['introduction_text']; ?></p>
    <?php if (!empty($fields['introduction_signature'])) {
    ?>
-      <div class="intro-signature">
+      <div class="intro-signature fadeIn">
          <?= $fields['introduction_signature']; ?>
       </div>
    <?php } ?>
@@ -36,12 +36,12 @@ get_header(); ?>
          if (!empty($feature['gallery']) && !empty($feature['text'])) {
       ?>
             <div class="feature-image-text">
-               <div class="feature-image">
+               <div class="feature-image fadeIn">
                   <?= Carousel::galleryFromACF($feature['gallery'], false, '', true);; ?>
                </div>
-               <div class="feature-text">
-                  <h5><?= $feature['pre_title']; ?></h5>
-                  <div class="signature">
+               <div class="feature-text fadeIn">
+                  <h5 class="fadeIn"><?= $feature['pre_title']; ?></h5>
+                  <div class="signature fadeIn">
                      <h1><?= $feature['title']; ?>
                      <?php if(!empty($feature['signature'])) { ?>
                         <div class="sig-svg">
@@ -50,7 +50,7 @@ get_header(); ?>
                         <?php } ?>
                      </h1>
                   </div>
-                  <p>
+                  <p class="fadeIn">
                      <?= $feature['text'] ;?>
                   </p>
                </div>
@@ -63,7 +63,7 @@ get_header(); ?>
 </section>
 
 <?php if (!empty($fields['gallery'])) { ?>
-   <section class="container">
+   <section class="container fadeIn">
       <?php Carousel::galleryFromACF($fields['gallery'], true, '', true); ?>
    </section>
 
