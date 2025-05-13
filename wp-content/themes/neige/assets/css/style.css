@@ -9797,14 +9797,10 @@ body.menu-opened #side-menu {
 
 .rooms-display {
   display: flex;
-  height: 500px;
-}
-.rooms-display .owl-stage-outer {
-  height: 100%;
 }
 .rooms-display .owl-stage-outer .owl-stage .owl-item {
   width: 100%;
-  height: 500px;
+  aspect-ratio: 1.5;
 }
 .rooms-display .owl-stage-outer .owl-stage .owl-item .item {
   position: relative;
@@ -9865,10 +9861,21 @@ body.menu-opened #side-menu {
   flex-direction: column;
   align-items: center;
 }
+.rooms-display .info ul {
+  justify-content: center;
+}
 .rooms-display .info .basic-info {
   font-family: "Montserrat", sans-serif;
   gap: 20px;
   padding: 0;
+}
+@media (max-width: 479px) {
+  .rooms-display .info h3 {
+    font-size: 20px;
+  }
+  .rooms-display .info li {
+    font-size: 12px;
+  }
 }
 .rooms-display .center .info {
   opacity: 1;

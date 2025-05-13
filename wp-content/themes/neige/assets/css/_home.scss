@@ -506,15 +506,16 @@
 
 .rooms-display {
   display: flex;
-  height: 500px;
+  // height: 500px;
 
   .owl-stage-outer {
-    height: 100%;
+    // height: 100%;
 
     .owl-stage {
       .owl-item {
         width: 100%;
-        height: 500px;
+        // height: 500px;
+        aspect-ratio: 1.5;
 
         .item {
           position: relative;
@@ -589,11 +590,22 @@
     z-index: 3;
     flex-direction: column;
     align-items: center;
+    ul {
+      justify-content: center;
+    }
 
     .basic-info {
       font-family: "Montserrat", sans-serif;
       gap: 20px;
       padding: 0;
+    }
+    @include phone {
+      h3 {
+        font-size: 20px;
+      }
+      li {
+        font-size: 12px;
+      }
     }
   }
 
