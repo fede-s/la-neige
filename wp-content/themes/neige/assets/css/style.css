@@ -10384,6 +10384,35 @@ body.menu-opened #side-menu {
   padding-right: 2%;
   padding-top: 50px;
 }
+.feature-image-text .feature-text h1 {
+  position: relative;
+  width: 75%;
+  font-size: 56px;
+  font-weight: 600;
+}
+.feature-image-text .feature-text h5 {
+  width: 60%;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+.feature-image-text .feature-text p {
+  width: 100%;
+  line-height: 1.25;
+}
+.feature-image-text .feature-text .signature {
+  width: 100%;
+}
+.feature-image-text .feature-text .signature .sig-svg {
+  display: flex;
+  font-size: 45px;
+  margin: 0;
+  margin-top: -20px;
+  line-height: 0.9;
+  font-weight: 100;
+  color: var(--olive-green);
+  font-family: "DesMontilles";
+  transform: rotate(-5deg);
+}
 @media (max-width: 768px) {
   .feature-image-text .feature-text {
     border-top: none;
