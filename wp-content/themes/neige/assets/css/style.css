@@ -9725,7 +9725,7 @@ body.menu-opened #side-menu {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
-  height: 1000px;
+  height: 1100px;
 }
 @media (max-width: 1200px) {
   .insta {

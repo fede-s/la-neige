@@ -119,6 +119,4 @@ Widgets::textImageSection($type);
         </a>
     </div>
 </section>
-
-
 <?php get_footer(); ?>

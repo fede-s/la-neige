@@ -18,10 +18,10 @@ get_header(); ?>
    </div>
 </div>
  <div class="introduction-text">
-   <p><?= $fields['introduction_text'] ;?></p>
+   <p class="fadeIn"><?= $fields['introduction_text'] ;?></p>
    <?php if(!empty($fields['introduction_signature'])) {
     ?>
-   <div class="intro-signature">
+   <div class="intro-signature fadeIn">
       <?= $fields['introduction_signature'] ;?>
    </div>
    <?php } ?>
@@ -33,11 +33,11 @@ get_header(); ?>
    foreach ($roomTypes as $room) { ?>
       <div class="room">
          <a href="<?= Utils::getPostLink($room->ID); ?>">
-            <?= Utils::imgLazyFromPost($room, 'medium', '400px'); ?>
+            <?= Utils::imgLazyFromPost($room, 'medium', '400px', '', 'fadeIn'); ?>
          </a>
-         <h3><?= $room->post_title; ?></h3>
-         <p><?= Utils::getSeasonField($room, 'short_description') ?></p>
-         <a class="room-link" href="<?= Utils::getPostLink($room->ID); ?>">Room Details</a>
+         <h3 class="fadeIn"><?= $room->post_title; ?></h3>
+         <p class="fadeIn"><?= Utils::getSeasonField($room, 'short_description') ?></p>
+         <a class="room-link fadeIn" href="<?= Utils::getPostLink($room->ID); ?>">Room Details</a>
       </div>
 
    <?php  } ?>
