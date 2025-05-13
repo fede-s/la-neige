@@ -8981,6 +8981,24 @@ body.menu-opened #side-menu {
   background: var(--soft-pink);
 }
 
+.fadeIn {
+  opacity: 0;
+  transform: translateY(60px);
+}
+.fadeIn.on {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.4s;
+}
+
+.fadeIn02 {
+  opacity: 0;
+}
+.fadeIn02.on {
+  opacity: 1;
+  transition: opacity 1.4s;
+}
+
 .header {
   background-color: var(--soft-pink);
   width: 100%;

@@ -61,6 +61,27 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+     function show(el) {
+        var windowHeight = jQuery(window).height();
+        jQuery(el).each(function() {
+            var thisPos = jQuery(this).offset().top;
+            var topOfWindow = jQuery(window).scrollTop();
+            if (topOfWindow + windowHeight - 100 > thisPos) {
+                jQuery(this).addClass('on');
+            }
+        });
+    }
+
+    jQuery(document).ready(function() {
+        jQuery(window).scroll(function() {
+            show('.fadeIn');
+            show('.fadeIn02');
+            show('.scrollAnimation');
+        });
+        show('.fadeIn');
+        show('.fadeIn02');
+        show('.scrollAnimation');
+    });
 });
 
 

@@ -47,8 +47,8 @@ Widgets::textImageSection($type);
 <section class="container bottom-100 pink">
     <div class="section-text-image">
         <div class="side-text discover-more">
-            <h5><?= $fields['room_preview_pre_title'] ;?></h5>
-            <div class="signature">
+            <h5 class="fadeIn"><?= $fields['room_preview_pre_title'] ;?></h5>
+            <div class="signature fadeIn">
                 <h1><a href="room-types">
                 <?= $fields['room_preview_title'] ;?>
                     </a>
@@ -59,7 +59,7 @@ Widgets::textImageSection($type);
             </div>
         </div>
     </div>
-    <div class="rooms-display bottom-30">
+    <div class="rooms-display bottom-30 fadeIn">
         <div id="rooms" class="owl-carousel owl-theme">
             <?php
             $roomTypes = Utils::getPosts('room-type');
@@ -87,8 +87,8 @@ Widgets::textImageSection($type);
 <section class="insta">
     <div class="container section-text-image instagram">
         <div class="side-text">
-            <h5><?= get_field('instagram_pre_title'); ?></h5>
-            <div class="signature">
+            <h5 class="fadeIn"><?= get_field('instagram_pre_title'); ?></h5>
+            <div class="signature fadeIn">
                 <h1><?= get_field('instagram_title'); ?>
                     <div class="sig-svg">
                         <?= $fields['instagram_signature']; ?>
@@ -98,22 +98,22 @@ Widgets::textImageSection($type);
 
         </div>
     </div>
-    <div class="post one">
+    <div class="post one fadeIn">
         <a href="<?= get_field('post_1')['link']['url'] ?>">
             <?= Utils::imgLazy(get_field('post_1')['image'], 'large', '800px') ?>
         </a>
     </div>
-    <div class="post two">
+    <div class="post two fadeIn">
         <a href="<?= get_field('post_2')['link']['url'] ?>">
             <?= Utils::imgLazy(get_field('post_2')['image'], 'large', '800px') ?>
         </a>
     </div>
-    <div class="post three">
+    <div class="post three fadeIn">
         <a href="<?= get_field('post_3')['link']['url'] ?>">
             <?= Utils::imgLazy(get_field('post_3')['image'], 'large', '800px') ?>
         </a>
     </div>
-    <div class="post four">
+    <div class="post four fadeIn">
         <a href="<?= get_field('post_4')['link']['url'] ?>">
             <?= Utils::imgLazy(get_field('post_4')['image'], 'large', '800px') ?>
         </a>
