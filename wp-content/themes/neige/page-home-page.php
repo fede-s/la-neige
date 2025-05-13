@@ -44,7 +44,7 @@ Widgets::textImageSection($type);
 $type = 3;
 Widgets::textImageSection($type);
 ?>
-<section class="container top-100 bottom-100 pink">
+<section class="container bottom-100 pink">
     <div class="section-text-image">
         <div class="side-text discover-more">
             <h5><?= $fields['room_preview_pre_title'] ;?></h5>
