@@ -121,22 +121,18 @@
     }
 
     .signature {
-      padding-bottom: 100px;
-      width: 80%;
-
-
+      width: 100%;
       .sig-svg {
+        display: flex;
+        justify-content: flex-end;
         font-size: 45px;
         margin: 0;
         line-height: 0.9;
         font-weight: 100;
         color: var(--olive-green);
         font-family: "DesMontilles";
-        position: absolute;
         transform: rotate(-5deg);
-        right: -20%;
-
-        // bottom: -42px;
+        
         @include tablet {
           position: relative;
           right: auto;
@@ -151,10 +147,6 @@
         path {
           fill: var(--olive-green);
         }
-      }
-
-      @include tablet {
-        padding-bottom: 50px;
       }
     }
 

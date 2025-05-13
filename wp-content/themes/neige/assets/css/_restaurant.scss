@@ -11,10 +11,7 @@
       }
 
       .signature {
-         padding-bottom: 100px;
-         @include tablet {
-            padding-bottom: 50px;
-         }
+         padding-bottom: 50px;
       }
    }
 

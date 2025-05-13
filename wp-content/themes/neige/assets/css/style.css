@@ -9440,19 +9440,18 @@ body.menu-opened #side-menu {
   margin-left: 10%;
 }
 .section-text-image .side-text .signature {
-  padding-bottom: 100px;
-  width: 80%;
+  width: 100%;
 }
 .section-text-image .side-text .signature .sig-svg {
+  display: flex;
+  justify-content: flex-end;
   font-size: 45px;
   margin: 0;
   line-height: 0.9;
   font-weight: 100;
   color: var(--olive-green);
   font-family: "DesMontilles";
-  position: absolute;
   transform: rotate(-5deg);
-  right: -20%;
 }
 @media (max-width: 1024px) {
   .section-text-image .side-text .signature .sig-svg {
@@ -9467,11 +9466,6 @@ body.menu-opened #side-menu {
 }
 .section-text-image .side-text .signature svg path {
   fill: var(--olive-green);
-}
-@media (max-width: 1024px) {
-  .section-text-image .side-text .signature {
-    padding-bottom: 50px;
-  }
 }
 @media (max-width: 1200px) {
   .section-text-image .side-text h1 {
@@ -9917,12 +9911,7 @@ body.menu-opened #side-menu {
   padding-bottom: 0;
 }
 .restaurant .side-text .signature {
-  padding-bottom: 100px;
-}
-@media (max-width: 1024px) {
-  .restaurant .side-text .signature {
-    padding-bottom: 50px;
-  }
+  padding-bottom: 50px;
 }
 .restaurant .side-image {
   padding-top: 150px;
