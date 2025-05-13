@@ -186,7 +186,6 @@
     width: 47.5%;
 
     .three-two-ratio {
-      aspect-ratio: unset;
       height: 100%;
       @include tablet {
         aspect-ratio: 3 / 2;

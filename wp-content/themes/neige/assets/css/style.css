@@ -9493,7 +9493,6 @@ body.menu-opened #side-menu {
   width: 47.5%;
 }
 .section-text-image .side-image .three-two-ratio {
-  aspect-ratio: unset;
   height: 100%;
 }
 @media (max-width: 1024px) {
