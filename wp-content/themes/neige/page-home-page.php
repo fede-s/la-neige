@@ -59,7 +59,7 @@ Widgets::textImageSection($type);
             </div>
         </div>
     </div>
-    <div class="rooms-display bottom-30 top-100">
+    <div class="rooms-display bottom-30">
         <div id="rooms" class="owl-carousel owl-theme">
             <?php
             $roomTypes = Utils::getPosts('room-type');
