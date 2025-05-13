@@ -9193,7 +9193,7 @@ body.menu-opened #side-menu {
   height: var(--icon-size);
   width: var(--icon-size);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .amenities {
     grid-template-columns: 1fr;
   }

@@ -67,7 +67,7 @@
       height: var(--icon-size);
       width: var(--icon-size);
    }
-   @include tablet {
+   @include small-desktop {
       grid-template-columns: 1fr;
    }
 }
