@@ -15,14 +15,14 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
    <div class="spacer"></div>
    <div class="spacer"></div>
    <div class="container">
-      <h1><?= the_title(); ?></h1>
+      <h1 class="fadeIn"><?= the_title(); ?></h1>
       <div class="spacer"></div>
       <div class="activity-info">
-         <div class="info-left">
+         <div class="info-left fadeIn">
             <?= Utils::getSeasonField($fields, 'intro') ?>
          </div>
          <div class="info-right">
-            <div class="property-features">
+            <div class="property-features fadeIn">
                <div>
                   <?= $fields['details'] ?>
                </div>
@@ -30,13 +30,13 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
             <?php
             if (!empty($fields['booking_title'])) { ?>
                <div class="spacer"></div>
-               <div class="title-with-line">
+               <div class="title-with-line fadeIn">
                   <span></span><?= $fields['booking_title']  ?><span></span>
                </div>
             <?php
             }
             if (!empty($fields['booking_button']['link'])) { ?>
-               <div class="book-button-wrapper">
+               <div class="book-button-wrapper fadeIn">
                   
                      <a href="<?= $fields['booking_button']['link']; ?>" class="linkBtn"><?= $fields['booking_button']['label']; ?></a>
                   
@@ -49,7 +49,7 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
    <?php
    if (!empty($gallery)) { ?>
       <div class="spacer large"></div>
-      <div class="">
+      <div class="fadeIn">
          <?php Carousel::galleryFromACF($gallery); ?>
       </div>
    <?php
@@ -64,9 +64,9 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
     ?>
       <div class="spacer large"></div>
       <div class="container">
-         <h2 class="text-center">More</h2>
+         <h2 class="text-center fadeIn">More</h2>
       </div>
-      <div class="container large">
+      <div class="container large fadeIn">
          <div class="spacer sm"></div>
          <?php
          $activities = Utils::getCurrentSeasonPosts('activity');
