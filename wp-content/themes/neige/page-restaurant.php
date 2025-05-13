@@ -60,8 +60,8 @@ get_header(); ?>
       </div>
 
       <div class="side-image">
-         <div class="side-img">
-            <?php echo Utils::imgLazy(get_field('restaurant_image'), 'medium', '800px'); ?>
+         <div class="side-img image-aspect">
+            <?php echo Utils::imgLazy(get_field('restaurant_image'), 'medium', '800px', '', 'image-aspect'); ?>
          </div>
          <p><?= get_field('restaurant_text'); ?></p>
          <div class="buttons">
@@ -75,8 +75,8 @@ get_header(); ?>
 <section class="restaurant chef pink">
    <div class="container section-text-image">
       <div class="side-image">
-         <div class="side-img">
-            <?php echo Utils::imgLazy(get_field('chef_image'), 'medium', '800px'); ?>
+         <div class="side-img image-aspect">
+            <?php echo Utils::imgLazy(get_field('chef_image'), 'medium', '800px', '', 'image-aspect'); ?>
          </div>
          <p><?= get_field('chef_text'); ?></p>
       </div>

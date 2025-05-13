@@ -9967,6 +9967,11 @@ body.menu-opened #side-menu {
   }
 }
 
+.image-aspect {
+  height: auto !important;
+  aspect-ratio: 1.81;
+}
+
 .shadow-image {
   position: relative;
   display: flex;
@@ -10100,11 +10105,12 @@ body.menu-opened #side-menu {
 }
 .activities .activity .activity-img {
   width: 100%;
+  aspect-ratio: 1.26;
   overflow: hidden;
 }
 .activities .activity .activity-img img {
   width: 100%;
-  height: 300px;
+  aspect-ratio: 1.26;
   object-fit: cover;
   transition: 0.35s ease-in-out;
 }
@@ -10324,17 +10330,24 @@ body.menu-opened #side-menu {
 }
 .access .side-image iframe {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1;
 }
 @media (max-width: 1024px) {
   .access .side-image iframe {
-    height: 450px;
+    aspect-ratio: 1.5;
   }
 }
 .access .side-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1;
   object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .access .side-image img {
+    aspect-ratio: 1.5;
+  }
 }
 
 .contact-signature {
@@ -10393,5 +10406,3 @@ body.menu-opened #side-menu {
 .feature-image:hover img, .feature-image-text:hover img {
   transform: scale(1.07);
 }
-
-/*# sourceMappingURL=style.css.map */
