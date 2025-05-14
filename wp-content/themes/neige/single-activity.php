@@ -64,7 +64,7 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
     ?>
       <div class="spacer large"></div>
       <div class="container">
-         <h2 class="text-center fadeIn">More</h2>
+         <h1 class="fadeIn activity-more">EXPLORE MORE</h1>
       </div>
       <div class="container large fadeIn">
          <div class="spacer sm"></div>
