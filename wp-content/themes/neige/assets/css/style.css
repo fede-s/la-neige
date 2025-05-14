@@ -8993,10 +8993,14 @@ body.menu-opened #side-menu {
 
 .fadeIn02 {
   opacity: 0;
+  transform: translateY(60px);
+  transform: rotate(-3deg);
 }
 .fadeIn02.on {
   opacity: 1;
+  transform: translateY(0);
   transition: opacity 1.4s;
+  transform: rotate(-3deg);
 }
 
 .header {
