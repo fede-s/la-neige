@@ -9607,7 +9607,7 @@ body.menu-opened #side-menu {
 
 .float-img {
   position: relative;
-  aspect-ratio: 1.15;
+  height: 70vw;
   margin: 0 -12.5%;
   display: grid;
 }
