@@ -10393,7 +10393,7 @@ body.menu-opened #side-menu {
 }
 
 .feature-image-text {
-  margin: 100px 10%;
+  margin: 100px 0;
   display: flex;
 }
 .feature-image-text .feature-image {
