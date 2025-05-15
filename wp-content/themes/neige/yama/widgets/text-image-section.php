@@ -21,7 +21,7 @@ $backGround = get_field($name . '_background_image');
     <?php if($type == 2) {
      echo Utils::imgLazy($backGround, 'large', '2000px', '', 'background-image type-2 fadeIn'); 
     }?>
-    <div class="section-text-image">
+    <div class="section-text-image base-top-img">
         <?php
         if ($type == 2) { ?>
             <div class="side-image">

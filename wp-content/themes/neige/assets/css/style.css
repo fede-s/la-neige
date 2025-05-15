@@ -9657,6 +9657,42 @@ body.menu-opened #side-menu {
   object-fit: cover;
 }
 
+.base-top-img .side-image {
+  height: auto;
+  aspect-ratio: 1.05;
+}
+.base-top-img .side-img {
+  position: relative;
+  height: auto;
+}
+.base-top-img .side-img .base-image {
+  aspect-ratio: 1;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .base-top-img .side-img .base-image {
+    width: 100%;
+    height: 300px;
+    aspect-ratio: auto;
+  }
+}
+.base-top-img .side-img .top-image {
+  position: absolute;
+  aspect-ratio: 1.2;
+  bottom: -23%;
+  left: 26%;
+}
+@media (max-width: 768px) {
+  .base-top-img .side-img .top-image {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: 300px;
+    aspect-ratio: auto;
+  }
+}
+
 .pink {
   background-color: var(--soft-pink);
 }
