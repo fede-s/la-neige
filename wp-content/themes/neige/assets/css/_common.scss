@@ -149,10 +149,6 @@ p {
 
 .top-100 {
 	padding-top: 100px;
-
-	@include tablet {
-		padding-top: 0;
-	}
 }
 
 .bottom-30 {

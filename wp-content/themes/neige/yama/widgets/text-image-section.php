@@ -16,7 +16,7 @@ $backGround = get_field($name . '_background_image');
 
 
 
-<section class="container sections <?php echo ($type == 1) ? 'bottom-100' : '';
+<section class="container sections <?php echo ($type == 1) ? 'bottom-100 top-100' : '';
                                     echo ($type == 2) ? 'pink bottom-100' : (($type == 3) ? 'forest-blue' : ''); ?>">
     <?php if($type == 2) {
      echo Utils::imgLazy($backGround, 'large', '2000px', '', 'background-image type-2 fadeIn'); 

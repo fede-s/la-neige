@@ -15,7 +15,7 @@ get_header(); ?>
 <section class="contact container restaurant forest-blue">
    <div class="contact-title">
       <h1 class="fadeIn"><?= $fields['title']; ?></h1>
-      <div class="contact-signature fadeIn02">
+      <div class="contact-signature fadeIn">
          <?= $fields['signature']; ?>
       </div>
       <div class="contact-data fadeIn">
@@ -63,7 +63,7 @@ get_header(); ?>
          <div class="contact-title">
             <h1 class="fadeIn"><?= $fields['access_title'] ?? '' ?></h1>
          </div>
-         <div class="contact-signature fadeIn02">
+         <div class="contact-signature fadeIn">
             <?= $fields['access_signature']; ?>
          </div>
          <p class="access-text fadeIn"><?= $fields['access_text'] ?? '' ?></p>

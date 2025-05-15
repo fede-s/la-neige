@@ -8468,11 +8468,6 @@ p {
 .top-100 {
   padding-top: 100px;
 }
-@media (max-width: 1024px) {
-  .top-100 {
-    padding-top: 0;
-  }
-}
 
 .bottom-30 {
   padding-bottom: 30px;
@@ -9413,7 +9408,6 @@ body.menu-opened #side-menu {
 .section-text-image {
   position: relative;
   z-index: 5;
-  padding-top: 100px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -9912,7 +9906,7 @@ body.menu-opened #side-menu {
 }
 
 .restaurant {
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 .restaurant .section-text-image {
   width: auto;
@@ -10165,6 +10159,7 @@ body.menu-opened #side-menu {
   align-items: baseline;
   word-wrap: break-word;
   font-size: 14px;
+  line-height: 1.5;
 }
 .activity-info .info-left,
 .activity-info .info-right {
@@ -10244,10 +10239,10 @@ body.menu-opened #side-menu {
 }
 
 .contact-title {
-  padding-top: 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 100px;
 }
 .contact-title h1 {
   padding-bottom: 0;
@@ -10278,7 +10273,15 @@ body.menu-opened #side-menu {
 .contact-title .contact-data p {
   margin: 5px 0;
 }
+@media (max-width: 1200px) {
+  .contact-title {
+    padding-bottom: 0;
+  }
+}
 
+.contact {
+  padding: 100px 10%;
+}
 .contact .side-image {
   padding-top: 0;
 }
@@ -10307,6 +10310,11 @@ body.menu-opened #side-menu {
   .contact .side-text {
     padding-top: 0;
     padding-bottom: 50px;
+  }
+}
+@media (max-width: 1200px) {
+  .contact {
+    padding: 100px 5%;
   }
 }
 @media (max-width: 1024px) {
@@ -10360,6 +10368,11 @@ body.menu-opened #side-menu {
 @media (max-width: 1024px) {
   .access .side-image img {
     aspect-ratio: 1.5;
+  }
+}
+@media (max-width: 1024px) {
+  .access {
+    padding: 0 5%;
   }
 }
 

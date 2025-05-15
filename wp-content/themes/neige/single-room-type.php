@@ -106,7 +106,7 @@ get_header(); ?>
     <div class="spacer medium"></div>
 </div>
 
-<section class="container bottom-100 pink">
+<section class="container bottom-100 top-100 pink">
     <div class="section-text-image">
         <div class="side-text discover-more discover-room">
             <h5 class="fadeIn">THERE IS MORE</h5>
