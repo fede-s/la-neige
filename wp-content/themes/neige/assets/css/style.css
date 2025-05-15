@@ -9419,17 +9419,17 @@ body.menu-opened #side-menu {
 }
 .section-text-image .side-text h1 {
   position: relative;
-  width: 75%;
+  width: 500px;
   font-size: 56px;
   font-weight: 600;
 }
 .section-text-image .side-text h5 {
-  width: 60%;
+  width: 300px;
   font-weight: 500;
   padding-bottom: 20px;
 }
 .section-text-image .side-text p {
-  width: 75%;
+  width: 400px;
   padding-left: 10%;
 }
 .section-text-image .side-text .linkBtn {
@@ -9505,7 +9505,7 @@ body.menu-opened #side-menu {
 .section-text-image .main-image img {
   position: relative;
   width: 126.3%;
-  aspect-ratio: 1;
+  aspect-ratio: 1.25;
   object-fit: cover;
 }
 @media (max-width: 1200px) {
@@ -9586,7 +9586,7 @@ body.menu-opened #side-menu {
 
 .float-img {
   position: relative;
-  height: 70vw;
+  height: 50vw;
   margin: 0 -12.5%;
   display: grid;
 }
@@ -9608,7 +9608,7 @@ body.menu-opened #side-menu {
   position: relative;
   left: 10%;
   aspect-ratio: 0.86;
-  width: 30%;
+  width: 25%;
 }
 @media (max-width: 1024px) {
   .float-img .image-left {
@@ -9633,7 +9633,7 @@ body.menu-opened #side-menu {
   bottom: 0;
   position: absolute;
   width: 35%;
-  aspect-ratio: 1.5;
+  aspect-ratio: 1;
 }
 @media (max-width: 1200px) {
   .float-img .image-right {
