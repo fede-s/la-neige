@@ -456,7 +456,11 @@
   grid-template-columns: repeat(4, 1fr);
   position: relative;
   height: 1100px;
-
+  .side-text {
+    h1 {
+      width: 75%;
+    }
+  }
   @include small-desktop {
     height: 900px;
   }

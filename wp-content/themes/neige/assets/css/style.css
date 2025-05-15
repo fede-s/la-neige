@@ -9742,6 +9742,9 @@ body.menu-opened #side-menu {
   position: relative;
   height: 1100px;
 }
+.insta .side-text h1 {
+  width: 75%;
+}
 @media (max-width: 1200px) {
   .insta {
     height: 900px;
