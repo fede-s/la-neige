@@ -189,4 +189,13 @@
         }
       }
     }
+    @include tablet {
+      padding: 0 0;
+    }
+}
+.activity-more {
+   padding-left: 25px;
+   @include tablet {
+      padding-left: 0;
+   }
 }

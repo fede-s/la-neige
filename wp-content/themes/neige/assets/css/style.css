@@ -10247,6 +10247,20 @@ body.menu-opened #side-menu {
 .more-list .owl-carousel .owl-dots span {
   display: none;
 }
+@media (max-width: 1024px) {
+  .more-list {
+    padding: 0 0;
+  }
+}
+
+.activity-more {
+  padding-left: 25px;
+}
+@media (max-width: 1024px) {
+  .activity-more {
+    padding-left: 0;
+  }
+}
 
 .contact-title {
   padding-top: 50px;

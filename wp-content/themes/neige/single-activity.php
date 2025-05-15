@@ -63,10 +63,10 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
    }
     ?>
       <div class="spacer large"></div>
-      <div class="container">
+      <div class="">
          <h1 class="fadeIn activity-more">EXPLORE MORE</h1>
       </div>
-      <div class="container large fadeIn">
+      <div class="fadeIn">
          <div class="spacer sm"></div>
          <?php
          $activities = Utils::getCurrentSeasonPosts('activity');
