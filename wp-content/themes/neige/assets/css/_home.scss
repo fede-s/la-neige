@@ -476,6 +476,11 @@
       padding-top: 50px;
     }
   }
+  @include phone {
+    .sig-svg {
+      justify-content: flex-start !important;
+    }
+  }
 
 
   .post {
