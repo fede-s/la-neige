@@ -8446,6 +8446,10 @@ h6 {
   margin: 0;
 }
 
+p {
+  line-height: 1.5;
+}
+
 .container {
   padding: 0 10%;
   width: 80%;
@@ -9455,7 +9459,6 @@ body.menu-opened #side-menu {
 .section-text-image .side-text p {
   width: 75%;
   padding-left: 10%;
-  line-height: 1.25;
 }
 .section-text-image .side-text .linkBtn {
   margin: 40px 0;
@@ -10449,7 +10452,6 @@ body.menu-opened #side-menu {
 }
 .feature-image-text .feature-text p {
   width: 100%;
-  line-height: 1.25;
 }
 .feature-image-text .feature-text .signature {
   width: 100%;
