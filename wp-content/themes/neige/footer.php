@@ -43,7 +43,7 @@ $options = get_fields('options'); ?>
             </p>
         </div>
         <div class="header-content">
-            <div class="signature-footer">
+            <div class="signature-footer fadeIn03">
                 <?= $options['footer_signature']; ?>
             </div>
         </div>

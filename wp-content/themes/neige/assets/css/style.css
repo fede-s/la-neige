@@ -8898,7 +8898,7 @@ body.menu-opened #side-menu {
   font-weight: 100;
   color: var(--olive-green);
   font-family: "DesMontilles";
-  transform: rotate(-3deg);
+  transform: rotate(-5deg);
 }
 
 .logo-footer {
@@ -8983,28 +8983,6 @@ body.menu-opened #side-menu {
 }
 .trp_language_switcher_shortcode .trp-language-switcher > div > a:hover {
   background: var(--soft-pink);
-}
-
-.fadeIn {
-  opacity: 0;
-  transform: translateY(60px);
-}
-.fadeIn.on {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 1.4s;
-}
-
-.fadeIn02 {
-  opacity: 0;
-  transform: translateY(60px);
-  transform: rotate(-3deg);
-}
-.fadeIn02.on {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 1.4s;
-  transform: rotate(-3deg);
 }
 
 .header {
@@ -10483,4 +10461,34 @@ body.menu-opened #side-menu {
 
 .feature-image:hover img, .feature-image-text:hover img {
   transform: scale(1.07);
+}
+
+.fadeIn {
+  opacity: 0;
+  transform: translateY(60px);
+}
+.fadeIn.on {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.4s;
+}
+
+.fadeIn02 {
+  opacity: 0;
+  transform: translateY(60px);
+}
+.fadeIn02.on {
+  opacity: 1;
+  transform: translateY(0px) rotate(-5deg);
+  transition: transform 1.4s, opacity 1.4s;
+}
+
+.fadeIn03 {
+  opacity: 0;
+  transform: translateY(60px);
+}
+.fadeIn03.on {
+  opacity: 1;
+  transform: translateY(0px) rotate(-5deg);
+  transition: transform 1.4s, opacity 1.4s;
 }

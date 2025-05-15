@@ -629,7 +629,7 @@ p {
 	font-weight: 100;
 	color: var(--olive-green);
 	font-family: "DesMontilles";
-	transform: rotate(-3deg);
+	transform: rotate(-5deg);
 }
 
 .logo-footer {
@@ -726,28 +726,5 @@ p {
 	}
 }
 
-// Scroll Effect
-
-.fadeIn {
-	opacity: 0;
-	transform: translateY(60px);
  
-	&.on {
-	  opacity: 1;
-	  transform: translateY(0);
-	  transition: 1.4s;
-	}
- }
  
- .fadeIn02 {
-	opacity: 0;
-	transform: translateY(60px);
-	transform: rotate(-3deg);
- 
-	&.on {
-	  opacity: 1;
-	  transform: translateY(0);
-	  transition: opacity 1.4s;
-	  transform: rotate(-3deg);
-	}
- }

@@ -86,3 +86,36 @@
       transform: scale(1.07);
    }
 }
+
+// Scroll Effect
+
+.fadeIn {
+	opacity: 0;
+	transform: translateY(60px);
+ 
+	&.on {
+	  opacity: 1;
+	  transform: translateY(0);
+	  transition: 1.4s;
+	}
+ }
+.fadeIn02 {
+	opacity: 0;
+	transform: translateY(60px);
+ 
+	&.on {
+	  opacity: 1;
+	  transform: translateY(0px) rotate(-5deg);
+	  transition: transform 1.4s, opacity 1.4s;
+	}
+ }
+ .fadeIn03 {
+	opacity: 0;
+	transform: translateY(60px);
+ 
+	&.on {
+	  opacity: 1;
+	  transform: translateY(0px) rotate(-5deg);
+	  transition: transform 1.4s, opacity 1.4s;
+	}
+ }

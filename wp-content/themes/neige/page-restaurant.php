@@ -24,7 +24,7 @@ get_header(); ?>
    <p class="fadeIn"><?= $fields['introduction_text'] ;?></p>
    <?php if(!empty($fields['introduction_signature'])) {
     ?>
-   <div class="intro-signature fadeIn">
+   <div class="intro-signature fadeIn02">
       <?= $fields['introduction_signature'] ;?>
    </div>
    <?php } ?>
