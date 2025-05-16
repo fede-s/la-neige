@@ -43,6 +43,9 @@
          width: 75%;
          font-size: 56px;
          font-weight: 600;
+         @include phone {
+          font-size: 33px;
+         }
        }
    
        h5 {
@@ -66,6 +69,10 @@
            color: var(--olive-green);
            font-family: "DesMontilles";
            transform: rotate(-5deg);
+           @include phone {
+            margin-top: -15px;
+            font-size: 35px;
+           }
          } 
        }
       @include small-tablet {

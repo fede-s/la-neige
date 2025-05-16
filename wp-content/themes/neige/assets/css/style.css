@@ -9007,7 +9007,7 @@ body.menu-opened #side-menu {
   font-size: clamp(17px, 2.5vw, 33px);
 }
 .header .header-text h1 {
-  font-size: clamp(40px, 5vw, 56px);
+  font-size: clamp(33px, 5vw, 56px);
 }
 @media (max-width: 768px) {
   .header .header-text {
@@ -9145,12 +9145,17 @@ body.menu-opened #side-menu {
 .details h1 {
   font-size: 56px;
 }
+@media (max-width: 479px) {
+  .details h1 {
+    font-size: 40px;
+  }
+}
 .details h6 {
   font-size: 18px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .details .post-title {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 }
 
@@ -9457,6 +9462,11 @@ body.menu-opened #side-menu {
     right: auto;
   }
 }
+@media (max-width: 479px) {
+  .section-text-image .side-text .signature .sig-svg {
+    font-size: 38px;
+  }
+}
 .section-text-image .side-text .signature svg {
   display: block;
   height: 100%;
@@ -9479,6 +9489,11 @@ body.menu-opened #side-menu {
   }
   .section-text-image .side-text .linkBtn {
     margin-left: 0;
+  }
+}
+@media (max-width: 479px) {
+  .section-text-image .side-text h1 {
+    font-size: 33px;
   }
 }
 .section-text-image .side-image {
@@ -9984,6 +9999,11 @@ body.menu-opened #side-menu {
     padding: 20px 10%;
   }
 }
+@media (max-width: 479px) {
+  .restaurant .side-image .buttons {
+    flex-direction: column;
+  }
+}
 .restaurant .side-image .side-img {
   display: flex;
   height: 400px;
@@ -10481,6 +10501,11 @@ body.menu-opened #side-menu {
   font-size: 56px;
   font-weight: 600;
 }
+@media (max-width: 479px) {
+  .feature-image-text .feature-text h1 {
+    font-size: 33px;
+  }
+}
 .feature-image-text .feature-text h5 {
   width: 60%;
   font-weight: 500;
@@ -10502,6 +10527,12 @@ body.menu-opened #side-menu {
   color: var(--olive-green);
   font-family: "DesMontilles";
   transform: rotate(-5deg);
+}
+@media (max-width: 479px) {
+  .feature-image-text .feature-text .signature .sig-svg {
+    margin-top: -15px;
+    font-size: 35px;
+  }
 }
 @media (max-width: 768px) {
   .feature-image-text .feature-text {

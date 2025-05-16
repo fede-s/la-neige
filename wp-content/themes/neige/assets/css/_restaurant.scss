@@ -35,6 +35,9 @@
          @include tablet {
             padding: 20px 10%;
          }
+         @include phone {
+            flex-direction: column;
+         }
       }
 
       .side-img {

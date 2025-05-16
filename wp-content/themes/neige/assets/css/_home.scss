@@ -139,6 +139,9 @@
           position: relative;
           right: auto;
         }
+        @include phone {
+          font-size: 38px;
+        }
       }
 
       svg {
@@ -172,6 +175,11 @@
         margin-left: 0;
       }
 
+    }
+    @include phone {
+      h1 {
+        font-size: 33px;
+      }
     }
   }
 
