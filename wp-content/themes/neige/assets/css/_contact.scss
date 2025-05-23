@@ -85,6 +85,14 @@
          padding-top: 20px;
          padding-bottom: 40px;
       }
+      .contact-logo {
+         width: 300px;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
 
       @include tablet {
          padding-top: 0;

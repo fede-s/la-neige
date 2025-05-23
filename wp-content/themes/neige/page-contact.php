@@ -37,7 +37,9 @@ get_header(); ?>
    </div>
    <div class="section-text-image">
       <div class="side-text fadeIn">
-         <?= Utils::imgLazy(get_field('contact_logo'), 'medium', '300px'); ?>
+         <div class="contact-logo">
+            <?= Utils::imgLazy(get_field('contact_logo'), 'medium', '300px'); ?>
+         </div>
          <h5><?= $fields['name'] ;?></h5>
          <?= $fields['text'] ?? '' ?>
       </div>
