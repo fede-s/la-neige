@@ -10434,6 +10434,7 @@ body.menu-opened #side-menu {
 }
 .access .side-text .travel-option h5 {
   padding-top: 0;
+  padding-bottom: 25px;
   color: var(--olive-green);
 }
 .access .contact-title {
