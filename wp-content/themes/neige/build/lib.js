@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         jQuery(el).each(function() {
             var thisPos = jQuery(this).offset().top;
             var topOfWindow = jQuery(window).scrollTop();
-            if (el == '.fadeIn03') {
+            if (el == '.fadeIn03' || '.copyright') {
                 if (topOfWindow + windowHeight > thisPos) {
                     jQuery(this).addClass('on');
                 }

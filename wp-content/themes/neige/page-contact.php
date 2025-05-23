@@ -20,21 +20,25 @@ get_header(); ?>
       </div>
       <div class="contact-data fadeIn">
          <?php
-         if (!empty($fields['tel'])) { ?>
+         $telephone = get_field('telephone', 'options');
+         if (!empty($telephone)) { ?>
             <div>
-               <p><a href="tel:<?= $fields['tel'] ?>"><?= $fields['tel']; ?></a></p>
+               <p><a href="tel:<?= $telephone ?>"><?= $telephone; ?></a></p>
             </div>
          <?php } ?>
          <?php
-         if (!empty($fields['email'])) { ?>
+         $email = get_field('email', 'options');
+         if (!empty($email)) { ?>
             <div>
-               <p><a href="mailto:<?= $fields['email'] ?>"><?= $fields['email'] ?></a></p>
+               <p><a href="mailto:<?= $email ?>"><?= $email ?></a></p>
             </div>
          <?php } ?>
       </div>
    </div>
    <div class="section-text-image">
       <div class="side-text fadeIn">
+         <?= Utils::imgLazy(get_field('contact_logo'), 'medium', '300px'); ?>
+         <h5><?= $fields['name'] ;?></h5>
          <?= $fields['text'] ?? '' ?>
       </div>
 
@@ -72,7 +76,7 @@ get_header(); ?>
             foreach ($fields['travel_options'] as $option) { ?>
                <div class="travel-option">
                   <?= Utils::imgLazy($option['icon'], 'large', '100px', '', 'fadeIn'); ?>
-                  <h6 class="fadeIn"><?= $option['title']; ?></h6>
+                  <h5 class="fadeIn"><?= $option['title']; ?></h5>
                   <p class="fadeIn"><?= $option['text']; ?></p>
                </div>
          <?php

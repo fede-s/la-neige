@@ -15,6 +15,7 @@
       grid-template-columns: 1fr 1fr;
       align-content: center;
       justify-items: center;
+      padding-top: 20px;
 
       span {
          flex: 1;
@@ -26,10 +27,16 @@
 
       div:last-child {
          border-left: 1px solid var(--olive-green);
+         @include phone {
+            border-left: none;
+         }
       }
 
       div {
          padding-left: 20px;
+         @include phone {
+            padding-left: 0;
+         }
       }
 
       a {
@@ -40,8 +47,11 @@
       p {
          margin: 5px 0;
       }
+      @include phone {
+         grid-template-columns: 1fr;
+      }
    }
-   @include small-desktop {
+   @include tablet {
       padding-bottom: 0;
    }
 }
@@ -113,13 +123,14 @@
          padding-top: 20px;
 
          img {
-            padding: 10px 0;
-            height: 25px;
-            width: 25px;
+            padding-top: 10px;
+            height: var(--icon-size);
+            width: var(--icon-size);
 
          }
 
-         h6 {
+         h5 {
+            padding-top: 0;
             color: var(--olive-green);
          }
       }
@@ -127,6 +138,7 @@
 
    .contact-title {
       padding-top: 0;
+      padding-bottom: 0;
    }
 
    .side-image {

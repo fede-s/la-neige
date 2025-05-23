@@ -50,7 +50,7 @@ $gallery = Utils::getSeasonField($fields, 'gallery');
    if (!empty($gallery)) { ?>
       <div class="spacer large"></div>
       <div class="fadeIn">
-         <?php Carousel::galleryFromACF($gallery); ?>
+         <?php Carousel::galleryFromACF($gallery, true, '', true); ?>
       </div>
    <?php
    }
