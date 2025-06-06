@@ -4,6 +4,7 @@
  * Template Name: Contact
  */
 
+require_once(YAMA . '/hubspot/Hubspot.php');
 
 global $post;
 
@@ -43,7 +44,6 @@ get_header(); ?>
          <h5><?= $fields['name'] ;?></h5>
          <?= $fields['text'] ?? '' ?>
       </div>
-
       <div class="side-image">
          <?php
          if (!empty($fields['gallery'][0])) {
@@ -62,7 +62,12 @@ get_header(); ?>
       </div>
    </div>
 </section>
-
+<section class="contact container forest-blue contact-form">
+    <div class="fadeIn">
+        <h1 class="text-center"><?= $fields['form_title'] ?? '' ?></h1>
+        <?php HubSpot::createForm($fields['form_id'] ?? '') ?>
+    </div>
+</section>
 <section class="contact container restaurant forest-blue access">
    <div class="section-text-image">
       <div class="side-text">
