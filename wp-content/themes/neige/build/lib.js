@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-    // jQuery(document).ready(function ($) {
-    //     $('.logo-carousel').owlCarousel({
-    //         loop: true,
-    //         margin: 10,
-    //         nav: false,
-    //         autoplay: true,
-    //         autoplayTimeout: 1000,
-    //         autoplayHoverPause: true,
-    //         dots: false,
-    //     });
-    // });
-
     const body = document.querySelector('body');
     const hamburgerMenu = document.querySelector('#hamburger-menu');
     const closeMenu = document.querySelector('.close-menu');
@@ -129,3 +116,56 @@ jQuery(document).ready(function () {
         }
     });
 });
+
+window.scripts = {};
+window.getScript = function (url, callback) {
+    if (!scripts[url]) {
+        scripts[url] = {
+            requests: [callback]
+        };
+        jQuery.ajax({
+            dataType: 'script',
+            cache: true,
+            url: url,
+            success: function () {
+                scripts[url].ready = true;
+                window.notifyScriptReady(url);
+            }
+        });
+    } else if (scripts[url].ready) {
+        setTimeout(callback, 0);
+    } else {
+        scripts[url].requests.push(callback);
+    }
+};
+
+window.notifyScriptReady = function (url) {
+    var script = scripts[url];
+    if (script.ready) {
+        for (var i = 0; i < script.requests.length; i++) {
+            if (script.requests[i]) {
+                script.requests[i].call();
+            }
+        }
+        script.requests = [];
+    }
+}
+
+window.getHSFormScript = function (callback) {
+    window.getScript('https://js.hsforms.net/forms/v2.js', callback);
+};
+
+window.createHubForm = function (opts) {
+    opts.portalId = '2766250';
+    if (opts.deferred) {
+        document.addEventListener('DOMContentLoaded', function () {
+            getHSFormScript(function () {
+                hbspt.forms.create(opts);
+            });
+        });
+    } else {
+        getHSFormScript(function () {
+            hbspt.forms.create(opts);
+        });
+    }
+}

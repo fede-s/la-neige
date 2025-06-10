@@ -798,8 +798,7 @@ script {
   color: white !important;
 }
 
-.btn:hover,
-.hbspt-form input[type=submit]:hover {
+.btn:hover {
   transform: scale(1.02, 1.02);
 }
 
@@ -1357,44 +1356,17 @@ script {
   padding: 10px 0 !important;
 }
 
-.hbspt-form input[type=submit] {
-  background: white !important;
-  color: var(--main-color) !important;
-  border: 2px solid var(--main-color) !important;
-  border-radius: 4px !important;
-  width: calc(100% - 4px);
-  max-width: 300px;
-  min-width: 100px;
-  padding: 6px 0 !important;
-  display: inline-block;
-  text-align: center;
-  line-height: 1.5rem !important;
-  font-size: 1rem !important;
-  font-weight: bold;
-  margin: 15px 5px 0px !important;
-  border-radius: 0;
-  text-transform: uppercase;
-  box-shadow: none !important;
-  text-shadow: none !important;
-  cursor: pointer;
-}
-
-.hbspt-form input[type=submit]:hover {
-  background-color: var(--main-color) !important;
-  color: white !important;
-}
-
 .hbspt-form .hs-form-field,
 .hbspt-form .mc-field-group {
   margin-bottom: 1rem !important;
 }
 
 .hbspt-form label {
+  display: block;
   width: 100% !important;
   padding: 0 7px;
   font-size: 0.9rem !important;
   margin: 0 0 5px 0 !important;
-  font-weight: bold !important;
   text-align: left;
 }
 
@@ -1411,25 +1383,51 @@ script {
   width: calc(100% - 10px) !important;
   margin: 0 5px !important;
   box-sizing: border-box !important;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none !important;
   font-size: 1rem !important;
-  border: 1px solid #ccc !important;
-  border-radius: 3px !important;
+  border: none !important;
+  border-bottom: 1px solid var(--soft-pink) !important;
+  border-radius: 0 !important;
+  color: var(--soft-pink) !important;
+  background: transparent;
+  font-family: BigCaslon, sans-serif;
+  height: 2.6rem !important;
+}
+.hbspt-form input::placeholder,
+.hbspt-form select::placeholder,
+.hbspt-form textarea::placeholder {
+  color: grey !important;
 }
 
-.hbspt-form select {
-  height: 32px !important;
+.hbspt-form input[type=submit] {
+  display: inline-block;
+  padding: 13px 16px 10px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  text-transform: uppercase;
+  border: 1px solid var(--soft-pink) !important;
+}
+.hbspt-form input[type=submit]:hover {
+  background-color: var(--soft-pink);
+  color: var(--forest-blue) !important;
+}
+
+.hbspt-form select:required:invalid {
+  color: grey !important;
+}
+
+.hbspt-form textarea {
+  height: 5rem !important;
+  padding-top: 12px;
 }
 
 .hbspt-form input[type=radio],
 .hbspt-form input[type=checkbox] {
   width: auto !important;
   height: 13px !important;
-}
-
-.hbspt-form .input input {
-  height: 2rem !important;
-  font-size: 1rem;
 }
 
 .hbspt-form .input input::placeholder {
@@ -1442,7 +1440,6 @@ select:focus,
 .hbspt-form input.hs-input:focus,
 .hbspt-form textarea.hs-input:focus,
 .hbspt-form select:focus {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px var(--text-color) !important;
   outline: none !important;
 }
 
@@ -10034,6 +10031,7 @@ body.menu-opened #side-menu {
   display: flex;
   aspect-ratio: 0.89;
   width: 80%;
+  margin-bottom: 4.5%;
 }
 .shadow-image img {
   height: 100%;
@@ -10063,7 +10061,6 @@ body.menu-opened #side-menu {
 }
 @media (max-width: 1024px) {
   .shadow-image {
-    margin: 0 10%;
     height: 450px;
   }
 }
@@ -10306,7 +10303,7 @@ body.menu-opened #side-menu {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 .contact-title h1 {
   padding-bottom: 0;
@@ -10360,7 +10357,7 @@ body.menu-opened #side-menu {
 }
 
 .contact {
-  padding: 100px 10%;
+  padding: 50px 10%;
 }
 .contact .side-image {
   padding-top: 0;
@@ -10402,12 +10399,7 @@ body.menu-opened #side-menu {
 }
 @media (max-width: 1200px) {
   .contact {
-    padding: 100px 5%;
-  }
-}
-@media (max-width: 1024px) {
-  .contact .section-text-image {
-    padding-top: 50px;
+    padding: 50px 5%;
   }
 }
 
@@ -10461,11 +10453,6 @@ body.menu-opened #side-menu {
     aspect-ratio: 1.5;
   }
 }
-@media (max-width: 1024px) {
-  .access {
-    padding: 0 5%;
-  }
-}
 
 .contact-signature {
   font-size: 30px;
@@ -10475,6 +10462,10 @@ body.menu-opened #side-menu {
   color: var(--olive-green);
   font-family: "DesMontilles";
   transform: rotate(-5deg);
+}
+
+.contact-form h1 {
+  padding-bottom: 40px;
 }
 
 .feature-image-text {
@@ -10607,3 +10598,5 @@ body.menu-opened #side-menu {
   transform: translateY(0px) rotate(-5deg);
   transition: transform 1.4s, opacity 1.4s;
 }
+
+/*# sourceMappingURL=style.css.map */
