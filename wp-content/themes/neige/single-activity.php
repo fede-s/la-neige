@@ -4,11 +4,23 @@
 get_header();
 $fields = get_fields();
 $gallery = Utils::getSeasonField($fields, 'gallery');
+$videoId = Utils::getVimeoVideoId(get_field('activity_video'));
 ?>
 
 <div class="header activity-header">
    <div class="gradient no-gradient">
+   <?php if (get_field('activity_video')) {
+        ?>
+            <div class="video-container">
+                <iframe
+                    src="https://player.vimeo.com/video/<?= $videoId ?>?autoplay=1&muted=1&loop=1&controls=0"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture">
+                </iframe>
+            </div>
+        <?php } else { ?>
       <?= Utils::imgLazyFromPost($post, 'large', '2000px'); ?>
+      <?php } ?>
    </div>
 </div>
 <section class="container">
