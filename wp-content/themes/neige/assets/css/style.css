@@ -10599,4 +10599,8 @@ body.menu-opened #side-menu {
   transition: transform 1.4s, opacity 1.4s;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 1024px) {
+  .mobile-padding {
+    padding-bottom: 50px;
+  }
+}

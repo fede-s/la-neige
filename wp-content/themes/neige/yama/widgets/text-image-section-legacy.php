@@ -46,7 +46,8 @@ $backGround = get_field($name . '_background_image');
                 </div>
             </div>
         <?php } ?>
-        <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : ''; ?>">
+        <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : '';
+                                    echo ($type == 3) ? ' mobile-padding' : ''; ?>">
             <h5 class="fadeIn"><?= $preTitle; ?></h5>
             <div class="signature fadeIn">
                 <h1><?= $title; ?></h1>
@@ -72,7 +73,7 @@ $backGround = get_field($name . '_background_image');
     if ($type == 3) { ?>
         <div class="float-img forest-blue">
         <?php if($type == 3) {
-     echo Utils::imgLazy(get_field('background_image_restaurant'), 'large', '2000px', '', 'background-image type-3 fadeIn'); 
+     echo Utils::imgLazy($backGround, 'large', '2000px', '', 'background-image type-3 fadeIn'); 
     }?>
             <div class="image-left top-100 fadeIn">
                 <?= Utils::imgLazy($gallery[1], 'medium', '800px') ?>
