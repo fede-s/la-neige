@@ -61,6 +61,10 @@ get_header(); ?>
    } ?>
 
 </section>
+<?php 
+$type = 2;
+Widgets::textImageSectionLegacy($type);
+?>
 
 <?php if (!empty($fields['gallery'])) { ?>
    <section class="container fadeIn">
