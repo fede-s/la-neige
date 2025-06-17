@@ -8959,12 +8959,12 @@ body.menu-opened #side-menu {
   right: 0;
 }
 .trp_language_switcher_shortcode .trp-language-switcher .trp-ls-shortcode-current-language {
-  background: var(--soft-pink);
+  background: transparent;
   border: none;
   padding: 0;
 }
 .trp_language_switcher_shortcode .trp-language-switcher .trp-ls-shortcode-language {
-  background: var(--soft-pink);
+  background: transparent;
   border: none;
   padding: 0;
 }
@@ -8975,7 +8975,7 @@ body.menu-opened #side-menu {
   font-family: "BigCaslon", ui-sans-serif;
 }
 .trp_language_switcher_shortcode .trp-language-switcher > div > a:hover {
-  background: var(--soft-pink);
+  background: transparent;
 }
 
 .header {

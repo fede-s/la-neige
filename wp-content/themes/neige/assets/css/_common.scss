@@ -699,13 +699,13 @@ p {
 		}
 
 		.trp-ls-shortcode-current-language {
-			background: var(--soft-pink);
+			background: transparent;
 			border: none;
 			padding: 0;
 		}
 
 		.trp-ls-shortcode-language {
-			background: var(--soft-pink);
+			background: transparent;
 			border: none;
 			padding: 0;
 		}
@@ -717,7 +717,7 @@ p {
 			font-family: 'BigCaslon', ui-sans-serif;
 
 			&:hover {
-				background: var(--soft-pink);
+				background: transparent;
 			}
 		}
 	}
