@@ -10604,3 +10604,39 @@ body.menu-opened #side-menu {
     padding-bottom: 50px;
   }
 }
+
+.section-legacy .legacy-content p {
+  padding: 0;
+  width: unset;
+}
+
+.section-legacy .side-text {
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  .section-legacy .side-text {
+    width: 100%;
+  }
+}
+
+.section-legacy .legacy-gallery {
+  width: 40%;
+  padding-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .section-legacy .legacy-gallery {
+    padding-top: 50px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-legacy {
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+}
+
+.legacy-flex {
+  flex-direction: row-reverse;
+}

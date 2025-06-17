@@ -10,18 +10,22 @@ $button = get_field($name . '_button');
 $gallery = get_field($name . '_gallery');
 $icons = get_field($name);
 $backGround = get_field($name . '_background_image');
+if ($type == 1 ) {
+   $text = $var['about_text'];
+   $gallery = $var['about_gallery'];
+} 
 
 
 ?>
 
 
 
-<section class="container sections <?php echo ($type == 1) ? 'bottom-100 top-100' : '';
+<section class="container sections <?php echo ($type == 1) ? 'bottom-100 top-100 section-legacy' : '';
                                     echo ($type == 2) ? 'pink bottom-100' : (($type == 3) ? 'forest-blue' : ''); ?>">
     <?php if($type == 2) {
      echo Utils::imgLazy($backGround, 'large', '2000px', '', 'background-image type-2 fadeIn'); 
     }?>
-    <div class="section-text-image base-top-img">
+    <div class="section-text-image base-top-img <?php echo ($count % 2 == 0) ? 'legacy-flex' : '';?> ">
         <?php
         if ($type == 2) { ?>
             <div class="side-image">
@@ -48,18 +52,25 @@ $backGround = get_field($name . '_background_image');
         <?php } ?>
         <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : '';
                                     echo ($type == 3) ? ' mobile-padding' : ''; ?>">
+            <?php if ($type == 2 || $type == 3) { ?>
             <h5 class="fadeIn"><?= $preTitle; ?></h5>
             <div class="signature fadeIn">
                 <h1><?= $title; ?></h1>
             </div>
             <p class="fadeIn"><?= $text; ?></p>
+            <?php } ?>
+            <?php if ($type == 1) { ?>
+               <div class="fadeIn legacy-content">
+                  <?= $text ;?>
+               </div>
+               <?php } ?>
             <?php if ($type == 2) { ?>
                 <a href="<?= $button['url']; ?>" class="linkBtn fadeIn pink"><?= $button['title']; ?></a>
             <?php } ?>
         </div>
         <?php
         if ($type == 1) {
-            echo '<div class="side-image fadeIn bottom-30">';
+            echo '<div class="side-image fadeIn bottom-30 legacy-gallery">';
             Carousel::galleryFromACF($gallery, false, '', true);
             echo '</div>';
         }

@@ -3,3 +3,33 @@
       padding-bottom: 50px;
    }
 }
+
+.section-legacy .legacy-content {
+   p {
+      padding: 0;
+      width: unset;
+   }
+}
+.section-legacy .side-text {
+   width: 50%;
+   @include tablet {
+      width: 100%;
+   }
+}
+.section-legacy .legacy-gallery {
+   width: 40%;
+   padding-bottom: 50px;
+   @include tablet {
+      padding-top: 50px;
+      width: 100%;
+   }
+}
+.section-legacy {
+   @include tablet {
+      padding-top: 50px;
+      padding-bottom: 0px;
+   }
+}
+.legacy-flex {
+   flex-direction: row-reverse   ;
+}

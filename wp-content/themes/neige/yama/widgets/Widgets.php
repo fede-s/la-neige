@@ -43,7 +43,7 @@ class Widgets {
    public static function textImageSection($type) {
       include(__DIR__ . '/text-image-section.php');
   }
-   public static function textImageSectionLegacy($type) {
+   public static function textImageSectionLegacy($type, $var=null, $count=null) {
          include(__DIR__ . '/text-image-section-legacy.php');
    }
 
