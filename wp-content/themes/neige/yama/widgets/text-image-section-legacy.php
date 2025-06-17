@@ -25,7 +25,7 @@ if ($type == 1 ) {
     <?php if($type == 2) {
      echo Utils::imgLazy($backGround, 'large', '2000px', '', 'background-image type-2 fadeIn'); 
     }?>
-    <div class="section-text-image base-top-img <?php echo ($count % 2 == 0) ? 'legacy-flex' : '';?> ">
+    <div class="section-text-image base-top-img <?php echo (($count % 2 == 0) && ($type == 1)) ? 'legacy-flex' : '';?> ">
         <?php
         if ($type == 2) { ?>
             <div class="side-image">

@@ -10640,3 +10640,9 @@ body.menu-opened #side-menu {
 .legacy-flex {
   flex-direction: row-reverse;
 }
+
+@media (max-width: 1024px) {
+  .section-text-image .main-image img {
+    height: 100%;
+  }
+}

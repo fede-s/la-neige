@@ -33,3 +33,8 @@
 .legacy-flex {
    flex-direction: row-reverse   ;
 }
+.section-text-image .main-image img {
+   @include tablet {
+      height: 100%;
+   }
+}
