@@ -2034,7 +2034,7 @@ h2.resp-accordion:first-child {
   width: 100%;
 }
 .owl-carousel .owl-nav {
-  display: flex !important;
+  display: flex;
   gap: 5px;
   margin: 0;
 }
