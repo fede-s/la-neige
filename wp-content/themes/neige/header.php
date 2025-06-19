@@ -59,7 +59,7 @@ $bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hote
                     </a>
                 </div>
                 <div class="nav-bar-right">
-                    <a href="<?= $bookingURL ?>" target="_blank" class="linkBtn book-btn">BOOK</a>
+                    <a href="<?= $bookingURL ?>" target="_blank" class="linkBtn book-btn">Reserve</a>
                 </div>
             </div>
         </div>
