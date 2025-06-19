@@ -34,27 +34,33 @@ foreach ($fields['about'] as $item) {
 <section class="container bottom-100 top-100 pink">
     <div class="section-text-image">
         <div class="side-text discover-more">
-            <h5 class="fadeIn">See More!</h5>
+            <h5 class="fadeIn"><?= $fields['gallery_pre_title'] ;?></h5>
             <div class="signature fadeIn">
                 <h1><a href="room-types">
-                More Pages
+                <?= $fields['gallery_title'] ;?>
                     </a>
                 </h1>
             </div>
         </div>
     </div>
-<div class="rooms-display bottom-30 fadeIn">
+    <div class="rooms-display bottom-30 fadeIn">
         <div id="rooms" class="owl-carousel owl-theme">
             <?php
-            $currentSeason = Utils::getCurrentSeason();
-            $menu_items = wp_get_nav_menu_items($currentSeason);
-            foreach ($menu_items as $item) {
+            $roomTypes = Utils::getPosts('room-type');
+            foreach ($roomTypes as $room) {
             ?>
                 <div class="item">
-                    <a href="<?= $item->url; ?>" target="_blank">
-                        <?= Utils::imgLazyFromPost($item->object_id, 'medium', '400px'); ?>
+                    <a href="<?= get_permalink($room->ID); ?>" target="_blank">
+                        <?= Utils::imgLazyFromPost($room, 'medium', '400px'); ?>
                         <div class="info">
-                            <h3><?= $item->title; ?></h3>
+                            <h3><?= $room->post_title; ?></h3>
+                            <ul class="basic-info">
+                                <li><?= get_post_meta($room->ID, 'square_meters', true); ?></li>
+                                <li><?= get_post_meta($room->ID, 'people', true); ?></li>
+                                <li><?= get_post_meta($room->ID, 'beds', true); ?></li>
+                                <li><?= get_post_meta($room->ID, 'bathrooms', true); ?></li>
+                                <li><?= get_post_meta($room->ID, 'sofa', true); ?></li>
+                            </ul>
                         </div>
                     </a>
                 </div>
