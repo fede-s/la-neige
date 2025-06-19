@@ -65,6 +65,7 @@ get_header(); ?>
 $type = 2;
 Widgets::textImageSectionLegacy($type);
 ?>
+<div class="top-50"></div>
 
 <?php if (!empty($fields['gallery'])) { ?>
    <section class="container fadeIn">
