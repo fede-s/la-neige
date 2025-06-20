@@ -662,6 +662,7 @@
     }
 
     @include phone {
+      opacity: 1;
       h3 {
         font-size: 20px;
       }
@@ -671,10 +672,13 @@
       }
     }
   }
+  
 
   .center {
-    .info {
-      opacity: 1;
+    .item:hover {
+      .info {
+        opacity: 1;
+      }
     }
   }
 

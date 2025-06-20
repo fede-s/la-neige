@@ -9923,6 +9923,9 @@ body.menu-opened #side-menu {
   padding: 0;
 }
 @media (max-width: 479px) {
+  .rooms-display .info {
+    opacity: 1;
+  }
   .rooms-display .info h3 {
     font-size: 20px;
   }
@@ -9930,7 +9933,7 @@ body.menu-opened #side-menu {
     font-size: 12px;
   }
 }
-.rooms-display .center .info {
+.rooms-display .center .item:hover .info {
   opacity: 1;
 }
 
