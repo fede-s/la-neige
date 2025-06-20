@@ -16,6 +16,7 @@ if ($type == 1 ) {
 } 
 
 
+if (!empty($gallery)) {
 ?>
 
 
@@ -23,11 +24,13 @@ if ($type == 1 ) {
 <section class="container sections <?php echo ($type == 1) ? 'bottom-100 top-100 section-legacy' : '';
                                     echo ($type == 2) ? 'pink bottom-100' : (($type == 3) ? 'forest-blue' : ''); ?>">
     <?php if($type == 2) {
-     echo Utils::imgLazy($backGround, 'large', '2000px', '', 'background-image type-2 fadeIn'); 
+    //  echo Utils::imgLazy($backGround, 'large', '2000px', '', 'background-image type-2 fadeIn'); 
     }?>
     <div class="section-text-image base-top-img <?php echo (($count % 2 == 0) && ($type == 1)) ? 'legacy-flex' : '';?> ">
         <?php
-        if ($type == 2) { ?>
+        if ($type == 2) {
+            if(!empty($gallery)) {
+            ?>
             <div class="side-image">
                 <div class="side-img">
                     <?php
@@ -46,10 +49,10 @@ if ($type == 1 ) {
                         <?php
                         }
                         ?>
-                    <?php } ?>
+                    <?php }  ?>
                 </div>
             </div>
-        <?php } ?>
+        <?php } } ?>
         <div class="side-text <?php echo ($type == 2 || $type == 3) ? 'top-100' : '';
                                     echo ($type == 3) ? ' mobile-padding' : ''; ?>">
             <?php if ($type == 2 || $type == 3) { ?>
@@ -64,9 +67,11 @@ if ($type == 1 ) {
                   <?= $text ;?>
                </div>
                <?php } ?>
-            <?php if ($type == 2) { ?>
+            <?php if ($type == 2) { 
+                if(!empty($button)) {
+                ?>
                 <a href="<?= $button['url']; ?>" class="linkBtn fadeIn pink"><?= $button['title']; ?></a>
-            <?php } ?>
+            <?php } } ?>
         </div>
         <?php
         if ($type == 1) {
@@ -95,3 +100,5 @@ if ($type == 1 ) {
         </div>
     <?php }  ?>
 </section>
+
+<?php } ?>
