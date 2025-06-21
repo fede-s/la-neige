@@ -9945,7 +9945,7 @@ body.menu-opened #side-menu {
   gap: 20px;
   padding: 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 1024px) {
   .rooms-display .info {
     opacity: 1;
   }

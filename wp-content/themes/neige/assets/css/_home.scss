@@ -565,15 +565,12 @@
 
 .rooms-display {
   display: flex;
-  // height: 500px;
 
   .owl-stage-outer {
-    // height: 100%;
 
     .owl-stage {
       .owl-item {
         width: 100%;
-        // height: 500px;
         aspect-ratio: 1.5;
 
         .item {
@@ -661,7 +658,7 @@
       padding: 0;
     }
 
-    @include phone {
+    @include tablet {
       opacity: 1;
       h3 {
         font-size: 20px;
