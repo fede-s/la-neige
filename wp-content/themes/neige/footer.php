@@ -1,10 +1,13 @@
 <?php
+require_once(YAMA . '/hubspot/Hubspot.php');
+
 $options = get_fields('options'); ?>
 
 <footer class="footer">
     <section class="newsletter-section">
         <div class="container newsletter-container fadeIn">
-            <?php include(YAMA . '/widgets/subscribe-form.php'); ?>
+            <h1>Subscribe to our Newsletter!</h1>
+            <?php HubSpot::createForm($options['newsletter_form_id']) ?>
         </div>
     </section>
     <section class="info">

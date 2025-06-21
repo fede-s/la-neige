@@ -477,31 +477,64 @@ p {
 	}
 
 	.newsletter-container {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		justify-content: space-between;
 		align-items: flex-end;
 		flex-wrap: wrap;
 		text-transform: uppercase;
-
-		#mc_embed_shell,
-		#mc_embed_signup,
-		form {
-			width: 100%;
-			margin: 0 !important;
+		gap: 20px;
+		@include tablet {
+			grid-template-columns: 1fr;
 		}
-
-		#mc_embed_signup_scroll {
-			display: flex;
-			width: 100%;
-			align-items: flex-end;
-			flex-wrap: wrap;
-			gap: 20px;
+		.hbspt-form {
+			max-width: unset;
+			form {
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr auto;
+				grid-template-rows: auto auto;
+				gap: 0 10px;
+				@include phone {
+					grid-template-columns: 1fr;
+					grid-template-rows: auto auto auto;
+					gap: 0;
+				}
+				.hs_email {
+					grid-row: 2;
+					margin-bottom: 0 !important;
+					@include phone {
+						grid-row: 1;
+						margin-bottom: 20px !important;
+					}
+					label {
+						display: none;
+					}
+					input {
+						padding: 0 10px;
+					}
+				}
+				.hs-submit {
+					grid-row: 2;
+				}
+				.hs_error_rollup {
+					grid-row: 1;
+					@include phone {
+						grid-row: 3;
+					}
+				}
+				.actions {
+					padding: 0 !important;
+				}
+				.hs-error-msgs {
+					display: none;
+				}
+			}
 		}
 
 		h1 {
 			font-size: min(3.7vw, 55px);
 			padding: 0;
-			width: 50%;
 			text-align: left;
 			position: relative;
 			top: .7vw;
@@ -512,27 +545,6 @@ p {
 				min-width: unset;
 				top: 0;
 			}
-		}
-
-		input[type="email"] {
-			font-family: 'BigCaslon', ui-sans-serif;
-			padding: 10px;
-			border: none !important;
-			border-bottom: 1px solid var(--soft-pink) !important;
-			background-color: transparent !important;
-			flex: 1;
-			color: var(--soft-pink) !important;
-			margin: 0 !important;
-
-			@include tablet {
-				width: 100%;
-				flex: unset;
-			}
-		}
-
-		input[type="submit"] {
-			margin: 0 !important;
-			border: 1px solid var(--soft-pink) !important;
 		}
 	}
 }
@@ -723,5 +735,4 @@ p {
 	}
 }
 
- 
  
