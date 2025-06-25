@@ -256,8 +256,8 @@ class Utils {
     }
 
     public static function getSeasonFromURL(): string {
-        preg_match('/^\/(summer|winter)/', $_SERVER['REQUEST_URI'], $matches);
-        return !empty($matches[1]) ? $matches[1] : '';
+        preg_match('/^\/(ja\/)?(summer|winter)/', $_SERVER['REQUEST_URI'], $matches);
+        return !empty($matches[2]) ? $matches[2] : '';
     }
 
     public static function getCurrentSeason() {
