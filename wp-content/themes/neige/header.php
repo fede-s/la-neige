@@ -10,8 +10,7 @@ $menu_items = wp_get_nav_menu_items($currentSeason);
 $options = get_fields('options');
 $lang = substr($TRP_LANGUAGE, 0, 2);
 $langAndLocale = $lang === 'en' ? 'en-US' : ($lang === 'ja' ? 'ja-JP' : '');
-$theme = $currentSeason === 'summer' ? 'HHGSummer' : 'HHGWinter';
-$bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hotel=48088&locale={$langAndLocale}&theme={$theme}";
+$bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hotel=48088&locale={$langAndLocale}&theme=LANEIGE";
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
