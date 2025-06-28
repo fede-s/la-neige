@@ -711,4 +711,7 @@
   @include tablet {
     bottom: 17%;
   }
+  @include small-tablet {
+    display: none;
+  }
 }
