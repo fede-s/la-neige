@@ -647,7 +647,8 @@ p {
 	width: 200px;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 20%;
+	top: 0%;
+	padding: 53px;
 	order: 1;
 
 
@@ -661,6 +662,7 @@ p {
 	}
 
 	@include tablet {
+		padding: 0;
 		position: relative;
 	}
 }

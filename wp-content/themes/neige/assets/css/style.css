@@ -8923,7 +8923,8 @@ body.menu-opened #side-menu {
   width: 200px;
   left: 50%;
   transform: translateX(-50%);
-  top: 20%;
+  top: 0%;
+  padding: 53px;
   order: 1;
 }
 .logo-footer svg {
@@ -8935,6 +8936,7 @@ body.menu-opened #side-menu {
 }
 @media (max-width: 1024px) {
   .logo-footer {
+    padding: 0;
     position: relative;
   }
 }
@@ -10672,5 +10674,3 @@ body.menu-opened #side-menu {
     height: 100%;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
