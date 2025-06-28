@@ -707,5 +707,8 @@
   width: max(350px, min(40%, 650px));
   height: auto;
   right: 0%;
-  bottom: 0%;
+  bottom: 20%;
+  @include tablet {
+    bottom: 17%;
+  }
 }
