@@ -79,7 +79,12 @@
    font-weight: 100;
    color: var(--olive-green);
    font-family: "DesMontilles";
-   transform: rotate(-5deg);
+   transform: rotate(-3deg);
+   body.translatepress-ja & {
+      font-family: "Shippori Mincho", serif;
+      font-weight: 600;
+      font-style: normal;
+    }
    @include tablet {
       display: block;
    }
@@ -126,6 +131,11 @@
       font-size: 13px;
       font-weight: 500;
       text-underline-offset: 5px;
+      body.translatepress-ja & {
+         font-family: "KozukaMincho";
+           font-style: normal;
+         font-weight: 500;
+       }
    }
 
    .room-link:hover {

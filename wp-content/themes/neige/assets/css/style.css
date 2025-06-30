@@ -8397,6 +8397,13 @@ h2.resp-accordion:first-child {
   font-family: "DesMontilles";
   src: url("../webfonts/font.woff2") format("woff2"), url("../webfonts/font.woff") format("woff");
 }
+/* Kozuka Mincho Medium */
+@font-face {
+  font-family: "KozukaMincho";
+  src: url("../webfonts/KozukaMinchoMedium.woff2") format("woff2"), url("../webfonts/KozukaMinchoMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--forest-blue);
@@ -8411,6 +8418,16 @@ h6 {
   font-family: "BigCaslon";
   font-weight: normal;
   font-style: normal;
+}
+body.translatepress-ja h1,
+body.translatepress-ja h2,
+body.translatepress-ja h3,
+body.translatepress-ja h4,
+body.translatepress-ja h5,
+body.translatepress-ja h6 {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
 }
 
 h1 {
@@ -8445,6 +8462,11 @@ h6 {
 
 p {
   line-height: 1.5;
+}
+body.translatepress-ja p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .container {
@@ -8607,6 +8629,11 @@ body.scrolled .menu-nav-bar .season-selector .season-selector-item span {
   font-style: normal;
   padding-bottom: 5px;
 }
+body.translatepress-ja .season-selector .season-selector-item a span {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
+}
 .season-selector .season-selector-item a img {
   width: var(--icon-size);
   height: var(--icon-size);
@@ -8726,6 +8753,11 @@ body.menu-opened #side-menu {
   list-style: none;
   margin: 0;
   padding-left: 0;
+}
+body.translatepress-ja .menu-items {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
 }
 
 .menu-item a {
@@ -8855,6 +8887,11 @@ body.menu-opened #side-menu {
   color: inherit;
   text-decoration: none;
 }
+body.translatepress-ja .footer .info a {
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
 .footer .info a:hover {
   color: var(--olive-green);
   text-decoration: underline;
@@ -8919,7 +8956,12 @@ body.menu-opened #side-menu {
   font-weight: 100;
   color: var(--olive-green);
   font-family: "DesMontilles";
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
+}
+body.translatepress-ja .signature-footer {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .logo-footer {
@@ -8963,6 +9005,11 @@ body.menu-opened #side-menu {
   transition: background-color 0.5s ease;
   text-transform: uppercase;
 }
+body.translatepress-ja .linkBtn {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
+}
 
 .linkBtn:hover {
   background-color: var(--forest-blue);
@@ -9003,6 +9050,11 @@ body.menu-opened #side-menu {
   cursor: pointer;
   color: var(--forest-blue);
   font-family: "BigCaslon", ui-sans-serif;
+}
+body.translatepress-ja .trp_language_switcher_shortcode .trp-language-switcher > div > a {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
 }
 .trp_language_switcher_shortcode .trp-language-switcher > div > a:hover {
   background: transparent;
@@ -9093,7 +9145,12 @@ body.menu-opened #side-menu {
   font-weight: 100;
   color: var(--olive-green);
   font-family: "DesMontilles";
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
+}
+body.translatepress-ja .intro-signature {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 @media (max-width: 1024px) {
   .intro-signature {
@@ -9139,6 +9196,11 @@ body.menu-opened #side-menu {
   font-size: 13px;
   font-weight: 500;
   text-underline-offset: 5px;
+}
+body.translatepress-ja .room .room-link {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
 }
 .room .room-link:hover {
   color: var(--olive-green);
@@ -9195,6 +9257,11 @@ body.menu-opened #side-menu {
   gap: 10px;
   padding: 0 0 50px;
 }
+body.translatepress-ja .basic-info {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
+}
 .basic-info li {
   display: flex;
   gap: 10px;
@@ -9215,6 +9282,11 @@ body.menu-opened #side-menu {
   flex-wrap: wrap;
   padding: 0;
 }
+body.translatepress-ja .amenities {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
+}
 .amenities li {
   display: flex;
   gap: 20px;
@@ -9233,6 +9305,11 @@ body.menu-opened #side-menu {
 
 .this-suite {
   padding-bottom: 50px;
+}
+body.translatepress-ja .this-suite {
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 .this-suite ul {
   padding: 0 0 0 20px;
@@ -9481,7 +9558,12 @@ body.menu-opened #side-menu {
   font-weight: 100;
   color: var(--olive-green);
   font-family: "DesMontilles";
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
+}
+body.translatepress-ja .section-text-image .side-text .signature .sig-svg {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 @media (max-width: 1024px) {
   .section-text-image .side-text .signature .sig-svg {
@@ -9612,6 +9694,11 @@ body.menu-opened #side-menu {
 .section-text-image .basic-info {
   padding-left: 10%;
   padding-top: 40px;
+}
+body.translatepress-ja .section-text-image .basic-info {
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 @media (max-width: 1024px) {
   .section-text-image .basic-info {
@@ -9952,6 +10039,11 @@ body.menu-opened #side-menu {
   gap: 20px;
   padding: 0;
 }
+body.translatepress-ja .rooms-display .info .basic-info {
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
 @media (max-width: 1024px) {
   .rooms-display .info {
     opacity: 1;
@@ -10226,6 +10318,11 @@ body.menu-opened #side-menu {
   text-decoration-color: var(--olive-green);
   font-weight: bold;
 }
+body.translatepress-ja .activities .activity .content .discover {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
+}
 .activities .activity .cta-link {
   position: absolute;
   top: 0;
@@ -10264,6 +10361,11 @@ body.menu-opened #side-menu {
   word-wrap: break-word;
   font-size: 14px;
   line-height: 1.5;
+}
+body.translatepress-ja .activity-info {
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 .activity-info .info-left,
 .activity-info .info-right {
@@ -10326,6 +10428,11 @@ body.menu-opened #side-menu {
 }
 .more-list .owl-carousel .owl-dots span {
   display: none;
+}
+body.translatepress-ja .more-list .box-list-item .title {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
 }
 @media (max-width: 1024px) {
   .more-list {
@@ -10504,7 +10611,12 @@ body.menu-opened #side-menu {
   font-weight: 100;
   color: var(--olive-green);
   font-family: "DesMontilles";
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
+}
+body.translatepress-ja .contact-signature {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .contact-form h1 {
@@ -10586,7 +10698,12 @@ body.menu-opened #side-menu {
   font-weight: 100;
   color: var(--olive-green);
   font-family: "DesMontilles";
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
+}
+body.translatepress-ja .feature-image-text .feature-text .signature .sig-svg {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 @media (max-width: 479px) {
   .feature-image-text .feature-text .signature .sig-svg {
@@ -10628,7 +10745,7 @@ body.menu-opened #side-menu {
 }
 .fadeIn02.on {
   opacity: 1;
-  transform: translateY(0px) rotate(-5deg);
+  transform: translateY(0px) rotate(-3deg);
   transition: transform 1.4s, opacity 1.4s;
 }
 
@@ -10638,7 +10755,7 @@ body.menu-opened #side-menu {
 }
 .fadeIn03.on {
   opacity: 1;
-  transform: translateY(0px) rotate(-5deg);
+  transform: translateY(0px) rotate(-3deg);
   transition: transform 1.4s, opacity 1.4s;
 }
 

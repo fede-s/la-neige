@@ -36,6 +36,11 @@
    flex-wrap: wrap;
    gap: 10px;
    padding: 0 0 50px;
+   body.translatepress-ja & {
+		font-family: "KozukaMincho";
+  		font-style: normal;
+		font-weight: 500;
+	 }
 
    li {
       display: flex;
@@ -58,6 +63,11 @@
    grid-template-columns: 1fr 1fr;
    flex-wrap: wrap;
    padding: 0;
+   body.translatepress-ja & {
+		font-family: "KozukaMincho";
+  		font-style: normal;
+		font-weight: 500;
+	 }
 
    li {
       display: flex;
@@ -76,6 +86,11 @@
 }
 .this-suite{
    padding-bottom: 50px;
+   body.translatepress-ja & {
+		font-family: "Noto Sans JP", sans-serif;
+  		font-style: normal;
+		font-weight: 400;
+	}
    ul {
       padding: 0 0 0 20px;
       display: flex;

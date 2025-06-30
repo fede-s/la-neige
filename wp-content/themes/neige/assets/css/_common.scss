@@ -82,6 +82,16 @@
 		url('../webfonts/font.woff') format('woff');
 }
 
+/* Kozuka Mincho Medium */
+
+@font-face {
+	font-family: "KozukaMincho";
+	src: url('../webfonts/KozukaMinchoMedium.woff2') format('woff2'),
+		url('../webfonts/KozukaMinchoMedium.woff') format('woff');
+	font-weight: 500;
+  	font-style: normal;
+}
+
 body {
 	font-family: "Montserrat", sans-serif;
 	color: var(--forest-blue);
@@ -96,6 +106,11 @@ h6 {
 	font-family: 'BigCaslon';
 	font-weight: normal;
 	font-style: normal;
+	body.translatepress-ja & {
+		font-family: "KozukaMincho";
+  		font-style: normal;
+		font-weight: 500;
+	}
 
 }
 
@@ -131,6 +146,11 @@ h6 {
 }
 p {
 	line-height: 1.5;
+	body.translatepress-ja & {
+		font-family: "Noto Sans JP", sans-serif;
+  		font-style: normal;
+		font-weight: 400;
+	}
 }
 
 .container {
@@ -317,6 +337,11 @@ p {
 				font-weight: normal;
 				font-style: normal;
 				padding-bottom: 5px;
+				body.translatepress-ja & {
+					font-family: "KozukaMincho";
+					  font-style: normal;
+					font-weight: 500;
+				 }
 			}
 
 			img {
@@ -448,6 +473,11 @@ p {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	body.translatepress-ja & {
+		font-family: "KozukaMincho";
+  		font-style: normal;
+		font-weight: 500;
+	 }
 }
 
 .menu-item a {
@@ -573,6 +603,11 @@ p {
 		a {
 			color: inherit;
 			text-decoration: none;
+			body.translatepress-ja & {
+				font-family: "Noto Sans JP", sans-serif;
+				  font-style: normal;
+				font-weight: 400;
+			}
 		}
 
 		a:hover {
@@ -641,7 +676,12 @@ p {
 	font-weight: 100;
 	color: var(--olive-green);
 	font-family: "DesMontilles";
-	transform: rotate(-5deg);
+	transform: rotate(-3deg);
+	body.translatepress-ja & {
+		font-family: "Shippori Mincho", serif;
+		font-weight: 600;
+		font-style: normal;
+	 }
 }
 
 .logo-footer {
@@ -688,6 +728,11 @@ p {
 	cursor: pointer;
 	transition: background-color 0.5s ease;
 	text-transform: uppercase;
+	body.translatepress-ja & {
+		font-family: "KozukaMincho";
+  		font-style: normal;
+		font-weight: 500;
+	 }
 }
 
 .linkBtn:hover {
@@ -732,6 +777,11 @@ p {
 			cursor: pointer;
 			color: var(--forest-blue);
 			font-family: 'BigCaslon', ui-sans-serif;
+			body.translatepress-ja & {
+				font-family: "KozukaMincho";
+				  font-style: normal;
+				font-weight: 500;
+			 }
 
 			&:hover {
 				background: transparent;

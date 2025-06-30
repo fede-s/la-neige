@@ -133,7 +133,12 @@
         font-weight: 100;
         color: var(--olive-green);
         font-family: "DesMontilles";
-        transform: rotate(-5deg);
+        transform: rotate(-3deg);
+        body.translatepress-ja & {
+          font-family: "Shippori Mincho", serif;
+          font-weight: 600;
+          font-style: normal;
+        }
 
         @include tablet {
           position: relative;
@@ -279,6 +284,11 @@
   .basic-info {
     padding-left: 10%;
     padding-top: 40px;
+    body.translatepress-ja & {
+      font-family: "Noto Sans JP", sans-serif;
+        font-style: normal;
+      font-weight: 400;
+    }
 
     @include tablet {
       padding-left: 0;
@@ -656,6 +666,11 @@
       font-family: "Montserrat", sans-serif;
       gap: 20px;
       padding: 0;
+      body.translatepress-ja & {
+        font-family: "Noto Sans JP", sans-serif;
+          font-style: normal;
+        font-weight: 400;
+      }
     }
 
     @include tablet {
