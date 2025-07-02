@@ -8496,13 +8496,14 @@ body.translatepress-ja p {
   padding-bottom: 100px;
 }
 
-strong {
+mark {
+  background-color: unset;
   color: var(--olive-green);
   font-family: "BigCaslon";
   font-weight: normal;
   font-style: italic;
 }
-body.translatepress-ja strong {
+body.translatepress-ja mark {
   font-family: "KozukaMincho";
   font-style: normal;
   font-weight: 500;
