@@ -9538,9 +9538,20 @@ body.translatepress-ja .this-suite {
   font-weight: 500;
   padding-bottom: 20px;
 }
-.section-text-image .side-text p {
+.section-text-image .side-text .wysiwyg-container {
   width: 400px;
   padding-left: 10%;
+}
+.section-text-image .side-text .wysiwyg-container strong {
+  color: var(--olive-green);
+  font-family: "BigCaslon";
+  font-weight: normal;
+  font-style: italic;
+}
+body.translatepress-ja .section-text-image .side-text .wysiwyg-container strong {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
 }
 .section-text-image .side-text .linkBtn {
   margin: 40px 0;
@@ -9592,7 +9603,8 @@ body.translatepress-ja .section-text-image .side-text .signature .sig-svg {
 @media (max-width: 1024px) {
   .section-text-image .side-text h1,
   .section-text-image .side-text h5,
-  .section-text-image .side-text p {
+  .section-text-image .side-text p,
+  .section-text-image .side-text .wysiwyg-container {
     width: 100%;
     padding-left: 0;
   }
@@ -10114,10 +10126,30 @@ body.translatepress-ja .rooms-display .info .basic-info {
   flex-direction: column;
   align-items: center;
 }
-.restaurant .side-image p {
+.restaurant .side-image .wysiwyg-container {
   width: 80%;
   display: flex;
+  flex-direction: column;
   padding: 60px 0;
+}
+.restaurant .side-image .wysiwyg-container p {
+  display: block;
+}
+.restaurant .side-image .wysiwyg-container strong {
+  color: var(--olive-green);
+  font-family: "BigCaslon";
+  font-weight: normal;
+  font-style: italic;
+}
+body.translatepress-ja .restaurant .side-image .wysiwyg-container strong {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .restaurant .side-image .wysiwyg-container {
+    width: 100%;
+  }
 }
 .restaurant .side-image .buttons {
   display: flex;

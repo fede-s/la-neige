@@ -63,11 +63,20 @@ get_header(); ?>
          <div class="side-img image-aspect">
             <?php echo Utils::imgLazy(get_field('restaurant_image'), 'medium', '800px', '', 'image-aspect fadeIn'); ?>
          </div>
-         <p class="fadeIn"><?= get_field('restaurant_text'); ?></p>
-         <div class="buttons fadeIn">
-            <a href="<?= get_field('button_left')['link']; ?>" class="linkBtn"><?= get_field('button_left')['label']; ?></a>
-            <a href="<?= get_field('button_right')['link']; ?>" class="linkBtn"><?= get_field('button_right')['label']; ?></a>
-         </div>
+         <div class="fadeIn wysiwyg-container"><?= get_field('restaurant_text'); ?></div>
+         <?php if(!empty($fields['button_left']) || !empty($fields['button_right'])) {
+             ?>
+            <div class="buttons fadeIn">
+            <?php if(!empty($fields['button_left'])) {
+                ?>
+               <a href="<?= get_field('button_left')['link']; ?>" class="linkBtn"><?= get_field('button_left')['label']; ?></a>
+               <?php } ?>
+            <?php if(!empty($fields['button_right'])) {
+               ?>
+               <a href="<?= get_field('button_right')['link']; ?>" class="linkBtn"><?= get_field('button_right')['label']; ?></a>
+               <?php } ?>
+            </div>
+           <?php } ?>
       </div>
    </div>
 </section>
@@ -78,7 +87,7 @@ get_header(); ?>
          <div class="side-img image-aspect">
             <?php echo Utils::imgLazy(get_field('chef_image'), 'medium', '800px', '', 'image-aspect fadeIn'); ?>
          </div>
-         <p class="fadeIn"><?= get_field('chef_text'); ?></p>
+         <div class="fadeIn wysiwyg-container"><?= get_field('chef_text'); ?></div>
       </div>
       <div class="side-text">
          <h5 class="fadeIn"><?= get_field('chef_pre_title'); ?></h5>

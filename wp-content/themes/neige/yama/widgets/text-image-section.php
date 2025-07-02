@@ -53,7 +53,7 @@ $backGround = get_field($name . '_background_image');
                 </h1>
 
             </div>
-            <p class="fadeIn"><?= $text; ?></p>
+            <div class="fadeIn wysiwyg-container"><?= $text; ?></div>
             <?php if ($type == 1 || $type == 3) { ?>
                 <a href="<?= $button['link']; ?>" class="linkBtn fadeIn"><?= $button['label']; ?></a>
             <?php }
