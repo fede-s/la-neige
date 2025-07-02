@@ -60,7 +60,7 @@ if (!empty($gallery)) {
             <div class="signature fadeIn">
                 <h1><?= $title; ?></h1>
             </div>
-            <p class="fadeIn"><?= $text; ?></p>
+            <div class="fadeIn wysiwyg-container"><?= $text; ?></div>
             <?php } ?>
             <?php if ($type == 1) { ?>
                <div class="fadeIn legacy-content">

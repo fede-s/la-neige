@@ -29,17 +29,6 @@
          p {
             display: block;
          }
-         strong {
-            color: var(--olive-green);
-            font-family: 'BigCaslon';
-            font-weight: normal;
-            font-style: italic;
-            body.translatepress-ja & {
-                   font-family: "KozukaMincho";
-                   font-style: normal;
-                   font-weight: 500;
-                 }
-          }
           @include tablet {
             width: 100%;
           }

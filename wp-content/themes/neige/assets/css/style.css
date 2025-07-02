@@ -8496,6 +8496,18 @@ body.translatepress-ja p {
   padding-bottom: 100px;
 }
 
+strong {
+  color: var(--olive-green);
+  font-family: "BigCaslon";
+  font-weight: normal;
+  font-style: italic;
+}
+body.translatepress-ja strong {
+  font-family: "KozukaMincho";
+  font-style: normal;
+  font-weight: 500;
+}
+
 .menu-nav-bar {
   position: sticky;
   top: 0;
@@ -9542,17 +9554,6 @@ body.translatepress-ja .this-suite {
   width: 400px;
   padding-left: 10%;
 }
-.section-text-image .side-text .wysiwyg-container strong {
-  color: var(--olive-green);
-  font-family: "BigCaslon";
-  font-weight: normal;
-  font-style: italic;
-}
-body.translatepress-ja .section-text-image .side-text .wysiwyg-container strong {
-  font-family: "KozukaMincho";
-  font-style: normal;
-  font-weight: 500;
-}
 .section-text-image .side-text .linkBtn {
   margin: 40px 0;
   margin-left: 10%;
@@ -10134,17 +10135,6 @@ body.translatepress-ja .rooms-display .info .basic-info {
 }
 .restaurant .side-image .wysiwyg-container p {
   display: block;
-}
-.restaurant .side-image .wysiwyg-container strong {
-  color: var(--olive-green);
-  font-family: "BigCaslon";
-  font-weight: normal;
-  font-style: italic;
-}
-body.translatepress-ja .restaurant .side-image .wysiwyg-container strong {
-  font-family: "KozukaMincho";
-  font-style: normal;
-  font-weight: 500;
 }
 @media (max-width: 1024px) {
   .restaurant .side-image .wysiwyg-container {

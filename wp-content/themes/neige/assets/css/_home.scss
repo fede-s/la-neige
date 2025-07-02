@@ -113,17 +113,6 @@
     .wysiwyg-container {
       width: 400px;
       padding-left: 10%;
-      strong {
-        color: var(--olive-green);
-        font-family: 'BigCaslon';
-        font-weight: normal;
-        font-style: italic;
-        body.translatepress-ja & {
-					font-family: "KozukaMincho";
-					font-style: normal;
-					font-weight: 500;
-				 }
-      }
     }
 
     .linkBtn {
