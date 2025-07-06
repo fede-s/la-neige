@@ -8971,11 +8971,6 @@ body.translatepress-ja .footer .info a {
   font-family: "DesMontilles";
   transform: rotate(-3deg);
 }
-body.translatepress-ja .signature-footer {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 600;
-  font-style: normal;
-}
 
 .logo-footer {
   z-index: 2;
@@ -9159,11 +9154,6 @@ body.translatepress-ja .trp_language_switcher_shortcode .trp-language-switcher >
   color: var(--olive-green);
   font-family: "DesMontilles";
   transform: rotate(-3deg);
-}
-body.translatepress-ja .intro-signature {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 600;
-  font-style: normal;
 }
 @media (max-width: 1024px) {
   .intro-signature {
@@ -9572,11 +9562,6 @@ body.translatepress-ja .this-suite {
   color: var(--olive-green);
   font-family: "DesMontilles";
   transform: rotate(-3deg);
-}
-body.translatepress-ja .section-text-image .side-text .signature .sig-svg {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 600;
-  font-style: normal;
 }
 @media (max-width: 1024px) {
   .section-text-image .side-text .signature .sig-svg {
@@ -10636,11 +10621,6 @@ body.translatepress-ja .more-list .box-list-item .title {
   font-family: "DesMontilles";
   transform: rotate(-3deg);
 }
-body.translatepress-ja .contact-signature {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 600;
-  font-style: normal;
-}
 
 .contact-form h1 {
   padding-bottom: 40px;
@@ -10722,11 +10702,6 @@ body.translatepress-ja .contact-signature {
   color: var(--olive-green);
   font-family: "DesMontilles";
   transform: rotate(-3deg);
-}
-body.translatepress-ja .feature-image-text .feature-text .signature .sig-svg {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 600;
-  font-style: normal;
 }
 @media (max-width: 479px) {
   .feature-image-text .feature-text .signature .sig-svg {
