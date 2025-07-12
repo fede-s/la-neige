@@ -44,6 +44,8 @@ function neige_files() {
     wp_enqueue_script('third-party-js', THEME_URI . '/build/third-party.js', ['jquery'], _S_VERSION);
     wp_enqueue_script('lib', THEME_URI . '/build/lib.js', ['jquery', 'third-party-js'], _S_VERSION);
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+    wp_enqueue_style('Cinzel', '//fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+    wp_enqueue_style('Crimson-Pro', '//fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
     wp_enqueue_style('Noto-Sans-JP', '//fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
     wp_enqueue_style('Shippori-Mincho', '//fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap');
     wp_enqueue_style('neige_main_styles', get_theme_file_uri('/assets/css/style.css'), [], _S_VERSION);

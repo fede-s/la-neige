@@ -37,6 +37,30 @@ $bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hote
             --oposite-season-color: <?= $currentSeason === 'winter' ? 'var(--main-summer-color)' : 'var(--main-winter-color)' ?>;
         }
     </style>
+    <?php
+    if (get_field('change_color', 'options')) { ?>
+        <style>
+            :root {
+                --soft-pink: #cfa66f;
+                --soft-pink-rgb: 207, 166, 111;
+                --olive-green: #9f7d50;
+                --olive-green-rgb: 159, 125, 80;
+                --main-font: "Cinzel";
+                --second-font: "Crimson Pro";
+            }
+        </style>
+    <?php } else { ?>
+        <style>
+            :root {
+                --soft-pink: #fadcdc;
+                --soft-pink-rgb: 250, 220, 220;
+                --olive-green: #96963c;
+                --olive-green-rgb: 150, 150, 60;
+                --main-font: "BigCaslon";
+                --second-font: "Monserrat";
+            }
+        </style>
+        <?php } ?>
     <?php wp_head(); ?>
 </head>
 
@@ -71,7 +95,7 @@ $bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hote
                 <ul class="menu-items">
                     <?php
                     foreach ($menu_items as $item) {
-                        $slug = get_post_field('post_name', $item->object_id). 'Image'; ?>
+                        $slug = get_post_field('post_name', $item->object_id) . 'Image'; ?>
                         <li class="menu-item" data-featured-image="<?= $slug ?>">
                             <a href="<?= $item->url; ?>"> <?= $item->title ?></a>
                         </li>
@@ -91,7 +115,7 @@ $bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hote
                 </div>
                 <?php
                 foreach ($menu_items as $item) {
-                    $slug = get_post_field('post_name', $item->object_id). 'Image';
+                    $slug = get_post_field('post_name', $item->object_id) . 'Image';
                     echo Utils::imgLazyFromPost($item->object_id, 'large', '100vw', '', $slug);
                 } ?>
             </div>

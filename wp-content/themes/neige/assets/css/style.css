@@ -8329,10 +8329,6 @@ h2.resp-accordion:first-child {
 :root {
   --header-height: 120px;
   --header-scrolled-height: 90px;
-  --soft-pink: #fadcdc;
-  --soft-pink-rgb: 250, 220, 220;
-  --olive-green: #96963c;
-  --olive-green-rgb: 150, 150, 60;
   --forest-blue: #284a46;
   --forest-blue-rgb: 40, 74, 70;
   --main-winter-color: var(--soft-pink);
@@ -8352,42 +8348,42 @@ h2.resp-accordion:first-child {
 
 /* BigCaslon - Regular */
 @font-face {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   src: url("../webfonts/BigCaslon-Regular.woff2") format("woff2"), url("../webfonts/BigCaslon-Regular.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 /* BigCaslon - Italic (Regular Italic) */
 @font-face {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   src: url("../webfonts/BigCaslon-RegularItalic.woff2") format("woff2"), url("../webfonts/BigCaslon-RegularItalic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
 }
 /* BigCaslon - Bold */
 @font-face {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   src: url("../webfonts/BigCaslon-Bold.woff2") format("woff2"), url("../webfonts/BigCaslon-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 /* BigCaslon - Bold Italic */
 @font-face {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   src: url("../webfonts/BigCaslon-BoldItalic.woff2") format("woff2"), url("../webfonts/BigCaslon-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
 }
 /* BigCaslon - Black */
 @font-face {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   src: url("../webfonts/BigCaslon-Black.woff2") format("woff2"), url("../webfonts/BigCaslon-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 /* BigCaslon - Black Italic */
 @font-face {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   src: url("../webfonts/BigCaslon-BlackItalic.woff2") format("woff2"), url("../webfonts/BigCaslon-BlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
@@ -8405,7 +8401,7 @@ h2.resp-accordion:first-child {
   font-style: normal;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--second-font), sans-serif;
   color: var(--forest-blue);
 }
 
@@ -8415,7 +8411,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: normal;
 }
@@ -8499,7 +8495,7 @@ body.translatepress-ja p {
 mark {
   background-color: unset;
   color: var(--olive-green);
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: italic;
 }
@@ -8637,7 +8633,7 @@ body.scrolled .menu-nav-bar .season-selector .season-selector-item span {
   text-decoration: none;
 }
 .season-selector .season-selector-item a span {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: normal;
   padding-bottom: 5px;
@@ -8760,7 +8756,7 @@ body.menu-opened #side-menu {
 }
 
 .menu-items {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: normal;
   list-style: none;
@@ -8951,7 +8947,7 @@ body.translatepress-ja .footer .info a {
 .copyright {
   z-index: 2;
   order: 5;
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: normal;
 }
@@ -8997,7 +8993,7 @@ body.translatepress-ja .footer .info a {
 }
 
 .linkBtn {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: normal;
   display: inline-block;
@@ -9057,7 +9053,7 @@ body.translatepress-ja .linkBtn {
   text-align: center;
   cursor: pointer;
   color: var(--forest-blue);
-  font-family: "BigCaslon", ui-sans-serif;
+  font-family: var(--main-font), ui-sans-serif;
 }
 body.translatepress-ja .trp_language_switcher_shortcode .trp-language-switcher > div > a {
   font-family: "KozukaMincho";
@@ -9189,7 +9185,7 @@ body.translatepress-ja .trp_language_switcher_shortcode .trp-language-switcher >
   line-height: 1.5;
 }
 .room .room-link {
-  font-family: "BigCaslon", nor;
+  font-family: var(--main-font), nor;
   font-weight: normal;
   font-style: normal;
   display: inline;
@@ -9252,7 +9248,7 @@ body.translatepress-ja .room .room-link {
 }
 
 .basic-info {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: normal;
   display: flex;
@@ -9277,7 +9273,7 @@ body.translatepress-ja .basic-info {
 }
 
 .amenities {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: normal;
   display: grid;
@@ -10316,7 +10312,7 @@ body.translatepress-ja .rooms-display .info .basic-info {
   word-wrap: break-word;
 }
 .activities .activity .content .discover {
-  font-family: "BigCaslon";
+  font-family: var(--main-font);
   font-weight: normal;
   font-style: normal;
   color: var(--olive-green);

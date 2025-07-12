@@ -29,7 +29,7 @@
 }
 
 .basic-info {
-   font-family: 'BigCaslon';
+   font-family: var(--main-font);
 	font-weight: normal;
 	font-style: normal;
    display: flex;
@@ -56,7 +56,7 @@
 }
 
 .amenities {
-   font-family: 'BigCaslon';
+   font-family: var(--main-font);
 	font-weight: normal;
 	font-style: normal;
    display: grid;
