@@ -38,13 +38,13 @@ $bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hote
         }
     </style>
     <?php
-    if (get_field('change_color', 'options')) { ?>
+    if (get_field('change_color', 'options') || get_field('change_color', 'options') != null) { ?>
         <style>
             :root {
                 --soft-pink: #cfa66f;
                 --soft-pink-rgb: 207, 166, 111;
-                --olive-green: #9f7d50;
-                --olive-green-rgb: 159, 125, 80;
+                --forest-blue: #9f7d50;
+                --forest-blue-rgb: 159, 125, 80;
                 --main-font: "Cinzel";
                 --second-font: "Crimson Pro";
             }
@@ -54,8 +54,8 @@ $bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hote
             :root {
                 --soft-pink: #fadcdc;
                 --soft-pink-rgb: 250, 220, 220;
-                --olive-green: #96963c;
-                --olive-green-rgb: 150, 150, 60;
+                --forest-blue: #284a46;
+	            --forest-blue-rgb: 40, 74, 70;
                 --main-font: "BigCaslon";
                 --second-font: "Monserrat";
             }
