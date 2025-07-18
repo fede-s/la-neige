@@ -1,16 +1,18 @@
 <?php
 require_once(YAMA . '/hubspot/Hubspot.php');
 
-$options = get_fields('options'); ?>
+$options = get_fields('options');
+$colorWhite = ($options['change_color'] == true) ? 'color-white ' : '';
+?>
 
 <footer class="footer">
     <section class="newsletter-section">
-        <div class="container newsletter-container fadeIn">
+        <div class="container newsletter-container fadeIn <?= $colorWhite ;?>">
             <h1>Subscribe to our Newsletter!</h1>
             <?php HubSpot::createForm($options['newsletter_form_id']) ?>
         </div>
     </section>
-    <section class="info">
+    <section class="info <?= $colorWhite ;?>">
         <?= Utils::imgLazy(get_field('footer_background_image', 'options'), 'large', '2000px', '', 'background-image footer-image fadeIn');; ?>
         <div class="container contact">
             <h5 class="fadeIn">GET IN TOUCH</h5>

@@ -9067,6 +9067,10 @@ body.translatepress-ja .trp_language_switcher_shortcode .trp-language-switcher >
   background: transparent;
 }
 
+.color-white {
+  color: #fff !important;
+}
+
 .header {
   background-color: var(--soft-pink);
   width: 100%;

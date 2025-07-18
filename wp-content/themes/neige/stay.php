@@ -5,6 +5,8 @@
 global $post;
 
 $fields = get_fields($post);
+$options = get_fields('options');
+$colorWhite = ($options['change_color'] == true) ? 'color-white ' : '';
 
 get_header(); ?>
 
@@ -12,7 +14,7 @@ get_header(); ?>
    <div class="gradient">
       <?= Utils::imgLazy(get_field('header_image'), 'large', '2000px') ?>
    </div>
-   <div class="header-text fadeIn">
+   <div class="header-text fadeIn <?= $colorWhite ;?>">
       <h5><?= $fields['pre_title'] ;?></h5>
       <h1><?= $fields['title'] ;?></h1>
    </div>

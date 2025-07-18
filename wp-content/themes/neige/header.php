@@ -87,17 +87,18 @@ $bookingURL = "https://reservations.hakubahospitalitygroup.com/?chain=31179&hote
             </div>
         </div>
         <div id="side-menu">
+            <?php $colorWhite = ($options['change_color'] == true) ? 'color-white ' : ''; ?>
             <div class="menu-left">
                 <div class="close-menu">
-                    <span class="close-icon">X Close</span>
+                    <span class="close-icon <?= $colorWhite ;?>">X Close</span>
                 </div>
-                <?php Widgets::seasonSwitch(); ?>
+                <?php Widgets::seasonSwitch($options['change_color']); ?>
                 <ul class="menu-items">
                     <?php
                     foreach ($menu_items as $item) {
                         $slug = get_post_field('post_name', $item->object_id) . 'Image'; ?>
                         <li class="menu-item" data-featured-image="<?= $slug ?>">
-                            <a href="<?= $item->url; ?>"> <?= $item->title ?></a>
+                            <a href="<?= $item->url; ?>" class="<?= $colorWhite ;?>"> <?= $item->title ?></a>
                         </li>
                     <?php
                     } ?>

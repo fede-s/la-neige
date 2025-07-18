@@ -47,7 +47,7 @@ class Widgets {
          include(__DIR__ . '/text-image-section-legacy.php');
    }
 
-  public static function seasonSwitch() {
+  public static function seasonSwitch($changeColor=null) {
       include(__DIR__ . '/season-switch.php');
   }
 }
