@@ -8532,6 +8532,9 @@ body.page-template-page-home-page .menu-nav-bar .menu-logo {
   opacity: 0;
   pointer-events: none;
 }
+body.page-template-page-home-page .menu-nav-bar .menu-logo a img {
+  width: 100%;
+}
 body.admin-bar .menu-nav-bar {
   top: 32px;
 }

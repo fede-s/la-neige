@@ -6,6 +6,7 @@
 global $post;
 
 $fields = get_fields($post);
+$options = get_fields('options');
 
 get_header(); ?>
 
@@ -25,10 +26,15 @@ get_header(); ?>
         <?php } else { ?>
             <div class="header-content">
             <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px', '', 'logo-header fadeIn'); ?>
-            <?php echo Utils::imgLazy(get_field('header_image'), 'large', '2000px', '', 'image-header fadeIn'); ?>
+            <?php
+            $fullScreen = ($options['change_color'] == true) ? 'fadeIn ' : 'image-header fadeIn';
+             echo Utils::imgLazy(get_field('header_image'), 'large', '2000px', '', $fullScreen  ); ?>
+
+            <?php if (!$options['change_color']) { ?>
             <div class="signature-header contact-signature fadeIn02">
                 <?php echo $fields['header_signature']; ?>
             </div>
+            <?php } ?>
             </div>
             
         <?php } ?>

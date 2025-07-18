@@ -216,6 +216,11 @@ mark {
 		.menu-logo {
 			opacity: 0;
 			pointer-events: none;
+			a {
+				img {
+					width: 100%;
+				}
+			}
 		}
 	}
 
