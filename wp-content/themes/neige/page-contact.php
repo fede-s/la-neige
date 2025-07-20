@@ -9,6 +9,8 @@ require_once(YAMA . '/hubspot/Hubspot.php');
 global $post;
 
 $fields = get_fields($post);
+$options = get_fields('options');
+$colorWhite = ($options['change_color'] == true) ? 'color-white ' : '';
 
 get_header(); ?>
 
@@ -65,7 +67,9 @@ get_header(); ?>
 <section class="contact container forest-blue contact-form">
     <div class="fadeIn">
         <h1 class="text-center"><?= $fields['form_title'] ?? '' ?></h1>
-        <?php HubSpot::createForm($fields['form_id'] ?? '') ?>
+         <div class="<?= $colorWhite ;?>">
+           <?php HubSpot::createForm($fields['form_id'] ?? '') ?>
+         </div>
     </div>
 </section>
 <section class="contact container restaurant forest-blue access">
