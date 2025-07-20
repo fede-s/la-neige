@@ -9075,6 +9075,9 @@ body.translatepress-ja .trp_language_switcher_shortcode .trp-language-switcher >
 .color-white input::placeholder {
   color: #fff !important;
 }
+.color-white textarea::placeholder {
+  color: #fff !important;
+}
 
 .fullScreen {
   height: 80vh !important;

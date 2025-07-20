@@ -805,6 +805,9 @@ mark {
 	input::placeholder {
 		color: #fff !important;
 	}
+	textarea::placeholder {
+		color: #fff !important;
+	}
 }
 .fullScreen {
 	height:  calc(80vh)!important;
