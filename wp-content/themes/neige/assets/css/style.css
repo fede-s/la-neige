@@ -8334,10 +8334,12 @@ h2.resp-accordion:first-child {
   --main-winter-color: var(--soft-pink);
   --main-summer-color: var(--olive-green);
   --icon-size: 70px;
+  --logo-header-height: 175px;
 }
 @media (max-width: 768px) {
   :root {
     --header-height: 60px;
+    --logo-header-height: 245px;
   }
 }
 @media (max-width: 479px) {
@@ -9069,6 +9071,10 @@ body.translatepress-ja .trp_language_switcher_shortcode .trp-language-switcher >
 
 .color-white {
   color: #fff !important;
+}
+
+.fullScreen {
+  height: 80vh !important;
 }
 
 .header {

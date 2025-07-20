@@ -6,9 +6,11 @@
 	--main-winter-color: var(--soft-pink);
 	--main-summer-color: var(--olive-green);
 	--icon-size: 70px;
+	--logo-header-height: 175px;
 
 	@include small-tablet {
 		--header-height: 60px;
+		--logo-header-height: 245px;
 	}
 
 	@include phone {
@@ -800,6 +802,9 @@ mark {
 
 .color-white {
 	color: #fff !important;
+}
+.fullScreen {
+	height:  calc(80vh)!important;
 }
 
  

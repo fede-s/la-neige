@@ -27,7 +27,7 @@ get_header(); ?>
             <div class="header-content">
             <?= Utils::imgLazy(get_field('logo', 'options'), 'large', '200px', '', 'logo-header fadeIn'); ?>
             <?php
-            $fullScreen = ($options['change_color'] == true) ? 'fadeIn ' : 'image-header fadeIn';
+            $fullScreen = ($options['change_color'] == true) ? 'fullScreen' : 'image-header fadeIn';
              echo Utils::imgLazy(get_field('header_image'), 'large', '2000px', '', $fullScreen  ); ?>
 
             <?php if (!$options['change_color']) { ?>
