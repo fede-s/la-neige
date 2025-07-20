@@ -802,6 +802,9 @@ mark {
 
 .color-white {
 	color: #fff !important;
+	input::placeholder {
+		color: #fff !important;
+	}
 }
 .fullScreen {
 	height:  calc(80vh)!important;
