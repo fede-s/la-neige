@@ -7,6 +7,7 @@
 global $post;
 
 $fields = get_fields($post);
+$options = get_fields('options');
 
 get_header(); ?>
 
@@ -123,6 +124,7 @@ get_header(); ?>
     <div class="rooms-display bottom-30 fadeIn">
         <div id="rooms" class="owl-carousel owl-theme">
             <?php
+            $colorWhite = ($options['change_color'] == true) ? 'color-white ' : '';
             $roomTypes = Utils::getPosts('room-type');
             $actualPost = get_the_ID();
             foreach ($roomTypes as $room) {
@@ -131,7 +133,7 @@ get_header(); ?>
                     <div class="item">
                         <a href="<?= get_permalink($room->ID); ?>" target="_blank">
                             <?= Utils::imgLazyFromPost($room, 'medium', '400px'); ?>
-                            <div class="info">
+                            <div class="info <?= $colorWhite ;?>">
                                 <h3><?= $room->post_title; ?></h3>
                                 <ul class="basic-info">
                                     <li><?= get_post_meta($room->ID, 'square_meters', true); ?></li>
