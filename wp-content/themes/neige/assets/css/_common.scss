@@ -7,6 +7,7 @@
 	--main-summer-color: var(--olive-green);
 	--icon-size: 70px;
 	--logo-header-height: 175px;
+	--theme-color-text: #fff;
 
 	@include small-tablet {
 		--header-height: 60px;
@@ -304,6 +305,9 @@ mark {
 			background: var(--forest-blue);
 			color: var(--soft-pink);
 			padding: 13px min(4vw, 50px) 10px;
+			body.theme-change & {
+				color: var(--theme-color-text);
+			}
 		}
 	}
 
@@ -346,7 +350,9 @@ mark {
 			color: var(--forest-blue);
 			text-transform: uppercase;
 			text-decoration: none;
-
+			body.theme-change & {
+				color: var(--theme-color-text);
+			}
 			span {
 				font-family: var(--main-font);
 				font-weight: normal;
@@ -475,7 +481,9 @@ mark {
 	cursor: pointer;
 	font-size: 1.2em;
 	z-index: 99;
-
+	body.theme-change & {
+		color: var(--theme-color-text);
+	}
 	:hover {
 		color: var(--olive-green);
 	}
@@ -502,6 +510,9 @@ mark {
 	text-decoration: none;
 	transition: color 0.3s;
 	font-size: 1.1em;
+	body.theme-change & {
+		color: var(--theme-color-text);
+	}
 }
 
 .menu-item a:hover {
@@ -516,6 +527,9 @@ mark {
 	padding: 60px 0 70px;
 	background-color: var(--forest-blue);
 	color: var(--soft-pink);
+	body.theme-change & {
+		color: var(--theme-color-text);
+	}
 
 	@include tablet {
 		padding: 70px 0;
@@ -748,6 +762,9 @@ mark {
 .linkBtn:hover {
 	background-color: var(--forest-blue);
 	color: var(--soft-pink);
+	body.theme-change & {
+		color: var(--theme-color-text);
+	}
 }
 
 .trp_language_switcher_shortcode {
@@ -787,6 +804,9 @@ mark {
 			cursor: pointer;
 			color: var(--forest-blue);
 			font-family: var(--main-font), ui-sans-serif;
+			body.theme-change & {
+				color: var(--theme-color-text);
+			}
 			body.translatepress-ja & {
 				font-family: "KozukaMincho";
 				  font-style: normal;

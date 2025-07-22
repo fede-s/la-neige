@@ -1398,6 +1398,16 @@ script {
 .hbspt-form textarea::placeholder {
   color: grey !important;
 }
+body.theme-change .hbspt-form input::placeholder,
+body.theme-change .hbspt-form select::placeholder,
+body.theme-change .hbspt-form textarea::placeholder {
+  color: var(--theme-color-text) !important;
+}
+body.theme-change .hbspt-form input,
+body.theme-change .hbspt-form select,
+body.theme-change .hbspt-form textarea {
+  color: var(--theme-color-text) !important;
+}
 
 .hbspt-form input[type=submit] {
   display: inline-block;
@@ -1413,6 +1423,9 @@ script {
 .hbspt-form input[type=submit]:hover {
   background-color: var(--soft-pink);
   color: var(--forest-blue) !important;
+}
+body.theme-change .hbspt-form input[type=submit]:hover {
+  color: var(--theme-color-text) !important;
 }
 
 .hbspt-form select:required:invalid {
@@ -8335,6 +8348,7 @@ h2.resp-accordion:first-child {
   --main-summer-color: var(--olive-green);
   --icon-size: 70px;
   --logo-header-height: 175px;
+  --theme-color-text: #fff;
 }
 @media (max-width: 768px) {
   :root {
@@ -8605,6 +8619,9 @@ body.scrolled .menu-nav-bar .menu-logo {
   color: var(--soft-pink);
   padding: 13px min(4vw, 50px) 10px;
 }
+body.theme-change .menu-nav-bar .nav-bar-right .book-btn {
+  color: var(--theme-color-text);
+}
 .menu-nav-bar .season-selector .season-selector-item span {
   max-height: 20px;
   opacity: 1;
@@ -8636,6 +8653,9 @@ body.scrolled .menu-nav-bar .season-selector .season-selector-item span {
   color: var(--forest-blue);
   text-transform: uppercase;
   text-decoration: none;
+}
+body.theme-change .season-selector .season-selector-item a {
+  color: var(--theme-color-text);
 }
 .season-selector .season-selector-item a span {
   font-family: var(--main-font);
@@ -8756,6 +8776,9 @@ body.menu-opened #side-menu {
   font-size: 1.2em;
   z-index: 99;
 }
+body.theme-change .close-menu {
+  color: var(--theme-color-text);
+}
 .close-menu :hover {
   color: var(--olive-green);
 }
@@ -8782,6 +8805,9 @@ body.translatepress-ja .menu-items {
   transition: color 0.3s;
   font-size: 1.1em;
 }
+body.theme-change .menu-item a {
+  color: var(--theme-color-text);
+}
 
 .menu-item a:hover {
   color: var(--olive-green);
@@ -8792,6 +8818,9 @@ body.translatepress-ja .menu-items {
   padding: 60px 0 70px;
   background-color: var(--forest-blue);
   color: var(--soft-pink);
+}
+body.theme-change .newsletter-section {
+  color: var(--theme-color-text);
 }
 @media (max-width: 1024px) {
   .newsletter-section {
@@ -9024,6 +9053,9 @@ body.translatepress-ja .linkBtn {
   background-color: var(--forest-blue);
   color: var(--soft-pink);
 }
+body.theme-change .linkBtn:hover {
+  color: var(--theme-color-text);
+}
 
 .trp_language_switcher_shortcode {
   position: relative;
@@ -9059,6 +9091,9 @@ body.translatepress-ja .linkBtn {
   cursor: pointer;
   color: var(--forest-blue);
   font-family: var(--main-font), ui-sans-serif;
+}
+body.theme-change .trp_language_switcher_shortcode .trp-language-switcher > div > a {
+  color: var(--theme-color-text);
 }
 body.translatepress-ja .trp_language_switcher_shortcode .trp-language-switcher > div > a {
   font-family: "KozukaMincho";
@@ -9220,6 +9255,9 @@ body.translatepress-ja .room .room-link {
   font-style: normal;
   font-weight: 500;
 }
+body.theme-change .room .room-link {
+  color: var(--theme-color-text);
+}
 .room .room-link:hover {
   color: var(--olive-green);
   text-decoration: none;
@@ -9337,6 +9375,9 @@ body.translatepress-ja .this-suite {
 }
 .this-suite li::marker {
   color: var(--soft-pink);
+}
+body.theme-change .this-suite li::marker {
+  color: var(--theme-color-text);
 }
 
 .side-img {
@@ -9839,6 +9880,9 @@ body.translatepress-ja .section-text-image .basic-info {
 .pink {
   background-color: var(--soft-pink);
 }
+body.theme-change .pink {
+  color: var(--theme-color-text);
+}
 .pink .shadow {
   background-color: var(--forest-blue);
 }
@@ -9846,6 +9890,9 @@ body.translatepress-ja .section-text-image .basic-info {
 .forest-blue {
   background-color: var(--forest-blue);
   color: var(--soft-pink);
+}
+body.theme-change .forest-blue {
+  color: var(--theme-color-text);
 }
 .forest-blue .shadow {
   background-color: var(--soft-pink);
@@ -9855,9 +9902,15 @@ body.translatepress-ja .section-text-image .basic-info {
   border-color: var(--soft-pink);
   color: var(--soft-pink);
 }
+body.theme-change .forest-blue .linkBtn {
+  color: var(--theme-color-text);
+}
 .forest-blue .linkBtn:hover {
   background-color: var(--soft-pink);
   color: var(--forest-blue);
+}
+body.theme-change .forest-blue .linkBtn:hover {
+  color: var(--theme-color-text);
 }
 
 .instagram {
@@ -9978,6 +10031,9 @@ body.translatepress-ja .section-text-image .basic-info {
   text-decoration: none;
   color: var(--forest-blue);
 }
+body.theme-change .discover-more a {
+  color: var(--theme-color-text);
+}
 
 .rooms-display {
   display: flex;
@@ -10044,6 +10100,9 @@ body.translatepress-ja .section-text-image .basic-info {
   z-index: 3;
   flex-direction: column;
   align-items: center;
+}
+body.theme-change .rooms-display .info {
+  color: var(--theme-color-text);
 }
 .rooms-display .info ul {
   justify-content: center;

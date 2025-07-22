@@ -99,6 +99,9 @@
    }
    li::marker {
       color: var(--soft-pink);
+      body.theme-change & {
+         color: var(--theme-color-text);
+      }
   }
 }
 

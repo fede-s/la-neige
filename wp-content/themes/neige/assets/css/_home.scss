@@ -416,6 +416,9 @@
 
 .pink {
   background-color: var(--soft-pink);
+  body.theme-change & {
+    color: var(--theme-color-text);
+  }
 
   .shadow {
     background-color: var(--forest-blue);
@@ -425,6 +428,9 @@
 .forest-blue {
   background-color: var(--forest-blue);
   color: var(--soft-pink);
+  body.theme-change & {
+    color: var(--theme-color-text);
+  }
 
   .shadow {
     background-color: var(--soft-pink);
@@ -434,11 +440,17 @@
     background-color: inherit;
     border-color: var(--soft-pink);
     color: var(--soft-pink);
+    body.theme-change & {
+      color: var(--theme-color-text);
+    }
   }
 
   .linkBtn:hover {
     background-color: var(--soft-pink);
     color: var(--forest-blue);
+    body.theme-change & {
+      color: var(--theme-color-text);
+    }
   }
 
 }
@@ -564,6 +576,9 @@
   a {
     text-decoration: none;
     color: var(--forest-blue);
+    body.theme-change & {
+      color: var(--theme-color-text);
+    }
   }
 }
 
@@ -652,6 +667,9 @@
     z-index: 3;
     flex-direction: column;
     align-items: center;
+    body.theme-change & {
+      color: var(--theme-color-text);
+    }
 
     ul {
       justify-content: center;

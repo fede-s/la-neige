@@ -835,6 +835,12 @@ script {
   height: 2.6rem !important;
   &::placeholder {
     color: grey !important;
+    body.theme-change & {
+      color: var(--theme-color-text)!important;
+    }
+  }
+  body.theme-change & {
+    color: var(--theme-color-text)!important;
   }
 }
 
@@ -852,6 +858,9 @@ script {
     &:hover {
       background-color: var(--soft-pink);
       color: var(--forest-blue) !important;
+      body.theme-change & {
+				color: var(--theme-color-text)!important;
+			}
     }
   }
 }
