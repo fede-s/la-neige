@@ -9255,9 +9255,6 @@ body.translatepress-ja .room .room-link {
   font-style: normal;
   font-weight: 500;
 }
-body.theme-change .room .room-link {
-  color: var(--theme-color-text);
-}
 .room .room-link:hover {
   color: var(--olive-green);
   text-decoration: none;
@@ -9375,9 +9372,6 @@ body.translatepress-ja .this-suite {
 }
 .this-suite li::marker {
   color: var(--soft-pink);
-}
-body.theme-change .this-suite li::marker {
-  color: var(--theme-color-text);
 }
 
 .side-img {
