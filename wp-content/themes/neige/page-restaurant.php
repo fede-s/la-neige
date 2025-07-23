@@ -36,8 +36,7 @@ get_header(); ?>
    <div class="container section-text-image">
       <div class="side-text">
          <h5 class="fadeIn"><?= $fields['restaurant_pre_title']; ?></h5>
-         <?php if (get_field('restaurant_signature')) {
-         ?>
+         
             <div class="signature fadeIn">
                <h1><?= $fields['restaurant_title']; ?>
                <div class="sig-svg">
@@ -45,7 +44,7 @@ get_header(); ?>
                </div>
             </h1>
             </div>
-         <?php }
+         <?php 
          if (get_field('restaurant_gallery')[0]) {
          ?>
             <div class="shadow-image fadeIn">
@@ -66,14 +65,14 @@ get_header(); ?>
             <?php echo Utils::imgLazy(get_field('restaurant_image'), 'medium', '800px', '', 'image-aspect fadeIn'); ?>
          </div>
          <div class="fadeIn wysiwyg-container"><?= get_field('restaurant_text'); ?></div>
-         <?php if(!empty($fields['button_left']) || !empty($fields['button_right'])) {
+         <?php if(!empty($fields['button_left']['link']) || !empty($fields['button_right']['link'])) {
              ?>
             <div class="buttons fadeIn">
-            <?php if(!empty($fields['button_left'])) {
+            <?php if(!empty($fields['button_left']['link']) && !empty($fields['button_left']['label'])) {
                 ?>
                <a href="<?= get_field('button_left')['link']; ?>" class="linkBtn"><?= get_field('button_left')['label']; ?></a>
                <?php } ?>
-            <?php if(!empty($fields['button_right'])) {
+            <?php if(!empty($fields['button_right']['link']) && !empty($fields['button_right']['label'])) {
                ?>
                <a href="<?= get_field('button_right')['link']; ?>" class="linkBtn"><?= get_field('button_right')['label']; ?></a>
                <?php } ?>
@@ -93,8 +92,7 @@ get_header(); ?>
       </div>
       <div class="side-text">
          <h5 class="fadeIn"><?= get_field('chef_pre_title'); ?></h5>
-         <?php if (get_field('chef_signature')) {
-         ?>
+         
             <div class="signature fadeIn">
                <h1><?= $fields['chef_title']; ?>
                <div class="sig-svg">
@@ -102,7 +100,7 @@ get_header(); ?>
                </div>
             </h1>
          </div>
-         <?php }
+         <?php 
           if (get_field('chef_gallery')[0]) {
          ?>
             <div class="shadow-image fadeIn">
@@ -134,9 +132,12 @@ get_header(); ?>
          <div class="fadeIn">
             <?= get_field('opening_text'); ?>
          </div>
+         <?php if(!empty($fields['opening_button']['link']) && !empty($fields['opening_button']['label'])) {
+          ?>
          <div class="buttons fadeIn">
-            <a href="<?= get_field('opening_button')['link']; ?>" class="linkBtn"><?= get_field('button_left')['label']; ?></a>
+            <a href="<?= get_field('opening_button')['link']; ?>" class="linkBtn"><?= get_field('opening_button')['label']; ?></a>
          </div>
+         <?php } ?>
       </div>
    </div>
 </section>
